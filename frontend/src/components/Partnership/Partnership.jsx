@@ -23,24 +23,24 @@ const Partnership = () => {
   return (
     <div className="partnership">
       <h2 className="heading">Our Partnerships</h2>
-      <div className="card-container d-flex justify-content-center mt-5 mb-5 gap-5 flex-wrap">
+      <div className="card-container cardcontainer d-flex justify-content-center mt-5 mb-5 gap-5 flex-wrap">
         {displayedPartners.map((partner, index) => (
           <motion.div
             key={index}
             className="card cardd"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, delay: index * 0.2 }} // Staggered animation delay
           >
             <Card>
               <Card.Img
                 variant="top"
                 src={partner.image}
                 alt={partner.name}
-                className=""
+                className="card-img-top cardimgtop"
               />
               <Card.Body>
-                <Card.Title className="card-title text-center mt-3 mb-3 text-white">
+                <Card.Title className="card-title cardtitle text-center mt-3 mb-3 text-white">
                   {partner.name}
                 </Card.Title>
               </Card.Body>

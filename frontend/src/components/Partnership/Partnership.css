@@ -13,7 +13,7 @@
   margin-bottom: 40px;
 }
 
-.card-container {
+.cardcontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,14 +35,14 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.card-img-top {
+.cardimgtop {
   width: 100%;
   height: 80%; /* Adjust height for card image */
   object-fit: cover;
   border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
 }
 
-.card-body {
+.cardbody {
   height: 30%; /* Adjust height for card body */
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-.card-title {
+.cardtitle {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
