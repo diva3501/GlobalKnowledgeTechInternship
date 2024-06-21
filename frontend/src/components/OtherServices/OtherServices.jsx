@@ -1,4 +1,5 @@
 import React from 'react';
+import './OtherServices.css'; // Import the corresponding CSS file
 
 const OtherServices = () => {
   return (
@@ -8,7 +9,7 @@ const OtherServices = () => {
         <div className="col-md-4">
           <div className="card">
             <img
-              src="https://images.unsplash.com/photo-1508139688466-3000a0b35985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+              src="https://images.app.goo.gl/JRbHmdpBsWrcnGKz8"
               className="card-img-top"
               alt="..."
             />
