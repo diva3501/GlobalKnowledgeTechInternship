@@ -1,16 +1,11 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
+.App {
+  background-color: #000; /* Dark background color for the whole app */
 }
 
-a {
-  color: inherit; /* Ensure links inherit color */
-  text-decoration: none;
+.component-container {
+  margin-bottom: 20px; /* Add a gap between each component */
 }
 
-a:hover {
-  color: lightorange; /* Light orange hover effect */
+.navbar-container {
+  margin-bottom: 20px; /* Gap for Navbar if needed */
 }

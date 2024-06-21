@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import AboutUs from './components/Aboutus/Aboutus';
 import Partnership from './components/Partnership/Partnership';
 import TechnologyPrograms from './components/TechnologyPrograms/TechnologyPrograms';
+import GlobalPartner from './components/GlobalPartner/GlobalPartner';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Home />
       <Partnership />
       <TechnologyPrograms />
+      <AboutUs />
+      <GlobalPartner />
     </div>
   );
 }

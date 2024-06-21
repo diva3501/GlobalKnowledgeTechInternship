@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 const partners = [
   { name: "Microsoft", image: "/partner1.png" },
   { name: "Artificial Intelligence", image: "/partner2.png" },
+  { name: "Mulesoft", image: "/partner6.png" },
+  { name: "Blockchain", image: "/partner7.png" },
   { name: "Anglepoint", image: "/partner3.jpeg" },
   { name: "Red Hat", image: "/partner4.png" },
   { name: "Tableau", image: "/partner5.png" },
-  { name: "Mulesoft", image: "/partner6.png" },
-  { name: "Blockchain", image: "/partner7.png" },
   { name: "IBM", image: "/partner8.png" },
 ];
 

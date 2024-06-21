@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img src="/file.png" alt="Logo" />
+          <img src="/logo.png" alt="Logo" />
         </a>
         <button
           className="navbar-toggler border-0"
