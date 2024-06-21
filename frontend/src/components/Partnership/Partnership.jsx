@@ -4,7 +4,6 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import Card from "react-bootstrap/Card";
 
 const partners = [
-<<<<<<< Updated upstream
   { name: 'Microsoft', image: '/partner1.png' },
   { name: 'Artificial Intelligence', image: '/partner2.png' },
   { name: 'Anglepoint', image: '/partner3.jpeg' },
@@ -12,17 +11,7 @@ const partners = [
   { name: 'Tableau', image: '/partner5.png' },
   { name: 'Mulesoft', image: '/partner6.png' },
   { name: 'Blockchain', image: '/partner7.png' },
-  { name: 'IBM', image: '/partner8.png' }
-=======
-  { name: "Microsoft", image: "/partner1.png" },
-  { name: "Artificial Intelligence", image: "/partner2.png" },
-  { name: "Anglepoint", image: "/partner3.jpeg" },
-  { name: "Red Hat", image: "/partner4.jpg" },
-  { name: "Tableau", image: "/partner5.jpg" },
-  { name: "Mulesoft", image: "/partner6.jpg" },
-  { name: "Blockchain", image: "/partner7.jpg" },
-  { name: "IBM", image: "/partner8.jpg" },
->>>>>>> Stashed changes
+  { name: 'IBM', image: '/partner8.png' },
 ];
 
 const Partnership = () => {
