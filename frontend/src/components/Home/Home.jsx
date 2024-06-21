@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -52,29 +53,46 @@ class Home extends React.Component {
     const { title, subtitle, description, image } = slides[currentSlide];
 
     return (
-      <div className="home">
-        <div className="slide animate__animated animate__fadeIn">
+      <motion.div className="home">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="slide"
+        >
           <div className="content">
             <h3>{title}</h3>
             <h4>{subtitle}</h4>
             <p>{description}</p>
           </div>
-          <div className="image-container">
-            <img src={image} alt={title} />
-          </div>
-        </div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="image-container"
+          >
+            <motion.img
+              src={image}
+              alt={title}
+              className="img-fluid"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+          </motion.div>
+        </motion.div>
         <div className="controls">
           {slides.map((slide, index) => (
-            <button
+            <motion.button
               key={index}
               className={`control-button ${
                 index === currentSlide ? "active" : ""
               }`}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               onClick={() => this.setState({ currentSlide: index })}
-            ></button>
+            />
           ))}
         </div>
-      </div>
+      </motion.div>
     );
   }
 }
