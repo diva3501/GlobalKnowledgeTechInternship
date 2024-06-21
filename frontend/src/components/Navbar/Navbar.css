@@ -1,71 +1,51 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+/* Navbar background and text colors */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .navbar {
-  padding: 1rem 1rem;
-  height: 80px; 
-  background: rgba(31, 31, 31, 0.9);
-  transition: background-color 0.3s, height 0.3s;
+  background-color: #1f1f1f; /* Dark background */
 }
-
-
-.navbar:hover {
-  background: rgba(31, 31, 31, 0.7);
-  height: 90px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
 
 .navbar-brand img {
-  height: 40px;
-  width: auto;
-  display: block;
+  max-height: 50px; /* Adjust logo size */
 }
 
-
-.nav-link {
-  font-size: 16px;
-  padding: 8px 15px;
-  color: #cccccc !important;
-  transition: color 0.3s, background-color 0.3s;
+.navbar-nav .nav-link {
+  color: white; /* Navbar links text color */
+  font-weight: 500; /* Navbar links font weight */
+  margin-right: 15px; /* Space between navbar links */
 }
 
-.nav-link:hover {
-  color: #3ccaf1;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+.navbar-nav .nav-link:hover {
+  color: #ffc107; /* Hover color for navbar links */
 }
 
-.dropdown-menu-dark .dropdown-item {
-  color: #cccccc;
-  transition: background-color 0.3s;
+/* Dropdown menu */
+.navbar-nav .dropdown-menu {
+  background-color: #1f1f1f; /* Dark background for dropdown */
+  border: none; /* No border for dropdown */
 }
 
-.dropdown-menu-dark .dropdown-item:hover {
-  color: black;
-  background-color: #3ccaf1;
+.navbar-nav .dropdown-item {
+  color: white; /* Dropdown item text color */
 }
 
-.btn-outline-light {
-  color: #cccccc;
-  border-color: #cccccc;
-  transition: color 0.3s, background-color 0.3s;
+.navbar-nav .dropdown-item:hover {
+  background-color: #2b2b2b; /* Hover background color for dropdown items */
 }
 
-.btn-outline-light:hover {
-  color: black;
-  background-color: #cccccc;
+/* Navbar toggler icon */
+.navbar-toggler-icon {
+  background-color: white; /* Toggler icon color */
 }
 
-.btn-light {
-  color: black;
-  border-color: #cccccc;
-  transition: color 0.3s, background-color 0.3s;
+/* Navbar buttons */
+.navbar .btn {
+  margin-left: 10px; /* Space between buttons */
 }
 
-@media (max-width: 991px) {
-  .btn-light {
-    margin-top: 0.5rem;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    margin-right: 0; /* Remove margin between navbar links on smaller screens */
   }
 }
