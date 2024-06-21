@@ -1,0 +1,59 @@
+
+.navbar-mainbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.nav-link {
+  margin-right: 1rem;
+}
+
+.navbar-burger {
+  border: none;
+  background: none;
+}
+
+.navbar-burger svg {
+  fill: white;
+}
+
+.ms-auto {
+  display: flex;
+  align-items: center;
+}
+
+.ms-auto .btn {
+  margin-left: 1rem;
+}
+
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #343a40;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ms-auto {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .ms-auto .btn {
+    margin: 0.5rem 0;
+  }
+}
