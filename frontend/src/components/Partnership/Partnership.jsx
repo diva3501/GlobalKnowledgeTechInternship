@@ -4,13 +4,13 @@ import { FaAngleDoubleDown } from 'react-icons/fa';
 
 const partners = [
   { name: 'Microsoft', image: '/partner1.png' },
-  { name: 'Artificial Intelligence', image: '/assets/partner2.jpg' },
-  { name: 'Anglepoint', image: '/assets/partner3.jpg' },
-  { name: 'Red Hat', image: '/assets/partner4.jpg' },
-  { name: 'Tableau', image: '/assets/partner5.jpg' },
-  { name: 'Mulesoft', image: '/assets/partner6.jpg' },
-  { name: 'Blockchain', image: '/assets/partner7.jpg' },
-  { name: 'IBM', image: '/assets/partner8.jpg' }
+  { name: 'Artificial Intelligence', image: '/partner2.png' },
+  { name: 'Anglepoint', image: '/partner3.jpeg' },
+  { name: 'Red Hat', image: '/partner4.jpg' },
+  { name: 'Tableau', image: '/partner5.jpg' },
+  { name: 'Mulesoft', image: '/partner6.jpg' },
+  { name: 'Blockchain', image: '/partner7.jpg' },
+  { name: 'IBM', image: '/partner8.jpg' }
 ];
 
 const Partnership = () => {
