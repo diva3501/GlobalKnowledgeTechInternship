@@ -9,7 +9,7 @@ const OtherServices = () => {
         <div className="col-md-4">
           <div className="card">
             <img
-              src="https://images.app.goo.gl/JRbHmdpBsWrcnGKz8"
+              src="bootcamp.jpg"
               className="card-img-top"
               alt="..."
             />
@@ -30,7 +30,7 @@ const OtherServices = () => {
         <div className="col-md-4">
           <div className="card">
             <img
-              src="https://images.unsplash.com/photo-1494790108372-52589c9f8ed8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+              src="BPO.png"
               className="card-img-top"
               alt="..."
             />
@@ -50,7 +50,7 @@ const OtherServices = () => {
         <div className="col-md-4">
           <div className="card">
             <img
-              src="https://images.unsplash.com/photo-1519388647352-e7613262202d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+              src="DCC.jpg"
               className="card-img-top"
               alt="..."
             />
