@@ -1,14 +1,6 @@
-
-.navbar-mainbg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
 .navbar {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
+  background-color: black;
 }
 
 .navbar-brand img {
@@ -16,44 +8,43 @@
 }
 
 .nav-link {
-  margin-right: 1rem;
+  font-size: 16px;
+  padding: 8px 15px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-.navbar-burger {
-  border: none;
-  background: none;
+.nav-link:hover {
+  color: #3ccaf1; /* Gold color for hover effect */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for hover */
+  border-radius: 5px; /* Rounded corners for better UI */
 }
 
-.navbar-burger svg {
-  fill: white;
+.dropdown-menu-dark .dropdown-item {
+  color: white;
 }
 
-.ms-auto {
-  display: flex;
-  align-items: center;
+.dropdown-menu-dark .dropdown-item:hover {
+  color: black;
+  background-color: #3ccaf1;
 }
 
-.ms-auto .btn {
-  margin-left: 1rem;
+.btn-outline-light {
+  color: white;
+  border-color: white;
 }
 
+.btn-outline-light:hover {
+  color: black;
+  background-color: white;
+}
 
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: #343a40;
-  }
+.btn-light {
+  color: black;
+  border-color: white;
+}
 
-  .navbar-nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .ms-auto {
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-
-  .ms-auto .btn {
-    margin: 0.5rem 0;
+@media (max-width: 991px) {
+  .btn-light {
+    margin-top: 0.5rem;
   }
 }
