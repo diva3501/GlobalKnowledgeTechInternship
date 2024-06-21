@@ -12,11 +12,12 @@
 }
 
 .slide {
-  width: 95%;
-  height: 95%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  height: 70%;
   background-color: #151414;
   border-radius: 15px;
   overflow: hidden;
@@ -32,7 +33,7 @@
 
 .content {
   flex: 1;
-  background: rgba(0, 0, 0, 0.7);
+  
   color: white;
   padding: 40px;
   text-align: left;
@@ -87,7 +88,7 @@ h3:hover, h4:hover, p:hover {
   margin-top: 20px;
 }
 
-.control-button{
+.control-button {
   background-color: #666666;
   color: white;
   padding: 10px 20px;
@@ -118,7 +119,6 @@ h3:hover, h4:hover, p:hover {
 @media (max-width: 768px) {
   .slide {
     width: 100%;
-    max-width: 95%;
   }
 
   h3 {
@@ -131,5 +131,23 @@ h3:hover, h4:hover, p:hover {
 
   p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }
