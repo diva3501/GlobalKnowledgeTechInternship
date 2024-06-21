@@ -1,25 +1,24 @@
-
-  .technology-programs {
+.tp-technology-programs {
     background-color: rgb(18, 18, 18);
     color: white;
     padding: 40px 20px;
     text-align: center;
   }
   
-  .heading {
+  .tp-heading {
     font-size: 2.5rem;
     color: lightorange;
     margin-bottom: 40px;
   }
   
-  .card-container {
+  .tp-card-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
   }
   
-  .card {
+  .tp-card {
     background-color: navy;
     border-radius: 10px;
     width: 200px;
@@ -32,33 +31,33 @@
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
-    opacity: 0; /* Start with opacity 0 */
-    transform: translateY(20px); /* Start with 20px downward translation */
+    opacity: 0;
+    transform: translateY(20px);
   }
   
-  .card.animate-in {
+  .tp-card.animate-in {
     opacity: 1;
     transform: translateY(0);
   }
   
-  .icon-container {
+  .tp-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 120px;
   }
   
-  .program-icon {
+  .tp-program-icon {
     font-size: 3rem;
     color: rgb(205, 160, 78);
     transition: transform 0.3s ease-out;
   }
   
-  .card:hover .program-icon {
+  .tp-card:hover .tp-program-icon {
     transform: rotate(360deg);
   }
   
-  .program-name {
+  .tp-program-name {
     font-size: 1.5rem;
     color: white;
     margin-top: 10px;

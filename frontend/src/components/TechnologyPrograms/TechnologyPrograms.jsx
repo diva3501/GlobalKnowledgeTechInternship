@@ -3,11 +3,11 @@ import './TechnologyPrograms.css';
 import { FaCloud, FaBrain, FaCube, FaRobot, FaDatabase } from 'react-icons/fa';
 
 const programs = [
-  { name: 'Cloud Architect', icon: <FaCloud className="program-icon" /> },
-  { name: 'Data Science', icon: <FaBrain className="program-icon" /> },
-  { name: 'Blockchain', icon: <FaCube className="program-icon" /> },
-  { name: 'Artificial Intelligence', icon: <FaRobot className="program-icon" /> },
-  { name: 'Machine Learning', icon: <FaDatabase className="program-icon" /> }
+  { name: 'Cloud Architect', icon: <FaCloud className="tp-program-icon" /> },
+  { name: 'Data Science', icon: <FaBrain className="tp-program-icon" /> },
+  { name: 'Blockchain', icon: <FaCube className="tp-program-icon" /> },
+  { name: 'Artificial Intelligence', icon: <FaRobot className="tp-program-icon" /> },
+  { name: 'Machine Learning', icon: <FaDatabase className="tp-program-icon" /> }
 ];
 
 const TechnologyPrograms = () => {
@@ -47,15 +47,15 @@ const TechnologyPrograms = () => {
   }, []);
 
   return (
-    <div className="technology-programs">
-      <h2 className="heading">Technological Programs</h2>
-      <div className="card-container">
+    <div className="tp-technology-programs">
+      <h2 className="tp-heading">Technological Programs</h2>
+      <div className="tp-card-container">
         {programs.map((program, index) => (
-          <div ref={el => cardRefs.current[index] = el} className={`card ${isVisible[index] ? 'animate-in' : ''}`} key={index}>
-            <div className="icon-container">
+          <div ref={el => cardRefs.current[index] = el} className={`tp-card ${isVisible[index] ? 'animate-in' : ''}`} key={index}>
+            <div className="tp-icon-container">
               {program.icon}
             </div>
-            <div className="program-name">{program.name}</div>
+            <div className="tp-program-name">{program.name}</div>
           </div>
         ))}
       </div>
