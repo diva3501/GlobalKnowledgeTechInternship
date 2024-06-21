@@ -29,7 +29,7 @@ const Partnership = () => {
               variant="top"
               src={partner.image}
               alt={partner.name}
-              className="card-img-top"
+              className=""
             />
             <Card.Body>
               <Card.Title className="card-title text-center mt-3 mb-3 text-white">{partner.name}</Card.Title>
