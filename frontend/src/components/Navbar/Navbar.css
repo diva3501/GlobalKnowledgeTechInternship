@@ -3,18 +3,26 @@
 
 .navbar {
   padding: 1rem 1rem;
-  background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  height: 80px; 
+  background: rgba(31, 31, 31, 0.9);
+  transition: background-color 0.3s, height 0.3s;
 }
 
+
 .navbar:hover {
-  background: linear-gradient(135deg, #2b2b2b, #1f1f1f);
+  background: rgba(31, 31, 31, 0.7);
+  height: 90px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .navbar-brand img {
   height: 40px;
+  width: auto;
+  display: block;
 }
+
 
 .nav-link {
   font-size: 16px;
@@ -24,9 +32,9 @@
 }
 
 .nav-link:hover {
-  color: #3ccaf1; /* Accent color for hover effect */
-  background-color: rgba(255, 255, 255, 0.1); /* Light background for hover */
-  border-radius: 5px; /* Rounded corners for better UI */
+  color: #3ccaf1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
 .dropdown-menu-dark .dropdown-item {
