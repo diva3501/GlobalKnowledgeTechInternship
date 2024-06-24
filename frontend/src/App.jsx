@@ -9,6 +9,7 @@ import GlobalPartner from './components/GlobalPartner/GlobalPartner';
 import Otherservice from './components/Otherservice/Otherservice';
 import OurHappyCustomer from './components/OurHappyCustomer/OurHappyCustomer';
 import CustomerSay from './components/CustomerSay/CustomerSay';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <GlobalPartner />
       <OurHappyCustomer />
       <CustomerSay />
+      <Footer />
       
       
     </div>
