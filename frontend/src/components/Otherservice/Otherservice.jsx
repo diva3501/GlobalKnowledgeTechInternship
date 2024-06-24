@@ -120,7 +120,7 @@ const Otherservice = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
