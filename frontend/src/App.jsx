@@ -6,6 +6,11 @@ import AboutUs from './components/Aboutus/Aboutus';
 import Partnership from './components/Partnership/Partnership';
 import TechnologyPrograms from './components/TechnologyPrograms/TechnologyPrograms';
 import GlobalPartner from './components/GlobalPartner/GlobalPartner';
+import Otherservice from './components/Otherservice/Otherservice';
+import OurHappyCustomer from './components/OurHappyCustomer/OurHappyCustomer';
+import CustomerSay from './components/CustomerSay/CustomerSay';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
@@ -15,7 +20,13 @@ function App() {
       <Partnership />
       <TechnologyPrograms />
       <AboutUs />
+      <Otherservice />
       <GlobalPartner />
+      <OurHappyCustomer />
+      <CustomerSay />
+      <Footer />
+      
+      
     </div>
   );
 }
