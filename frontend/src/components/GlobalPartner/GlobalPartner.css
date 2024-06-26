@@ -8,7 +8,7 @@
 
 .global-partner-heading {
   font-size: 2.5rem;
-  color: #ffffff; /* White color for heading */
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .logo-wrapper {
-  background-color: rgba(20, 20, 20, 0.959);
+  background-color: rgba(52, 47, 57, 0.959);
   border-radius: 10px;
   padding: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -34,18 +34,18 @@
   }
 
 .logo-image {
-  height: 100px; /* Adjust as needed */
+  height: 100px;
   width: auto;
 }
 
 @media (max-width: 768px) {
   .logo-image {
-    height: 80px; /* Adjust for smaller screens */
+    height: 80px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-image {
-    height: 60px; /* Adjust for smallest screens */
+    height: 60px;
   }
 }

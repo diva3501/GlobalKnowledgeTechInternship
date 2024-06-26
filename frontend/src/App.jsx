@@ -10,6 +10,7 @@ import Otherservice from './components/Otherservice/Otherservice';
 import OurHappyCustomer from './components/OurHappyCustomer/OurHappyCustomer';
 import CustomerSay from './components/CustomerSay/CustomerSay';
 import Footer from './components/Footer/Footer';
+import Coursework from './components/Coursework/Coursework';
 
 
 function App() {
@@ -23,8 +24,10 @@ function App() {
       <Otherservice />
       <GlobalPartner />
       <OurHappyCustomer />
+      <Coursework />
       <CustomerSay />
       <Footer />
+      
       
       
     </div>

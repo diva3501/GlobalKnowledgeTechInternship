@@ -1,0 +1,141 @@
+.coursework {
+    padding: 20px;
+  }
+  
+  .coursework-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    color: #333;
+  }
+  
+  .nav-button.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+  }
+  
+  .nav-button:hover {
+    color: #0056b3;
+  }
+  
+  .coursework-content {
+    margin-top: 20px;
+  }
+  
+  .coursework-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: navy;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .course-title {
+    font-size: 20px;
+    font-style:oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .course-description {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    height: 80px; 
+    overflow: hidden;
+  }
+  
+  .show-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .show-more:hover {
+    background-color: #0056b3;
+  }
+  
+  .course-detail {
+    padding: 20px;
+    background-color: navy;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .course-detail-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .course-detail-title {
+    font-size: 20px;
+    font-style:oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin: 20px 0;
+  }
+  
+  .course-detail-description {
+    font-size: 16px;
+    color: white;
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
