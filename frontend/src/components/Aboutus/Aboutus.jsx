@@ -16,7 +16,7 @@ const Aboutus = () => {
           ></iframe>
         </div>
         <div className="about-content">
-          <h2 className="about-heading">About Us</h2>
+        <h2 className="about-heading">About Us</h2>
           <p className="about-text">
             A leader in IT Training domain, Global Knowledge Technologies
             delivers quality and customized academic and corporate training

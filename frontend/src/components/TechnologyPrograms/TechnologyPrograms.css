@@ -1,6 +1,6 @@
 /* Container */
 .tp-technology-programs {
-  background-color: #1f1f1f; 
+  background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
   /* Dark background color */
   box-shadow: #333;
   padding: 50px 0;

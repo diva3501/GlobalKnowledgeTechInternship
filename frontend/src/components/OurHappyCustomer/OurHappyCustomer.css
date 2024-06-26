@@ -1,6 +1,7 @@
 .customer-slider {
   text-align: center;
   padding: 20px;
+  background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
 }
 
 .customer-slider h2 {

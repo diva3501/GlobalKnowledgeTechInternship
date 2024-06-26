@@ -1,7 +1,7 @@
 .customer-say-container {
   text-align: center;
   padding: 40px 20px;
-  background-color: #121212;
+  background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
   color: white;
 }
 
