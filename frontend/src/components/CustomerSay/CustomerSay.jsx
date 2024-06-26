@@ -32,37 +32,63 @@ const feedbackData = [
 
 const CustomerSay = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbackData.length);
-    }, 4000); // Change card every 9 seconds
+    }, 3000); // Change card every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
+  // Function to get the set of three feedback cards to display
+  const getDisplayedCards = () => {
+    const displayedCards = [];
+    for (let i = 0; i < 3; i++) {
+      displayedCards.push(feedbackData[(currentIndex + i) % feedbackData.length]);
+    }
+    return displayedCards;
+  };
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className={`${styles.customerSayContainer} container py-5`}>
-      <h2 className="heading">What Our Customers Say</h2>
-      <div
-        className={`${styles.feedbackCardsContainer} d-flex justify-content-center`}
-      >
-        {feedbackData.map((feedback, index) => (
+      <h2 className={styles.customerSayTitle}>What Our Customers Say</h2>
+      <div className={`${styles.feedbackCardsContainer} d-flex justify-content-center`}>
+        {getDisplayedCards().map((feedback, index) => (
           <div
             key={index}
-            className={`${styles.feedbackCard} ${
-              index === currentIndex ? styles.active : ""
-            }`}
+            className={`${styles.feedbackCard} ${expandedIndex === index ? styles.expanded : ""}`}
+            onClick={() => toggleExpand(index)}
           >
             <IoMdQuote className={styles.quoteIcon} />
-            <p className={styles.feedbackCardContent}>{feedback.content}</p>
-            <div className={styles.feedbackCardDivider}></div>
-            <img
-              src={`/${feedback.image}`}
-              alt={`Customer ${index + 1}`}
-              className={styles.customerCardImage}
-            />
-            <p className={styles.customerCardName}>{feedback.name}</p>
+            <p className={`${styles.feedbackCardContent} ${expandedIndex === index ? styles.fullContent : styles.truncatedContent}`}>
+              {feedback.content}
+            </p>
+            
+            {expandedIndex === index && (
+              <div>
+                
+               
+              </div>
+            )}
+            {expandedIndex !== index && (
+              <div>
+                <div className={styles.feedbackCardDivider}></div>
+              <img
+                src={`/${feedback.image}`}
+                alt={`Customer ${index + 1}`}
+                className={styles.customerCardImage}
+              />
+              <div>
+              <p className={styles.customerCardName}>{feedback.name}</p>
+              </div>
+             </div>
+            )}
           </div>
         ))}
       </div>
