@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 const logos = [
-  { src: "/global1.png", alt: "Global Partner 1" },
   { src: "/global2.png", alt: "Global Partner 2" },
   { src: "/global3.png", alt: "Global Partner 3" },
   { src: "/global4.png", alt: "Global Partner 4" },
+  { src: "/global1.png", alt: "Global Partner 1" },
   { src: "/global5.png", alt: "Global Partner 5" },
 ];
 
@@ -18,7 +18,7 @@ const GlobalPartner = () => {
       <Container>
         <Row className="justify-content-center">
           {logos.map((logo, index) => (
-            <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
+            <Col key={index} xs={12} sm={6} md={4} className="mb-4">
               <motion.div
                 className="gp-logo-wrapper"
                 whileHover={{ scale: 1.1 }}
