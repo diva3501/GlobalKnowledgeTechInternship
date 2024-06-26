@@ -1,52 +1,57 @@
-/* Otherservice.css */
 .otherservice {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
-  overflow: hidden;
   padding: 20px;
+  overflow: hidden;
 }
 
-.container {
+
+.os-container {
   width: 80%;
   max-width: 1200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 .heading {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   text-align: center;
   margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .service-cards {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .service-card {
-  background: navy;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #121212;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   cursor: pointer;
-  width: 30%;
+  width: 100%;
+  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .service-image {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -55,11 +60,13 @@
 }
 
 .service-content h3 {
+  color: #fff;
   margin-top: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .service-content p {
-  color: white;
+  color: #d1d1d1;
   margin-bottom: 0;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -68,7 +75,7 @@
 }
 
 .read-more {
-  color: #007bff;
+  color: #00bfff;
   cursor: pointer;
 }
 
@@ -78,23 +85,33 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  transition: opacity 0.3s ease;
 }
 
 .expanded-service-content {
-  
-  background:navy;
+  background: #121212;
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 80%;
-  max-height: 80%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  max-height: 90%;
   overflow-y: auto;
   position: relative;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .close-button {
@@ -107,6 +124,11 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: #cc0000;
 }
 
 .expanded-service-image {
@@ -115,10 +137,15 @@
   object-fit: contain;
   margin-bottom: 20px;
 }
-.expheading{
-  color: white;
+
+.expheading {
+  color: #00bfff;
+  font-family: 'Roboto', sans-serif;
 }
-.expcontent{
+
+.expcontent {
   font-size: 1.25rem;
-  color: white;
+  color: #d1d1d1;
+  white-space: pre-line;
+  font-family: 'Roboto', sans-serif;
 }

@@ -1,91 +1,67 @@
-.customer-say-container {
+/* CustomerSay.module.css */
+.customerSayContainer {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
+  background: linear-gradient(135deg, #000, #2b2b2b);
   color: white;
 }
 
-.customer-say-title {
+.customerSayTitle {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #FFA500;
 }
 
-.feedback-cards-container {
+.feedbackCardsContainer {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.feedback-card {
-  background-color: navy;
+.feedbackCard {
+  background-color: #1a1a1a;
   color: white;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
   height: 350px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.feedback-card.card-1 {
-  left: 0%;
-  transform: translateX(0);
+.feedbackCard.active {
+  display: flex;
 }
 
-.feedback-card.card-2 {
-  left: 33.33%;
-  transform: translateX(0);
-}
-
-.feedback-card.card-3 {
-  left: 66.66%;
-  transform: translateX(0);
-}
-
-.feedback-card.active.card-1 {
-  transform: translateX(-100%);
-}
-
-.feedback-card.active.card-2 {
-  transform: translateX(-33.33%);
-}
-
-.feedback-card.active.card-3 {
-  transform: translateX(33.33%);
-}
-
-.quote-icon {
+.quoteIcon {
   font-size: 3rem;
   color: #CDA04E;
 }
 
-.feedback-card-content {
+.feedbackCardContent {
   margin: 20px 0;
 }
 
-.feedback-card-divider {
+.feedbackCardDivider {
   width: 50px;
   height: 2px;
   background-color: #CDA04E;
   margin-bottom: 20px;
 }
 
-.customer-card-image {
+.customerCardImage {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.customer-card-name {
+.customerCardName {
   margin-top: 10px;
   font-weight: bold;
 }

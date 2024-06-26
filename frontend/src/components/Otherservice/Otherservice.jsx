@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Otherservice.css';
+import React, { useState, useEffect } from "react";
+import "./Otherservice.css";
 
 const services = [
   {
@@ -135,16 +135,25 @@ const Otherservice = () => {
 
   return (
     <div className="otherservice">
-      <div className="container">
+      <div className="os-container">
         <h1 className="heading">Other Services</h1>
         <div className="service-cards">
           {services.slice(currentIndex, currentIndex + 3).map((service) => (
-            <div key={service.id} className="service-card" onClick={() => handleCardClick(service)}>
-              <img src={service.image} alt={service.title} className="service-image" />
+            <div
+              key={service.id}
+              className="service-card"
+              onClick={() => handleCardClick(service)}
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="service-image"
+              />
               <div className="service-content">
                 <h3>{service.title}</h3>
                 <p>
-                  {service.content.split('\n')[0]}... <span className="read-more">Read more</span>
+                  {service.content.split("\n")[0]}...{" "}
+                  <span className="read-more">Read more</span>
                 </p>
               </div>
             </div>
@@ -153,12 +162,21 @@ const Otherservice = () => {
       </div>
 
       {expandedService && (
-        <div className="expanded-service">
-          <div className="expanded-service-content">
-            <button className="close-button" onClick={handleCloseClick}>Close</button>
-            <h2 className='expheading'>{expandedService.title}</h2>
-            <img src={expandedService.image} alt={expandedService.title} className="expanded-service-image" />
-            <p className='expcontent'>{expandedService.content}</p>
+        <div className="expanded-service" onClick={handleCloseClick}>
+          <div
+            className="expanded-service-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-button" onClick={handleCloseClick}>
+              Close
+            </button>
+            <h2 className="expheading">{expandedService.title}</h2>
+            <img
+              src={expandedService.image}
+              alt={expandedService.title}
+              className="expanded-service-image"
+            />
+            <p className="expcontent">{expandedService.content}</p>
           </div>
         </div>
       )}

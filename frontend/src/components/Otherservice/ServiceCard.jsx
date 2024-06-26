@@ -1,5 +1,5 @@
-import React from 'react';
-import './ServiceCard.css';
+import React from "react";
+import "./ServiceCard.css";
 
 const ServiceCard = ({ service, onClick }) => {
   return (
@@ -8,7 +8,8 @@ const ServiceCard = ({ service, onClick }) => {
       <div className="service-content">
         <h3>{service.title}</h3>
         <p>
-          {service.content.split('\n')[0]}... <span className="read-more">Read more</span>
+          {service.content.split("\n")[0]}...{" "}
+          <span className="read-more">Read more</span>
         </p>
       </div>
     </div>

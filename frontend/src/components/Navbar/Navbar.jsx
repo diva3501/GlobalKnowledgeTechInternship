@@ -1,7 +1,9 @@
 import React from "react";
-import "./Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import './Navbar.jsx'
 
 const catalogItems = {
   "Artificial Intelligence": {
@@ -9,7 +11,15 @@ const catalogItems = {
     certifications: [],
   },
   IBM: {
-    courses: ["Analytics", "Cloud", "Security", "Systems", "Industry", "IOT", "Watson Health"],
+    courses: [
+      "Analytics",
+      "Cloud",
+      "Security",
+      "Systems",
+      "Industry",
+      "IOT",
+      "Watson Health",
+    ],
     certifications: [
       "Introduction to IBM SPSS Modeler and Data Science (vl 8.1.1)",
       "Data science without a Ph.D. Using IBM SPSS Modeler (VI g. 1.1)",
@@ -19,12 +29,20 @@ const catalogItems = {
     ],
   },
   "Red Hat": {
-    courses: ["Free", "Cloud Computing Virtualization and Storage", "OpenShift", "DevOps", "Ansible"],
+    courses: [
+      "Free",
+      "Cloud Computing Virtualization and Storage",
+      "OpenShift",
+      "DevOps",
+      "Ansible",
+    ],
     certifications: [],
   },
   Microsoft: {
     courses: ["Azure"],
-    certifications: ["Designing and Implementing a Data Science Solution on Azure"],
+    certifications: [
+      "Designing and Implementing a Data Science Solution on Azure",
+    ],
   },
   Blockchain: {
     courses: ["Architect Design", "Solution Design"],
@@ -50,7 +68,11 @@ const catalogItems = {
     ],
   },
   Mulesoft: {
-    courses: ["Anypoint Platform Operations", "Anypoint Platform Architecture", "Anypoint Platform Development"],
+    courses: [
+      "Anypoint Platform Operations",
+      "Anypoint Platform Architecture",
+      "Anypoint Platform Development",
+    ],
     certifications: [
       "MuleSoft Certified Developer - Level 1 (Mule 4)",
       "MuleSoft Certified Developer - Level 1 (Mule 4) DELTAMCD - Integration and API Associate (Mule 3.9)",
@@ -68,126 +90,146 @@ const catalogItems = {
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}
+    >
       <div className="container">
         {/* Logo Section */}
         <a className="navbar-brand" href="#">
-          <img src="/logo.png" alt="Logo" className="logo-img" />
+          <img src="/logo.png" alt="Logo" className={styles.logoImg} />
         </a>
 
-        {/* First Row with Browse Catalog Dropdown */}
-        <div className="dropdown nav-item">
-          <a
-            className="nav-link dropdown-toggle text-white"
-            href="#"
-            id="browseCatalogDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Browse Catalog
-          </a>
-          <ul
-            className="dropdown-menu dropdown-menu-dark catalog-dropdown"
-            aria-labelledby="browseCatalogDropdown"
-          >
-            {Object.keys(catalogItems).map((key) => (
-              <li key={key} className="dropdown-submenu">
-                <a className="dropdown-item dropdown-toggle" href="#">
-                  {key}
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <h6 className="dropdown-header">Courses</h6>
-                    {catalogItems[key].courses.length > 0 ? (
-                      catalogItems[key].courses.map((course, index) => (
-                        <a key={index} className="dropdown-item" href="#">
-                          {course}
-                        </a>
-                      ))
-                    ) : (
-                      <a className="dropdown-item" href="#">
-                        No Courses Available
-                      </a>
-                    )}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          {/* First Row with Browse Catalog Dropdown */}
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="browseCatalogDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Browse Catalog
+              </a>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="browseCatalogDropdown"
+              >
+                {Object.keys(catalogItems).map((key) => (
+                  <li key={key} className="dropdown-submenu">
+                    <a className="dropdown-item dropdown-toggle" href="#">
+                      {key}
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <h6 className="dropdown-header">Courses</h6>
+                        {catalogItems[key].courses.length > 0 ? (
+                          catalogItems[key].courses.map((course, index) => (
+                            <a key={index} className="dropdown-item" href="#">
+                              {course}
+                            </a>
+                          ))
+                        ) : (
+                          <a className="dropdown-item" href="#">
+                            No Courses Available
+                          </a>
+                        )}
+                      </li>
+                      <li>
+                        <h6 className="dropdown-header">Certifications</h6>
+                        {catalogItems[key].certifications.length > 0 ? (
+                          catalogItems[key].certifications.map(
+                            (certification, index) => (
+                              <a key={index} className="dropdown-item" href="#">
+                                {certification}
+                              </a>
+                            )
+                          )
+                        ) : (
+                          <a className="dropdown-item" href="#">
+                            No Certifications Available
+                          </a>
+                        )}
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <h6 className="dropdown-header">Certifications</h6>
-                    {catalogItems[key].certifications.length > 0 ? (
-                      catalogItems[key].certifications.map((certification, index) => (
-                        <a key={index} className="dropdown-item" href="#">
-                          {certification}
-                        </a>
-                      ))
-                    ) : (
-                      <a className="dropdown-item" href="#">
-                        No Certifications Available
-                      </a>
-                    )}
-                  </li>
-                </ul>
-              </li>
-            ))}
+                ))}
+              </ul>
+            </li>
           </ul>
-        </div>
 
-        {/* Second Row with Links */}
-        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              ABOUT
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              OFFERS
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              SCHEDULES
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              BLOG
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              WEBINARS
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              ACADEMICS
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              DIGITAL
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              AWARDS & RECOGNITION
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              CONTACT
-            </a>
-          </li>
-        </ul>
+          {/* Second Row with Links */}
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                ABOUT
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                OFFERS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                SCHEDULES
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                BLOG
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                WEBINARS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                ACADEMICS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                DIGITAL
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                AWARDS & RECOGNITION
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                CONTACT
+              </a>
+            </li>
+          </ul>
 
-        {/* Buttons Section */}
-        <div className="d-flex">
-          <a className="btn btn-outline-light me-2" href="#">
-            Log In
-          </a>
-          <a className="btn btn-light" href="#">
-            Sign Up
-          </a>
+          {/* Buttons Section */}
+          <div className="d-flex">
+            <a className="btn btn-outline-light me-2" href="#">
+              Log In
+            </a>
+            <a className="btn btn-light" href="#">
+              Sign Up
+            </a>
+          </div>
         </div>
       </div>
     </nav>
