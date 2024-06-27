@@ -56,7 +56,7 @@ class Home extends React.Component {
       <motion.div className="home">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="slide"
         >
@@ -66,8 +66,8 @@ class Home extends React.Component {
             <p>{description}</p>
           </div>
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="image-container"
           >
             <motion.img
