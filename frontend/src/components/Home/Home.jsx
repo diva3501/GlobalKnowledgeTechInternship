@@ -7,7 +7,7 @@ const slides = [
     title: "Data Science & IoT",
     subtitle: "Stay Updated and Remain Competitive",
     description:
-      "Unlock your potentialities and excel in the ever-expanding Data Science and IoT field.",
+      "Unlock your potential and excel in the ever-expanding Data Science and IoT field.",
     image: "/freepik.jpeg",
   },
   {
@@ -31,6 +31,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       currentSlide: 0,
+      isPaused: false,
     };
   }
 
@@ -43,9 +44,19 @@ class Home extends React.Component {
   }
 
   nextSlide = () => {
-    this.setState((prevState) => ({
-      currentSlide: (prevState.currentSlide + 1) % slides.length,
-    }));
+    if (!this.state.isPaused) {
+      this.setState((prevState) => ({
+        currentSlide: (prevState.currentSlide + 1) % slides.length,
+      }));
+    }
+  };
+
+  handlePause = () => {
+    this.setState({ isPaused: true });
+  };
+
+  handleResume = () => {
+    this.setState({ isPaused: false });
   };
 
   render() {
@@ -64,7 +75,11 @@ class Home extends React.Component {
     };
 
     return (
-      <motion.div className="home">
+      <motion.div
+        className="home"
+        onMouseEnter={this.handlePause}
+        onMouseLeave={this.handleResume}
+      >
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0 }}
