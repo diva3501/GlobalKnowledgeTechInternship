@@ -37,12 +37,12 @@ const CustomerSay = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbackData.length);
-    }, 3000); // Change card every 3 seconds
+    }, 3000); 
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval); 
   }, []);
 
-  // Function to get the set of three feedback cards to display
+  
   const getDisplayedCards = () => {
     const displayedCards = [];
     for (let i = 0; i < 3; i++) {

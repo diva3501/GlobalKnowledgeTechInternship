@@ -94,7 +94,7 @@ const Navbar = () => {
       className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}
     >
       <div className="container">
-        {/* Logo Section */}
+     
         <a className="navbar-brand" href="#">
           <img src="/logo.png" alt="Logo" className={styles.logoImg} />
         </a>
@@ -112,7 +112,7 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          {/* First Row with Browse Catalog Dropdown */}
+         
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">
               <a
@@ -172,7 +172,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Second Row with Links */}
+        
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link" href="/aboutgkt">
@@ -221,7 +221,6 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Buttons Section */}
           <div className="d-flex">
             <a className="btn btn-outline-light me-2" href="#">
               Log In
