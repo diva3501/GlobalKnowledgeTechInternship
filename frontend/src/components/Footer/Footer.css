@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(100deg, #242323,rgb(0, 0, 0));
-  color: white; /* Text color */
+  color: white;
   padding: 40px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +15,7 @@
 .footer-heading {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #FFA500; /* Heading color */
+  color: #FFA500;
 }
 
 .social-icons {
@@ -30,7 +30,7 @@
 }
 
 .social-icon:hover {
-  transform: scale(1.2); /* Scale up on hover */
+  transform: scale(1.2);
 }
 
 .footer-links {
@@ -49,7 +49,7 @@
 }
 
 .footer-links a:hover {
-  color: #FFA500; /* Hover color */
+  color: #FFA500;
 }
 
 .subscribe-form {
@@ -68,7 +68,7 @@
 .subscribe-form button {
   padding: 10px 20px;
   border: none;
-  background-color: #FFA500; /* Button background color */
+  background-color: #FFA500;
   color: white;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -76,7 +76,7 @@
 }
 
 .subscribe-form button:hover {
-  background-color: #CDA04E; /* Button hover background color */
+  background-color: #CDA04E;
 }
 
 .footer-bottom {
@@ -95,5 +95,5 @@
 }
 
 .footer-policies a:hover {
-  color: #FFA500; /* Hover color */
+  color: #FFA500;
 }

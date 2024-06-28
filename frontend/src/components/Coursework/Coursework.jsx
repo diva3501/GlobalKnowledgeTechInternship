@@ -7,10 +7,10 @@ const Coursework = () => {
   const [displayedCourses, setDisplayedCourses] = useState(courseworkData[selectedCategory].slice(0, 6));
   const [showAll, setShowAll] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
-  const [animationDirection, setAnimationDirection] = useState('left'); // Animation direction for slide effect
+  const [animationDirection, setAnimationDirection] = useState('left'); 
 
   const handleCategoryChange = (category) => {
-    // Determine animation direction based on selected category position
+   
     if (Object.keys(courseworkData).indexOf(selectedCategory) < Object.keys(courseworkData).indexOf(category)) {
       setAnimationDirection('left');
     } else {
@@ -21,10 +21,10 @@ const Coursework = () => {
     setShowAll(false);
     setSelectedCourse(null);
 
-    // Wait for animation to finish before updating displayed courses
+  
     setTimeout(() => {
       setDisplayedCourses(courseworkData[category].slice(0, 6));
-    }, 300); // Adjust timing to match your CSS animation duration
+    }, 300); 
   };
 
   const handleShowMore = () => {

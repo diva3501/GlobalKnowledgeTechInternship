@@ -1,4 +1,3 @@
-/* OurHappyCustomer.css */
 .customer-slider {
   text-align: center;
   padding: 60px 20px;
@@ -10,8 +9,6 @@
   font-size: 3rem;
   color: #f8f9fa;
 }
-
-
 
 .customer-slider-wrapper {
   display: flex;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { IoMdQuote } from 'react-icons/io';
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
-import './Footer.css'; // Assuming you import CSS for the footer
+import './Footer.css'; 
 
 const Footer = () => {
-  // Get current year dynamically
+  
   const currentYear = new Date().getFullYear();
 
   return (
