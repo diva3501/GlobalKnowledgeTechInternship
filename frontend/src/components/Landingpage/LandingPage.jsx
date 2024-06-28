@@ -14,7 +14,7 @@ import Footer from '../Footer/Footer';
 const LandingPage = () => {
   return (
     <div className="App">
-      <Navbar />
+      
       <Home />
       <Partnership />
       <TechnologyPrograms />

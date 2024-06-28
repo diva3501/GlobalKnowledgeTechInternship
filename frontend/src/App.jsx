@@ -9,6 +9,7 @@ import './components/Navbar/Navbar.module.css';
 function App() {
   return (
     <>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutgkt" element={<AboutPage />} />

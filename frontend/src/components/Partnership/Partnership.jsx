@@ -27,7 +27,7 @@ const Partnership = () => {
         {displayedPartners.map((partner, index) => (
           <motion.div
             key={index}
-            className="card cardd"
+            className="cardpt cardd"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.7, delay: index * 0.2 }} // Staggered animation delay
@@ -37,10 +37,10 @@ const Partnership = () => {
                 variant="top"
                 src={partner.image}
                 alt={partner.name}
-                className="card-img-top cardimgtop"
+                className="cardpt-img-top cardimgtop"
               />
               <Card.Body>
-                <Card.Title className="card-title cardtitle text-center mt-3 mb-3 text-white">
+                <Card.Title className="cardpt-title cardtitle text-center mt-3 mb-3 text-white">
                   {partner.name}
                 </Card.Title>
               </Card.Body>
