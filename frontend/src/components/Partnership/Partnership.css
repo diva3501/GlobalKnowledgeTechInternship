@@ -1,93 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-.partnership {
-  background: linear-gradient(100deg, #242323,rgb(0, 0, 0));
+.partnership-container {
+  background: linear-gradient(100deg, #242323, rgb(0, 0, 0));
   color: white;
   padding: 40px 20px;
   text-align: center;
 }
 
-.heading {
+.partnership-heading {
   font-size: 2.0rem;
-  color: #ffffff;
   margin-bottom: 40px;
 }
 
-.card-container {
+.partnership-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-.cardpt {
-    background-color: rgba(20, 20, 20, 0.959);
-    border-radius: 10px;
-    overflow: hidden;
-    width: 250px;
-    height: 350px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .cardpt:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  }
-  
-  .cardpt-img-top {
+
+.partnership-card {
+  overflow: hidden;
+  width: 250px;
+  height: 350px;
+  perspective: 1500px; /* Add perspective for 3D effect */
+}
+
+.partnership-card-inner {
+  background-color: rgba(20, 20, 20, 0.959);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.partnership-card:hover .partnership-card-inner {
+  transform: scale(1.05) rotateY(10deg); /* Scale and rotate on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.partnership-card-img-top {
+  width: 100%;
+  height: 80%;
+  object-fit: contain; /* Ensure image covers entire area */
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s; /* Smooth image transform */
+}
+
+.partnership-card:hover .partnership-card-img-top {
+  transform: scale(1.2); /* Scale up image on hover */
+}
+
+.partnership-card-body {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.959); /* Match card background */
+  padding: 10px;
+  transform-origin: bottom; /* Animation origin */
+  transition: transform 0.5s, opacity 0.5s; /* Animation properties */
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.partnership-card:hover .partnership-card-body {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.partnership-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.partnership-card:hover .partnership-card-title {
+  transform: scale(1.1); /* Scale title on hover */
+}
+
+.partnership-view-all-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.partnership-view-all-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.partnership-view-all-button:hover {
+  background-color: white;
+  color: #2b2b2b;
+}
+
+@media (max-width: 992px) {
+  .partnership-card {
     width: 100%;
-    height: 80%;
-    object-fit: CONTAIN;
-    border-radius: 10px 10px 0 0;
+    max-width: 300px;
   }
-  
-  .cardpt-body {
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .partnership-card {
+    max-width: 100%;
   }
-  
-  .cardpt-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  .view-all-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .view-all-button {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .view-all-button:hover {
-    background-color: white;
-    color: #2b2b2b;
-  }
-  
-  @media (max-width: 992px) {
-    .cardpt {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .cardpt {
-      max-width: 100%;
-    }
-  }
+}

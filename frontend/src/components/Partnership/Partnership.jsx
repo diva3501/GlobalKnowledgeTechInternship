@@ -21,26 +21,40 @@ const Partnership = () => {
   const displayedPartners = showAll ? partners : partners.slice(0, 4);
 
   return (
-    <div className="partnership">
-      <h2 className="heading">Our Partnerships</h2>
-      <div className="card-container cardcontainer d-flex justify-content-center mt-5 mb-5 gap-5 flex-wrap">
+    <motion.div
+      className="partnership-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="partnership-heading">Our Partnerships</h2>
+      <div className="partnership-card-container d-flex justify-content-center mt-5 mb-5 gap-5 flex-wrap">
         {displayedPartners.map((partner, index) => (
           <motion.div
             key={index}
-            className="cardpt cardd"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.7, delay: index * 0.2 }} // Staggered animation delay
+            className="partnership-card"
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3 },
+              boxShadow: "0 6px 12px rgba(0, 0, 0, 0.5)",
+            }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: index * 0.2 }}
           >
-            <Card>
+            <Card className="partnership-card-inner">
               <Card.Img
                 variant="top"
                 src={partner.image}
                 alt={partner.name}
-                className="cardpt-img-top cardimgtop"
+                className="partnership-card-img-top"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, rotate: 360 }}
+                transition={{ duration: 1 }}
               />
-              <Card.Body>
-                <Card.Title className="cardpt-title cardtitle text-center mt-3 mb-3 text-white">
+              <Card.Body className="partnership-card-body">
+                <Card.Title className="partnership-card-title text-center mt-3 mb-3">
                   {partner.name}
                 </Card.Title>
               </Card.Body>
@@ -49,16 +63,18 @@ const Partnership = () => {
         ))}
       </div>
       {!showAll && (
-        <div className="view-all-container">
-          <button
-            className="view-all-button"
+        <div className="partnership-view-all-container">
+          <motion.button
+            className="partnership-view-all-button"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             onClick={() => setShowAll(!showAll)}
           >
             View All <FaAngleDoubleDown />
-          </button>
+          </motion.button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

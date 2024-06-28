@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./TechnologyPrograms.css";
 import { FaCloud, FaBrain, FaCube, FaRobot, FaDatabase } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const programs = [
   { name: "Cloud Architect", icon: <FaCloud className="tp-program-icon" /> },
@@ -17,16 +18,14 @@ const programs = [
 ];
 
 const TechnologyPrograms = () => {
-  const [isVisible, setIsVisible] = useState(
-    Array(programs.length).fill(false)
-  );
+  const [isVisible, setIsVisible] = useState(Array(programs.length).fill(false));
   const cardRefs = useRef([]);
 
   useEffect(() => {
     const observerOptions = {
-      root: null, // use document as viewport
+      root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of element is visible
+      threshold: 0.5,
     };
 
     const observers = cardRefs.current.map((cardRef, index) => {
@@ -56,14 +55,20 @@ const TechnologyPrograms = () => {
       <h2 className="tp-heading">Technological Programs</h2>
       <div className="tp-card-container">
         {programs.map((program, index) => (
-          <div
-            ref={(el) => (cardRefs.current[index] = el)}
-            className={`tp-card ${isVisible[index] ? "animate-in" : ""}`}
+          <motion.div
             key={index}
+            ref={(el) => (cardRefs.current[index] = el)}
+            className="tp-card"
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible[index] ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
           >
-            <div className="tp-icon-container">{program.icon}</div>
+            <div className="tp-icon-container">
+              <motion.div whileHover={{ scale: 1.2 }}>{program.icon}</motion.div>
+            </div>
             <div className="tp-program-name">{program.name}</div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

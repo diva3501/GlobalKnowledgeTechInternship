@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ServiceCard.css";
 
-const ServiceCard = ({ service, onClick }) => {
+const ServiceCard = ({ service }) => {
   return (
-    <div className="service-card" onClick={() => onClick(service)}>
+    <Link to={`/services/${service.id}`} className="service-card">
       <img src={service.image} alt={service.title} className="service-image" />
       <div className="service-content">
         <h3>{service.title}</h3>
@@ -12,7 +13,7 @@ const ServiceCard = ({ service, onClick }) => {
           <span className="read-more">Read more</span>
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
