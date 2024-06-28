@@ -9,7 +9,7 @@ import './components/Navbar/Navbar.module.css';
 function App() {
   return (
     <Container fluid className="App">
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutgkt" element={<AboutPage />} />
