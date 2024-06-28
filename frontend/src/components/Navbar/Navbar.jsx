@@ -175,7 +175,7 @@ const Navbar = () => {
           {/* Second Row with Links */}
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/aboutgkt">
                 ABOUT
               </a>
             </li>
