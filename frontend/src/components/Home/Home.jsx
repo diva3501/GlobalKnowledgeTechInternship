@@ -116,6 +116,7 @@ class Home extends React.Component {
           </div>
         </motion.div>
       </motion.div>
+      
     );
   }
 }

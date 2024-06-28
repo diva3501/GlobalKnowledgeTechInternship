@@ -1,19 +1,19 @@
 .otherservice {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center;
+  align-items: center; */
   min-height: 100vh;
   background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
   padding: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
 .os-container {
-  width: 80%;
-  max-width: 1200px;
-  padding: 20px;
+  width: 100%;
+  /* max-width: 1200px; */
+  padding: 25px;
   background: rgba(78, 75, 75, 0.1);
   border-radius: 10px;
 }

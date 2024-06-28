@@ -8,7 +8,7 @@ const Aboutus = () => {
         <div className="video-background">
           <iframe
             className="video-frame"
-            src="https://www.youtube.com/embed/97XNN_aoxpg?autoplay=1&mute=1&loop=1&controls=0"
+            src="https://www.youtube.com/embed/97XNN_aoxpg?autoplay=1&mute=1&loop=1&controls=0&playlist=97XNN_aoxpg"
             title="About Us Video"
             frameBorder="0"
             allow="autoplay; encrypted-media"
