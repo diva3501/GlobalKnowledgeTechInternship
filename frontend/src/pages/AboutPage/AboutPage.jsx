@@ -323,6 +323,94 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-light py-5 text-dark">
+        <div className="container">
+          <h2 className="text-center mb-5">Differentiator</h2>
+          <div className="row text-center">
+            <div className="col-md-4 mb-4">
+              <div className="card border-0 shadow-lg h-100 bg-light">
+                <div className="card-body">
+                  <div className="mb-4">
+                    <svg
+                      width="64"
+                      height="64"
+                      className="bi bi-book text-primary"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 2.828c.885-.37 2.06-.662 3.5-.662 1.44 0 2.615.292 3.5.662 1.885-.742 3.735-.742 5.62 0A4.96 4.96 0 0 1 15 5v10.5a.5.5 0 0 1-.812.39 5.464 5.464 0 0 0-1.69-1.017c-.866-.342-1.943-.573-3.158-.573s-2.292.23-3.158.573A5.463 5.463 0 0 0 2.812 15.89a.5.5 0 0 1-.812-.39V5c0-1.39.617-2.635 1.758-3.435zM4.5 3c-1.253 0-2.342.267-3 .535v10.972c.805-.474 1.951-.757 3.158-.757.61 0 1.182.051 1.717.145V3.535c-.658-.268-1.747-.535-3-.535zm4.5.145v10.355c.535-.094 1.107-.145 1.717-.145 1.207 0 2.353.283 3.158.757V3.535c-.658-.268-1.747-.535-3-.535s-2.342.267-3 .535z" />
+                    </svg>
+                  </div>
+                  <h5 className="card-title text-primary">
+                    Curated Course Content
+                  </h5>
+                  <p className="card-text text-dark">
+                    Curated course content bridging the gap between campuses and
+                    corporate workforce enablement.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="card border-0 shadow-lg h-100 bg-light">
+                <div className="card-body">
+                  <div className="mb-4">
+                    <svg
+                      width="64"
+                      height="64"
+                      className="bi bi-person-badge text-primary"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6.5 2a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zM4 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM8 5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm-2-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2H1z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M14 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0zm-1 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h5 className="card-title text-primary">
+                    Advantage Bootcamp
+                  </h5>
+                  <p className="card-text text-dark">
+                    Offer iconic “Advantage Bootcamp” enabling participants to
+                    be Certificate-ready.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="card border-0 shadow-lg h-100 bg-light">
+                <div className="card-body">
+                  <div className="mb-4">
+                    <svg
+                      width="64"
+                      height="64"
+                      className="bi bi-cpu text-primary"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M5 0a.5.5 0 0 1 .5.5V2h-1V.5A.5.5 0 0 1 5 0zm6 0a.5.5 0 0 1 .5.5V2h-1V.5A.5.5 0 0 1 11 0zM5 14a.5.5 0 0 1 .5.5V16h-1v-1.5a.5.5 0 0 1 .5-.5zm6 0a.5.5 0 0 1 .5.5V16h-1v-1.5a.5.5 0 0 1 .5-.5zM0 5a.5.5 0 0 1 .5-.5H2v1H.5A.5.5 0 0 1 0 5zm14 0a.5.5 0 0 1 .5-.5H16v1h-1.5a.5.5 0 0 1-.5-.5zm-1 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V9.5a.5.5 0 0 1 .5-.5h10zm.5-1H1.5a.5.5 0 0 1-.5-.5V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5zm-1-2a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V3.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5V6zm.5 1.5a.5.5 0 0 1 .5.5V10h-1V8.5a.5.5 0 0 1 .5-.5zM0 11a.5.5 0 0 1 .5-.5H2v1H.5A.5.5 0 0 1 0 11zm14 0a.5.5 0 0 1 .5-.5H16v1h-1.5a.5.5 0 0 1-.5-.5zm-6-5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V6zm-4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1-.5-.5V6z" />
+                    </svg>
+                  </div>
+                  <h5 className="card-title text-primary">
+                    AI-based Learning Management
+                  </h5>
+                  <p className="card-text text-dark">
+                    AI-based learning management systems that are
+                    lifestyle-friendly - Anywhere, Anytime!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
