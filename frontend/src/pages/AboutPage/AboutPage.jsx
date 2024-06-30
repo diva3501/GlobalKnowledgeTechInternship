@@ -411,6 +411,62 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="container mt-5">
+        <h2 className="text-center mb-4">Training Delivery Methods</h2>
+        <div className="row">
+          <div className="col-md-3 mb-4">
+            <div className="card h-100">
+              <div className="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/classroom-training-icon.png?sfvrsn=4"
+                  className="card-img-top"
+                  alt="Classroom Training"
+                />
+                <h5 className="card-title mt-3">Classroom</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 mb-4">
+            <div className="card h-100">
+              <div className="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/virtual-training-icon.png?sfvrsn=4"
+                  className="card-img-top"
+                  alt="Virtual Training"
+                />
+                <h5 className="card-title mt-3">Virtual</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 mb-4">
+            <div className="card h-100">
+              <div className="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/blended-training-icon.png?sfvrsn=4"
+                  className="card-img-top"
+                  alt="Blended Training"
+                />
+                <h5 className="card-title mt-3">Blended</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 mb-4">
+            <div className="card h-100">
+              <div className="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/digital-learning-icon.png?sfvrsn=4"
+                  className="card-img-top"
+                  alt="Digital Training"
+                />
+                <h5 className="card-title mt-3">Digital</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </>
   );
 };

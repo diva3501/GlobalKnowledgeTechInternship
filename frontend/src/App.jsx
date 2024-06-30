@@ -5,6 +5,7 @@ import LandingPage from './components/Landingpage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
 import AboutPage from './pages/AboutPage/AboutPage';
 import './components/Navbar/Navbar.module.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutgkt" element={<AboutPage />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
