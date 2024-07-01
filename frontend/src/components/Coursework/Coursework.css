@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .coursework {
   background: linear-gradient(100deg, #242323, rgb(0, 0, 0));
   display: flex;
@@ -111,11 +113,12 @@
   text-align: center;
 }
 
-.course-detail-description {
+.course-detail-info {
   font-size: 16px;
   color: white;
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .back-button {
@@ -153,8 +156,6 @@
 .show-more:hover {
   background-color: #0056b3;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .coursework-cards {

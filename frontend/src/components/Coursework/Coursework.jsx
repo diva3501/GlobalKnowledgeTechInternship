@@ -7,10 +7,9 @@ const Coursework = () => {
   const [displayedCourses, setDisplayedCourses] = useState(courseworkData[selectedCategory].slice(0, 6));
   const [showAll, setShowAll] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
-  const [animationDirection, setAnimationDirection] = useState('left'); 
+  const [animationDirection, setAnimationDirection] = useState('left');
 
   const handleCategoryChange = (category) => {
-   
     if (Object.keys(courseworkData).indexOf(selectedCategory) < Object.keys(courseworkData).indexOf(category)) {
       setAnimationDirection('left');
     } else {
@@ -21,10 +20,9 @@ const Coursework = () => {
     setShowAll(false);
     setSelectedCourse(null);
 
-  
     setTimeout(() => {
       setDisplayedCourses(courseworkData[category].slice(0, 6));
-    }, 300); 
+    }, 300);
   };
 
   const handleShowMore = () => {
@@ -55,13 +53,18 @@ const Coursework = () => {
             <button className="back-button" onClick={() => setSelectedCourse(null)}>Back</button>
             <img src={selectedCourse.image} alt={selectedCourse.title} className="course-detail-image" />
             <h3 className="course-detail-title">{selectedCourse.title}</h3>
-            <p className="course-detail-description">{selectedCourse.description}</p>
+            <div className="course-detail-info">
+              <p><strong>Course Code:</strong> {selectedCourse.courseCode}</p>
+              <p><strong>Duration:</strong> {selectedCourse.duration}</p>
+              <p><strong>Price:</strong> {selectedCourse.price}</p>
+              <p><strong>Description:</strong> {selectedCourse.description}</p>
+            </div>
           </div>
         ) : (
           <div className="coursework-cards">
             {displayedCourses.map((course, index) => (
               <div key={index} className="course-card" onClick={() => handleCourseClick(course)}>
-                <img src={course.image} alt={course.title} className="course-image" />
+                
                 <h3 className="course-title">{course.title}</h3>
                 <p className="course-description">
                   {course.description.length > 100 ? `${course.description.substring(0, 100)}...` : course.description}

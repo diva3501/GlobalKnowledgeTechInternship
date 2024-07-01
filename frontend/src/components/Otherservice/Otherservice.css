@@ -9,13 +9,13 @@
   overflow: hidden;
 }
 
-
 .os-container {
   width: 80%;
   max-width: 1200px;
   padding: 20px;
   background: rgba(78, 75, 75, 0.1);
   border-radius: 10px;
+  margin-top: 50px; /* Adjust according to your navbar height */
 }
 
 .heading {
@@ -63,6 +63,8 @@
   color: #fff;
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size:xx-large;
 }
 
 .service-content p {
@@ -81,10 +83,10 @@
 
 .expanded-service {
   position: fixed;
-  top: 0;
+  top: 50px; /* Adjust to start below your navbar */
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px); /* Adjust to account for navbar height */
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;

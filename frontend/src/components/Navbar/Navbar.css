@@ -7,8 +7,8 @@
   margin-right: auto;
 }
 
-.navbar-brand .logo-img {
-  max-height: 40px;
+.logoImg {
+  max-height: 10px;
 }
 
 .navbar-nav .nav-link {

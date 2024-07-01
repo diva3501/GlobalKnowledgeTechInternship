@@ -1,22 +1,9 @@
 import React from "react";
 import "./Home.css";
+import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 
 const slides = [
-  {
-    title: "Data Science & IoT",
-    subtitle: "Stay Updated and Remain Competitive",
-    description:
-      "Unlock your potential and excel in the ever-expanding Data Science and IoT field.",
-    image: "/freepik.jpeg",
-  },
-  {
-    title: "AI and Machine Learning",
-    subtitle: "Creating Best Versions of You",
-    description:
-      "Be at the top of your professional game in the booming field of Artificial Intelligence and Machine Learning.",
-    image: "/freepik.jpeg",
-  },
   {
     title: "Global Knowledge Technologies",
     subtitle: "Offering IT Courses in Disruptive Technologies",
@@ -90,45 +77,23 @@ class Home extends React.Component {
         >
           <div className="overlay">
             <div className="content">
-              <motion.h3
-                initial="initial"
-                animate="animate"
-                variants={textVariants}
-                transition={{ duration: 1, delay: delay.title }}
-              >
-                {title}
-              </motion.h3>
-              <motion.h4
-                initial="initial"
-                animate="animate"
-                variants={textVariants}
-                transition={{ duration: 1, delay: delay.subtitle }}
-              >
-                {subtitle}
-              </motion.h4>
-              <motion.p
-                initial="initial"
-                animate="animate"
-                variants={textVariants}
-                transition={{ duration: 1, delay: delay.description }}
-              >
-                {description}
-              </motion.p>
+              <h3 className="title">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Global Knowledge Technologies",
+
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h3>
+              <h4 className="subtitle">{subtitle}</h4>
+              <p>{description}</p>
             </div>
           </div>
-          <div className="controls">
-            {slides.map((slide, index) => (
-              <motion.button
-                key={index}
-                className={`control-button ${
-                  index === currentSlide ? "active" : ""
-                }`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.8 }}
-                onClick={() => this.setState({ currentSlide: index })}
-              />
-            ))}
-          </div>
+          
         </motion.div>
       </motion.div>
     );
