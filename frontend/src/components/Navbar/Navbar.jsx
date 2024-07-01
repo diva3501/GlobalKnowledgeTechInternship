@@ -88,16 +88,14 @@ const catalogItems = {
   },
 };
 
+
 const Navbar = () => {
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}
-    >
+    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark sticky-top ${styles.navbarCustom}`}>
       <div className="container">
-     
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img src="/logo.png" alt="Logo" className={styles.logoImg} />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -112,7 +110,6 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-         
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">
               <a
@@ -125,10 +122,7 @@ const Navbar = () => {
               >
                 Browse Catalog
               </a>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="browseCatalogDropdown"
-              >
+              <ul className="dropdown-menu" aria-labelledby="browseCatalogDropdown">
                 {Object.keys(catalogItems).map((key) => (
                   <li key={key} className="dropdown-submenu">
                     <a className="dropdown-item dropdown-toggle" href="#">
@@ -152,13 +146,11 @@ const Navbar = () => {
                       <li>
                         <h6 className="dropdown-header">Certifications</h6>
                         {catalogItems[key].certifications.length > 0 ? (
-                          catalogItems[key].certifications.map(
-                            (certification, index) => (
-                              <a key={index} className="dropdown-item" href="#">
-                                {certification}
-                              </a>
-                            )
-                          )
+                          catalogItems[key].certifications.map((certification, index) => (
+                            <a key={index} className="dropdown-item" href="#">
+                              {certification}
+                            </a>
+                          ))
                         ) : (
                           <a className="dropdown-item" href="#">
                             No Certifications Available
@@ -172,12 +164,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-        
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="/aboutgkt">
+              <Link className="nav-link" to="/aboutgkt">
                 ABOUT
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -200,19 +191,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/academicsgkt">
                 ACADEMICS
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                DIGITAL
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                AWARDS & RECOGNITION
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">

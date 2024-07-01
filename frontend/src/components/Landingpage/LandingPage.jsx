@@ -24,7 +24,6 @@ const LandingPage = () => {
       <OurHappyCustomer />
       <Coursework />
       <CustomerSay />
-      <Footer />
     </div>
   );
 }

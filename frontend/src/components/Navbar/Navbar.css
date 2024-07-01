@@ -1,87 +1,66 @@
 .navbar {
-  background-color: #1f1f1f;
+  background-color: #1f1f1f; /* Dark background color */
   padding: 15px 20px;
 }
 
 .navbar-brand {
-  margin-right: auto;
+  margin-right: 15px; /* Margin for brand */
 }
 
 .logoImg {
-  max-height: 10px;
+  max-height: 50px; /* Adjust as needed */
 }
 
 .navbar-nav .nav-link {
-  color: white;
-  font-weight: 500;
-  margin-right: 20px;
+  color: white; /* Text color */
+  font-weight: 500; /* Font weight */
+  margin-right: 15px; /* Spacing between links */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffc107;
+  color: #ffc107; /* Hover color */
 }
 
-
-.navbar-nav .dropdown-menu {
-  background-color: #1f1f1f;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+.dropdown-menu {
+  background-color: #1f1f1f; /* Dropdown background color */
+  border: none; /* No border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
 }
 
-.navbar-nav .dropdown-item {
-  color: white;
+.dropdown-item {
+  color: white; /* Text color */
 }
 
-.navbar-nav .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.132);
-  border-radius: 5px;
-}
-
-
-.dropdown-submenu {
-  position: relative;
- 
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+  border-radius: 5px; /* Rounded corners on hover */
 }
 
 .dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-  background-color: #1f1f1f;
-  
+  top: 0; /* Position */
+  left: 100%; /* Position */
+  margin-top: -1px; /* Adjust positioning */
+  background-color: #1f1f1f; /* Submenu background color */
 }
 
 .dropdown-submenu > .dropdown-menu .dropdown-header {
-  color: #ffc107;
-  font-weight: 700;
+  color: #ffc107; /* Header color */
+  font-weight: 700; /* Header font weight */
 }
-
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  
-}
-
-
-.navbar .btn {
-  margin-left: 10px;
-}
-
 
 @media (max-width: 992px) {
   .navbar-nav .nav-link {
-    margin-right: 0;
+    margin-right: 0; /* Remove margin */
   }
 
   .navbar .btn {
-    margin-left: 0;
-    margin-top: 10px;
+    margin-left: 0; /* Button margin */
+    margin-top: 10px; /* Button top margin */
   }
 
   .navbar-brand img {
-    max-height: 30px;
-    margin-right: 0;
+    max-height: 30px; /* Brand logo max height */
+    margin-right: 0; /* Remove margin */
   }
 }
