@@ -10,11 +10,11 @@ const InlineTypewriter = styled.span`
 const AboutPage = () => {
   return (
     <>
-      <div className="bg-light py-5">
+      <div className="bg-dark py-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-8 text-center">
-              <h1 className="display-6 mb-3 text-dark">
+              <h1 className="display-6 mb-3 text-light">
                 Enhance Your{" "}
                 <InlineTypewriter>
                   <Typewriter
@@ -35,7 +35,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <section className="py-3 py-md-5">
+      <section className="py-3 py-md-5 bg-dark">
         <div className="container">
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5">
@@ -49,8 +49,8 @@ const AboutPage = () => {
             <div className="col-12 col-lg-6 col-xl-7">
               <div className="row justify-content-xl-center">
                 <div className="col-12 col-xl-11">
-                  <h2 className="mb-3">Who Are We?</h2>
-                  <p className="lead text-dark mb-3">
+                  <h2 className="mb-3 text-light">Who Are We?</h2>
+                  <p className="lead text-light mb-3">
                     Commenced on and thriving since 2002,{" "}
                     <strong>Global Knowledge Technologies</strong> is the most
                     prominent provider of professional development services and
@@ -63,7 +63,7 @@ const AboutPage = () => {
                     way to enabling your business to showcase its true
                     potential.
                   </p>
-                  <p className="text-dark mb-5">
+                  <p className="text-light mb-5">
                     We are a fast-growing company, but we have never lost sight
                     of our core values. We believe in collaboration, innovation,
                     and customer satisfaction. We are always looking for new
@@ -71,7 +71,7 @@ const AboutPage = () => {
                   </p>
                   <div className="row gy-4 gy-md-0 gx-xxl-5">
                     <div className="col-12 col-md-6">
-                      <div className="card border-0 shadow h-100">
+                      <div className="card bg-dark border-0 shadow h-100">
                         <div className="card-body d-flex align-items-start">
                           <div className="me-4 text-primary">
                             <svg
@@ -86,8 +86,8 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3">Versatile Brand</h2>
-                            <p className="text-dark mb-0">
+                            <h2 className="h4 mb-3 text-light">Versatile Brand</h2>
+                            <p className="text-light mb-0">
                               We are crafting a digital method that subsists
                               life across all mediums.
                             </p>
@@ -96,7 +96,7 @@ const AboutPage = () => {
                       </div>
                     </div>
                     <div className="col-12 col-md-6">
-                      <div className="card border-0 shadow h-100">
+                      <div className="card bg-dark border-0 shadow h-100">
                         <div className="card-body d-flex align-items-start">
                           <div className="me-4 text-primary">
                             <svg
@@ -111,8 +111,8 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3">Digital Agency</h2>
-                            <p className="text-dark mb-0">
+                            <h2 className="h4 mb-3 text-light">Digital Agency</h2>
+                            <p className="text-light mb-0">
                               We believe in innovation by merging primary with
                               elaborate skills.
                             </p>
@@ -128,11 +128,11 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-light py-5">
+      <section className="bg-dark py-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="h2 p-3 text-center">Quick Facts</h2>
+              <h2 className="h2 p-3 text-center text-light">Quick Facts</h2>
               <div className="row">
                 <div className="col-12 col-md-6 col-lg-4 mb-4">
                   <div className="card border-0 shadow h-100">
@@ -299,12 +299,12 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-5">
+      <section className="py-5 bg-dark">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h2 className="mb-4">Our Team</h2>
-              <span className="lead mb-4 text-muted">
+              <h2 className="mb-4 text-light">Our Team</h2>
+              <span className="lead mb-4 text-light">
                 Our team of experts is dedicated to helping you reach your
                 goals. We are committed to providing you with the best
                 educational resources and support. Our team of experts is
@@ -324,12 +324,12 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-light py-5 text-dark">
+      <section className="bg-dark py-5 text-light">
         <div className="container">
           <h2 className="text-center mb-5">Differentiator</h2>
           <div className="row text-center">
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-light">
+              <div className="card border-0 shadow-lg h-100 bg-dark">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -346,7 +346,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Curated Course Content
                   </h5>
-                  <p className="card-text text-dark">
+                  <p className="card-text text-light">
                     Curated course content bridging the gap between campuses and
                     corporate workforce enablement.
                   </p>
@@ -354,7 +354,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-light">
+              <div className="card border-0 shadow-lg h-100 bg-dark">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -376,7 +376,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Advantage Bootcamp
                   </h5>
-                  <p className="card-text text-dark">
+                  <p className="card-text text-light">
                     Offer iconic “Advantage Bootcamp” enabling participants to
                     be Certificate-ready.
                   </p>
@@ -384,7 +384,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-light">
+              <div className="card border-0 shadow-lg h-100 bg-dark">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -401,7 +401,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     AI-based Learning Management
                   </h5>
-                  <p className="card-text text-dark">
+                  <p className="card-text text-light">
                     AI-based learning management systems that are
                     lifestyle-friendly - Anywhere, Anytime!
                   </p>
@@ -412,8 +412,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="container mt-5">
-        <h2 className="text-center mb-4">Training Delivery Methods</h2>
+      <section className="py-5 bg-dark">
+        <h2 className="text-center mb-4 text-light">Training Delivery Methods</h2>
         <div className="row">
           <div className="col-md-3 mb-4">
             <div className="card h-100">
