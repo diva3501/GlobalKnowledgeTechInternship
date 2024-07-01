@@ -7,39 +7,72 @@ const InlineTypewriter = styled.span`
   display: inline-block;
 `;
 
+const StyledSection = styled.section`
+  background: linear-gradient(to right, #000000, #434343);
+  padding: 5rem 0;
+  color: #fff;
+`;
+
+const TeamImage = styled.img`
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+`;
+
+const Title = styled.h2`
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 50px;
+    background-color: #00aaff;
+    border-radius: 2px;
+  }
+`;
+
+const LeadText = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+`;
+
 const AboutPage = () => {
   return (
     <>
-      <div className="bg-dark py-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-10 col-lg-8 text-center">
-              <h1 className="display-6 mb-3 text-light">
-                Enhance Your{" "}
-                <InlineTypewriter>
-                  <Typewriter
-                    options={{
-                      strings: ["Skills", "Abilities", "Strengths"],
-                      wrapper: "span",
-                      cursor: "",
+      <StyledSection>
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-10 col-lg-8 text-center">
+            <h2 className="display-6 mb-3 text-light">
+              Enhance Your{" "}
+              <InlineTypewriter>
+                <Typewriter
+                  options={{
+                    strings: ["Skills", "Abilities", "Strengths"],
+                    wrapper: "span",
+                    cursor: "",
 
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </InlineTypewriter>{" "}
-                and Unlock Your Potential with Global Knowledge Technologies
-              </h1>
-            </div>
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </InlineTypewriter>{" "}
+              and Unlock Your Potential with Global Knowledge Technologies
+            </h2>
           </div>
         </div>
-      </div>
+      </StyledSection>
 
-      <section className="py-3 py-md-5 bg-dark">
+      <StyledSection className="py-3 py-md-5 bg-dark">
         <div className="container">
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5">
-              <img
+              <TeamImage
                 className="img-fluid rounded"
                 loading="lazy"
                 src="https://cdni.iconscout.com/illustration/premium/thumb/online-education-platform-4996048-4194809.png"
@@ -49,8 +82,8 @@ const AboutPage = () => {
             <div className="col-12 col-lg-6 col-xl-7">
               <div className="row justify-content-xl-center">
                 <div className="col-12 col-xl-11">
-                  <h2 className="mb-3 text-light">Who Are We?</h2>
-                  <p className="lead text-light mb-3">
+                  <Title className="mb-3 text-light">Who Are We?</Title>
+                  <LeadText className="lead text-light mb-3">
                     Commenced on and thriving since 2002,{" "}
                     <strong>Global Knowledge Technologies</strong> is the most
                     prominent provider of professional development services and
@@ -62,13 +95,13 @@ const AboutPage = () => {
                     steps in when you want to instill crucial skills that pave
                     way to enabling your business to showcase its true
                     potential.
-                  </p>
-                  <p className="text-light mb-5">
+                  </LeadText>
+                  <LeadText className="text-light mb-5">
                     We are a fast-growing company, but we have never lost sight
                     of our core values. We believe in collaboration, innovation,
                     and customer satisfaction. We are always looking for new
                     ways to improve our products and services.
-                  </p>
+                  </LeadText>
                   <div className="row gy-4 gy-md-0 gx-xxl-5">
                     <div className="col-12 col-md-6">
                       <div className="card bg-dark border-0 shadow h-100">
@@ -86,11 +119,13 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3 text-light">Versatile Brand</h2>
-                            <p className="text-light mb-0">
+                            <h2 className="h4 mb-3 text-light">
+                              Versatile Brand
+                            </h2>
+                            <LeadText className="text-light mb-0">
                               We are crafting a digital method that subsists
                               life across all mediums.
-                            </p>
+                            </LeadText>
                           </div>
                         </div>
                       </div>
@@ -111,11 +146,13 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3 text-light">Digital Agency</h2>
-                            <p className="text-light mb-0">
+                            <h2 className="h4 mb-3 text-light">
+                              Digital Agency
+                            </h2>
+                            <LeadText className="text-light mb-0">
                               We believe in innovation by merging primary with
                               elaborate skills.
-                            </p>
+                            </LeadText>
                           </div>
                         </div>
                       </div>
@@ -126,13 +163,13 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </StyledSection>
 
-      <section className="bg-dark py-5">
+      <StyledSection className="bg-dark py-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="h2 p-3 text-center text-light">Quick Facts</h2>
+              <Title className="h2  text-center text-light">Quick Facts</Title>
               <div className="row">
                 <div className="col-12 col-md-6 col-lg-4 mb-4">
                   <div className="card border-0 shadow h-100">
@@ -297,24 +334,24 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </StyledSection>
 
-      <section className="py-5 bg-dark">
+      <StyledSection>
         <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h2 className="mb-4 text-light">Our Team</h2>
-              <span className="lead mb-4 text-light">
+          <div className="row align-items-center">
+            <div className="col-md-6 mb-4 mb-md-0">
+              <Title>Our Team</Title>
+              <LeadText>
                 Our team of experts is dedicated to helping you reach your
                 goals. We are committed to providing you with the best
                 educational resources and support. Our team of experts is
                 passionate about teaching and sharing their knowledge with
                 others. We are always looking for new and innovative ways to
                 help you achieve your goals.
-              </span>
+              </LeadText>
             </div>
             <div className="col-md-6">
-              <img
+              <TeamImage
                 src="https://via.placeholder.com/500x500.png?text=Our+Team"
                 alt="Our Team"
                 className="img-fluid"
@@ -322,11 +359,11 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </StyledSection>
 
-      <section className="bg-dark py-5 text-light">
+      <StyledSection className="bg-dark py-5 text-light">
         <div className="container">
-          <h2 className="text-center mb-5">Differentiator</h2>
+          <Title className="text-center mb-5">Differentiator</Title>
           <div className="row text-center">
             <div className="col-md-4 mb-4">
               <div className="card border-0 shadow-lg h-100 bg-dark">
@@ -346,10 +383,10 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Curated Course Content
                   </h5>
-                  <p className="card-text text-light">
+                  <LeadText className="card-text text-light">
                     Curated course content bridging the gap between campuses and
                     corporate workforce enablement.
-                  </p>
+                  </LeadText>
                 </div>
               </div>
             </div>
@@ -376,10 +413,10 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Advantage Bootcamp
                   </h5>
-                  <p className="card-text text-light">
+                  <LeadText className="card-text text-light">
                     Offer iconic “Advantage Bootcamp” enabling participants to
                     be Certificate-ready.
-                  </p>
+                  </LeadText>
                 </div>
               </div>
             </div>
@@ -401,72 +438,72 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     AI-based Learning Management
                   </h5>
-                  <p className="card-text text-light">
+                  <LeadText className="card-text text-light">
                     AI-based learning management systems that are
                     lifestyle-friendly - Anywhere, Anytime!
-                  </p>
+                  </LeadText>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </StyledSection>
 
-      <section className="py-5 bg-dark">
-        <h2 className="text-center mb-4 text-light">Training Delivery Methods</h2>
-        <div className="row">
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body d-flex flex-column align-items-center">
-                <img
-                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/classroom-training-icon.png?sfvrsn=4"
-                  className="card-img-top"
-                  alt="Classroom Training"
-                />
-                <h5 className="card-title mt-3">Classroom</h5>
+      <StyledSection className="bg-dark py-5 text-light">
+        <div className="container">
+          <Title className="text-center mb-5">Training Delivery Methods</Title>
+          <div className="row">
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column align-items-center">
+                  <TeamImage
+                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/classroom-training-icon.png?sfvrsn=4"
+                    className="card-img-top"
+                    alt="Classroom Training"
+                  />
+                  <h5 className="card-title mt-3">Classroom</h5>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body d-flex flex-column align-items-center">
-                <img
-                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/virtual-training-icon.png?sfvrsn=4"
-                  className="card-img-top"
-                  alt="Virtual Training"
-                />
-                <h5 className="card-title mt-3">Virtual</h5>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column align-items-center">
+                  <TeamImage
+                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/virtual-training-icon.png?sfvrsn=4"
+                    className="card-img-top"
+                    alt="Virtual Training"
+                  />
+                  <h5 className="card-title mt-3">Virtual</h5>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body d-flex flex-column align-items-center">
-                <img
-                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/blended-training-icon.png?sfvrsn=4"
-                  className="card-img-top"
-                  alt="Blended Training"
-                />
-                <h5 className="card-title mt-3">Blended</h5>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column align-items-center">
+                  <TeamImage
+                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/blended-training-icon.png?sfvrsn=4"
+                    className="card-img-top"
+                    alt="Blended Training"
+                  />
+                  <h5 className="card-title mt-3">Blended</h5>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body d-flex flex-column align-items-center">
-                <img
-                  src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/digital-learning-icon.png?sfvrsn=4"
-                  className="card-img-top"
-                  alt="Digital Training"
-                />
-                <h5 className="card-title mt-3">Digital</h5>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column align-items-center">
+                  <TeamImage
+                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/digital-learning-icon.png?sfvrsn=4"
+                    className="card-img-top"
+                    alt="Digital Training"
+                  />
+                  <h5 className="card-title mt-3">Digital</h5>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      
+      </StyledSection>
     </>
   );
 };
