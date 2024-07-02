@@ -56,7 +56,7 @@ const CustomerSay = () => {
   };
 
   return (
-    <div className={`${styles.customerSayContainer} container py-5`}>
+    <div className={`${styles.customerSayContainer} container-fluid py-5`}>
       <h2 className={styles.customerSayTitle}>What Our Customers Say</h2>
       <div className={`${styles.feedbackCardsContainer} d-flex justify-content-center`}>
         {getDisplayedCards().map((feedback, index) => (

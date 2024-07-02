@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import AboutPage from './pages/AboutPage/AboutPage';
 import './components/Navbar/Navbar.module.css';
 import Footer from './components/Footer/Footer';
+import Academics from './pages/Academics/Academics';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutgkt" element={<AboutPage />} />
+        <Route path="/academicsgkt" element={<Academics/>} />
       </Routes>
       <Footer/>
     </>

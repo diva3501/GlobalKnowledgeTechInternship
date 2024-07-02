@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./OurHappyCustomer.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const OurHappyCustomer = () => {
   const customerImages = [
@@ -17,42 +19,51 @@ const OurHappyCustomer = () => {
     "customer11.png",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % customerImages.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [customerImages.length]);
-
-  const getDisplayedImages = () => {
-    const end = currentIndex + 7;
-    return [
-      ...customerImages.slice(currentIndex, end),
-      ...customerImages.slice(
-        0,
-        end > customerImages.length ? end - customerImages.length : 0
-      ),
-    ];
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (
     <div className="customer-slider">
       <div className="container text-center">
         <h2 className="mb-5 text-white heading">Our Happy Customers</h2>
-        <div className="customer-slider-wrapper d-flex justify-content-center">
-          {getDisplayedImages().map((image, index) => (
-            <img
-              key={index}
-              src={`/${image}`}
-              alt={`Customer ${index + 1}`}
-              className={`customer-image ${index < 7 ? "visible" : ""}`}
-              style={{ transform: `translateX(${-currentIndex * 100}%)` }}
-            />
+        <Slider {...settings} className="customer-slider-wrapper">
+          {customerImages.map((image, index) => (
+            <div key={index} className="customer-slide">
+              <img
+                src={`/${image}`}
+                alt={`Customer ${index + 1}`}
+                className="customer-image"
+              />
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );

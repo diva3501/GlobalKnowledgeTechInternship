@@ -4,13 +4,12 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaLinkedinIn } from 're
 import './Footer.css'; 
 
 const Footer = () => {
-  
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <div className="footer-column">
-        <h3 className="footer-heading">FOLLOW US!</h3>
+        <h3 className="footer-heading">Follow Us!</h3>
         <div className="social-icons">
           <FaFacebookF className="social-icon" />
           <FaInstagram className="social-icon" />
@@ -20,30 +19,30 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-column">
-        <h3 className="footer-heading">COMPANY</h3>
+        <h3 className="footer-heading">Company</h3>
         <ul className="footer-links">
-          <li><a href="/">About us</a></li>
-          <li><a href="/">Our team</a></li>
+          <li><a href="/">About Us</a></li>
+          <li><a href="/">Our Team</a></li>
           <li><a href="/">Careers</a></li>
-          <li><a href="/">Contact us</a></li>
+          <li><a href="/">Contact Us</a></li>
           <li><a href="/">Help & Support</a></li>
         </ul>
       </div>
       <div className="footer-column">
-        <h3 className="footer-heading">DISCOVER</h3>
+        <h3 className="footer-heading">Discover</h3>
         <ul className="footer-links">
-          <li><a href="/">Become an Instructor</a></li>
-          <li><a href="/">Be a Partner</a></li>
+          <li><a href="/">Become An Instructor</a></li>
+          <li><a href="/">Be A Partner</a></li>
         </ul>
       </div>
       <div className="footer-column">
-        <h3 className="footer-heading">FOR BUSINESS</h3>
+        <h3 className="footer-heading">For Business</h3>
         <ul className="footer-links">
-          <li><a href="/">Corporate training</a></li>
+          <li><a href="/">Corporate Training</a></li>
         </ul>
       </div>
       <div className="footer-column">
-        <h3 className="footer-heading">SUBSCRIBE TO OUR NEWSLETTER</h3>
+        <h3 className="footer-heading">Subscribe To Our Newsletter</h3>
         <div className="subscribe-form">
           <input type="email" placeholder="Enter your email" />
           <button type="submit">Subscribe</button>
