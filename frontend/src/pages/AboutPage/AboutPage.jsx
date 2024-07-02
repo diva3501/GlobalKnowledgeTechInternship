@@ -3,6 +3,8 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
+import { motion } from "framer-motion";
+
 const InlineTypewriter = styled.span`
   display: inline-block;
 `;
@@ -69,26 +71,41 @@ const ContentWrapper = styled.div`
 const AboutPage = () => {
   return (
     <>
-      <StyledSection style={{ display: 'flex', justifyContent: 'center' }}>
-        <ContentWrapper style={{ maxWidth: '80%' }}>
-          
-          <Title className="mb-3 text-light">
-            Enhance Your{" "}
-            <InlineTypewriter>
-              <span>Skills, Abilities, Strengths</span>{" "}
-              {/* Removed animation */}
-            </InlineTypewriter>{" "}
-            and Unlock Your Potential with <span style={{ color: '#00aaff' }}>Global Knowledge Technologies</span>
-          </Title>
-          <LeadText>
-            Join us to gain global knowledge and enhance your skills to achieve
-            your potential.
-          </LeadText>
-        </ContentWrapper>
+      <StyledSection>
+        <motion.div 
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <ContentWrapper style={{ maxWidth: "80%" }}>
+            <Title className="mb-3 text-light">
+              Enhance Your{" "}
+              <InlineTypewriter>
+                <span>Skills, Abilities, Strengths</span>{" "}
+                {/* Removed animation */}
+              </InlineTypewriter>{" "}
+              and Unlock Your Potential with{" "}
+              <span style={{ color: "#00aaff" }}>
+                Global Knowledge Technologies
+              </span>
+            </Title>
+            <LeadText>
+              Join us to gain global knowledge and enhance your skills to
+              achieve your potential.
+            </LeadText>
+          </ContentWrapper>
+        </motion.div>
       </StyledSection>
 
       <StyledSection className="py-3 py-md-5 bg-dark">
-        <div className="container">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+        >
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5">
               <TeamImage
@@ -100,7 +117,12 @@ const AboutPage = () => {
             </div>
             <div className="col-12 col-lg-6 col-xl-7">
               <div className="row justify-content-xl-center">
-                <div className="col-12 col-xl-11">
+                <motion.div
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: -100 }}
+                  transition={{ duration: 1 }}
+                  className="col-12 col-xl-11"
+                >
                   <Title className="mb-3 text-light">Who Are We?</Title>
                   <LeadText className="lead text-light mb-3">
                     Commenced on and thriving since 2002,{" "}
@@ -121,7 +143,12 @@ const AboutPage = () => {
                     and customer satisfaction. We are always looking for new
                     ways to improve our products and services.
                   </LeadText>
-                  <div className="row gy-4 gy-md-0 gx-xxl-5">
+                  <motion.div
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -100 }}
+                    transition={{ duration: 1.5 }}
+                    className="row gy-4 gy-md-0 gx-xxl-5"
+                  >
                     <div className="col-12 col-md-6">
                       <div className="card border-0 shadow h-100">
                         <div className="card-body d-flex align-items-start">
@@ -176,20 +203,30 @@ const AboutPage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </StyledSection>
 
       <StyledSection className="bg-dark py-5">
-        <div className="container">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+        >
           <div className="row">
             <div className="col-12">
               <Title className="h2  text-center text-light">Quick Facts</Title>
-              <div className="row">
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1.5 }}
+                className="row"
+              >
                 <div className="col-12 col-md-6 col-lg-4 mb-4">
                   <div className="card border-0 shadow h-100">
                     <div className="card-body d-flex align-items-start">
@@ -349,14 +386,19 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/* Add more cards as needed */}
-              </div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </StyledSection>
 
       <StyledSection>
-        <div className="container">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+        >
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
               <Title>Our Team</Title>
@@ -369,19 +411,29 @@ const AboutPage = () => {
                 help you achieve your goals.
               </LeadText>
             </div>
-            <div className="col-md-6">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1.5 }}
+              className="col-md-6"
+            >
               <TeamImage
                 src="https://via.placeholder.com/500x500.png?text=Our+Team"
                 alt="Our Team"
                 className="img-fluid"
               />
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </StyledSection>
 
       <StyledSection className="bg-dark py-5 text-light">
-        <div className="container">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+        >
           <Title className="text-center mb-5">Differentiator</Title>
           <div className="row text-center">
             <div className="col-md-4 mb-4">
@@ -465,11 +517,16 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </StyledSection>
 
       <StyledSection className="bg-dark py-5 text-light">
-        <div className="container">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="container"
+        >
           <Title className="text-center mb-5">Training Delivery Methods</Title>
           <div className="row">
             <div className="col-md-3 mb-4">
@@ -522,7 +579,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </StyledSection>
     </>
   );
