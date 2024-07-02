@@ -11,13 +11,16 @@ const StyledSection = styled.section`
   background: linear-gradient(to right, #000000, #434343);
   padding: 5rem 0;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const TeamImage = styled.img`
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 `;
-
 const Title = styled.h2`
   position: relative;
   display: inline-block;
@@ -27,12 +30,19 @@ const Title = styled.h2`
   &::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     height: 4px;
     width: 50px;
     background-color: #00aaff;
     border-radius: 2px;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 1.75rem;
   }
 `;
 
@@ -41,31 +51,40 @@ const LeadText = styled.p`
   line-height: 1.7;
   margin-bottom: 2rem;
 `;
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+`;
+
+
 
 const AboutPage = () => {
   return (
     <>
-      <StyledSection>
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-10 col-lg-8 text-center">
-            <h2 className="display-6 mb-3 text-light">
-              Enhance Your{" "}
-              <InlineTypewriter>
-                <Typewriter
-                  options={{
-                    strings: ["Skills", "Abilities", "Strengths"],
-                    wrapper: "span",
-                    cursor: "",
-
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </InlineTypewriter>{" "}
-              and Unlock Your Potential with Global Knowledge Technologies
-            </h2>
-          </div>
-        </div>
+      <StyledSection style={{ display: 'flex', justifyContent: 'center' }}>
+        <ContentWrapper style={{ maxWidth: '80%' }}>
+          
+          <Title className="mb-3 text-light">
+            Enhance Your{" "}
+            <InlineTypewriter>
+              <span>Skills, Abilities, Strengths</span>{" "}
+              {/* Removed animation */}
+            </InlineTypewriter>{" "}
+            and Unlock Your Potential with <span style={{ color: '#00aaff' }}>Global Knowledge Technologies</span>
+          </Title>
+          <LeadText>
+            Join us to gain global knowledge and enhance your skills to achieve
+            your potential.
+          </LeadText>
+        </ContentWrapper>
       </StyledSection>
 
       <StyledSection className="py-3 py-md-5 bg-dark">
@@ -104,7 +123,7 @@ const AboutPage = () => {
                   </LeadText>
                   <div className="row gy-4 gy-md-0 gx-xxl-5">
                     <div className="col-12 col-md-6">
-                      <div className="card bg-dark border-0 shadow h-100">
+                      <div className="card border-0 shadow h-100">
                         <div className="card-body d-flex align-items-start">
                           <div className="me-4 text-primary">
                             <svg
@@ -119,10 +138,10 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3 text-light">
+                            <h2 className="h4 mb-3 text-dark">
                               Versatile Brand
                             </h2>
-                            <LeadText className="text-light mb-0">
+                            <LeadText className="text-dark mb-0">
                               We are crafting a digital method that subsists
                               life across all mediums.
                             </LeadText>
@@ -131,7 +150,7 @@ const AboutPage = () => {
                       </div>
                     </div>
                     <div className="col-12 col-md-6">
-                      <div className="card bg-dark border-0 shadow h-100">
+                      <div className="card bg-light border-0 shadow h-100">
                         <div className="card-body d-flex align-items-start">
                           <div className="me-4 text-primary">
                             <svg
@@ -146,10 +165,10 @@ const AboutPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h2 className="h4 mb-3 text-light">
+                            <h2 className="h4 mb-3 text-dark">
                               Digital Agency
                             </h2>
-                            <LeadText className="text-light mb-0">
+                            <LeadText className="text-dark mb-0">
                               We believe in innovation by merging primary with
                               elaborate skills.
                             </LeadText>
@@ -366,7 +385,7 @@ const AboutPage = () => {
           <Title className="text-center mb-5">Differentiator</Title>
           <div className="row text-center">
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-dark">
+              <div className="card border-0 shadow-lg h-100 bg-light">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -383,7 +402,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Curated Course Content
                   </h5>
-                  <LeadText className="card-text text-light">
+                  <LeadText className="card-text text-dark">
                     Curated course content bridging the gap between campuses and
                     corporate workforce enablement.
                   </LeadText>
@@ -391,7 +410,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-dark">
+              <div className="card border-0 shadow-lg h-100 bg-light">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -413,7 +432,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     Advantage Bootcamp
                   </h5>
-                  <LeadText className="card-text text-light">
+                  <LeadText className="card-text text-dark">
                     Offer iconic “Advantage Bootcamp” enabling participants to
                     be Certificate-ready.
                   </LeadText>
@@ -421,7 +440,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="col-md-4 mb-4">
-              <div className="card border-0 shadow-lg h-100 bg-dark">
+              <div className="card border-0 shadow-lg h-100 bg-light">
                 <div className="card-body">
                   <div className="mb-4">
                     <svg
@@ -438,7 +457,7 @@ const AboutPage = () => {
                   <h5 className="card-title text-primary">
                     AI-based Learning Management
                   </h5>
-                  <LeadText className="card-text text-light">
+                  <LeadText className="card-text text-dark">
                     AI-based learning management systems that are
                     lifestyle-friendly - Anywhere, Anytime!
                   </LeadText>
@@ -457,10 +476,11 @@ const AboutPage = () => {
               <div className="card h-100">
                 <div className="card-body d-flex flex-column align-items-center">
                   <TeamImage
-                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/classroom-training-icon.png?sfvrsn=4"
+                    src="https://jooinn.com/images/primary-school-classroom-5.jpg"
                     className="card-img-top"
                     alt="Classroom Training"
                   />
+                  <br />
                   <h5 className="card-title mt-3">Classroom</h5>
                 </div>
               </div>
@@ -469,7 +489,7 @@ const AboutPage = () => {
               <div className="card h-100">
                 <div className="card-body d-flex flex-column align-items-center">
                   <TeamImage
-                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/virtual-training-icon.png?sfvrsn=4"
+                    src="https://tse1.mm.bing.net/th?id=OIP.jL8Zm3L6YWW4Qynk4uTwKQHaE8&pid=Api&P=0&h=180"
                     className="card-img-top"
                     alt="Virtual Training"
                   />
@@ -481,7 +501,7 @@ const AboutPage = () => {
               <div className="card h-100">
                 <div className="card-body d-flex flex-column align-items-center">
                   <TeamImage
-                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/blended-training-icon.png?sfvrsn=4"
+                    src="https://www.hurix.com/wp-content/uploads/2020/03/blended-learning.jpeg"
                     className="card-img-top"
                     alt="Blended Training"
                   />
@@ -493,7 +513,7 @@ const AboutPage = () => {
               <div className="card h-100">
                 <div className="card-body d-flex flex-column align-items-center">
                   <TeamImage
-                    src="https://www.trainingindustry.com/images/default-source/articles/training-delivery-methods/digital-learning-icon.png?sfvrsn=4"
+                    src="https://lighthouse-tc.com/wp-content/uploads/2020/08/online-training.jpg"
                     className="card-img-top"
                     alt="Digital Training"
                   />
