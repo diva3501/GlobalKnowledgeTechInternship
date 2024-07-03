@@ -71,12 +71,12 @@ const ContentWrapper = styled.div`
 const AboutPage = () => {
   return (
     <>
-      <StyledSection>
+      
         <motion.div 
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
           style={{ display: "flex", justifyContent: "center" }}
         >
           <ContentWrapper style={{ maxWidth: "80%" }}>
@@ -97,14 +97,14 @@ const AboutPage = () => {
             </LeadText>
           </ContentWrapper>
         </motion.div>
-      </StyledSection>
+    
 
-      <StyledSection className="py-3 py-md-5 bg-dark">
+      
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
         >
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5">
@@ -209,14 +209,14 @@ const AboutPage = () => {
             </div>
           </div>
         </motion.div>
-      </StyledSection>
+      
 
-      <StyledSection className="bg-dark py-5">
+     
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
         >
           <div className="row">
             <div className="col-12">
@@ -390,14 +390,14 @@ const AboutPage = () => {
             </div>
           </div>
         </motion.div>
-      </StyledSection>
 
-      <StyledSection>
+
+      
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
         >
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
@@ -425,14 +425,14 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </motion.div>
-      </StyledSection>
+   
 
-      <StyledSection className="bg-dark py-5 text-light">
+      
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
         >
           <Title className="text-center mb-5">Differentiator</Title>
           <div className="row text-center">
@@ -518,14 +518,14 @@ const AboutPage = () => {
             </div>
           </div>
         </motion.div>
-      </StyledSection>
 
-      <StyledSection className="bg-dark py-5 text-light">
+
+     
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="container"
+          className="container py-5"
         >
           <Title className="text-center mb-5">Training Delivery Methods</Title>
           <div className="row">
@@ -580,7 +580,7 @@ const AboutPage = () => {
             </div>
           </div>
         </motion.div>
-      </StyledSection>
+   
     </>
   );
 };
