@@ -9,7 +9,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import './components/Navbar/Navbar.module.css';
 import Footer from './components/Footer/Footer';
 import Academics from './pages/Academics/Academics';
-import Blog from './components/Navbar/Blog/Blog';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
