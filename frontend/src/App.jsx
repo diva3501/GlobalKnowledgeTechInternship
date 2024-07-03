@@ -1,12 +1,4 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import LandingPage from './components/Landingpage/LandingPage';
-import Navbar from './components/Navbar/Navbar';
-import AboutPage from './pages/AboutPage/AboutPage';
-import Coursework from './components/Coursework/Coursework';
-import CourseDetail from './components/Coursework/CourseDetail'; // Import the new component
-import Footer from './components/Footer/Footer';
-import './components/Navbar/Navbar.module.css';
+
 // App.jsx
 
 import React from "react";
@@ -21,17 +13,11 @@ import Academics from "./pages/Academics/Academics";
 import Blog from "./pages/Blog/Blog";
 import BlogDetail from "./pages/Blog/BlogDetail";
 import GlobalStyle from "./GlobalStyle";
+import CourseDetail from "./components/Coursework/CourseDetail";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/aboutgkt" element={<AboutPage />} />
-        <Route path="/academicsgkt" element={<Coursework />} />
-        <Route path="/course/:courseCode" element={<CourseDetail />} /> 
-      </Routes>
       <GlobalStyle />
       <Navbar />
       <Container
@@ -43,6 +29,7 @@ function App() {
           <Route path="/aboutgkt" element={<AboutPage />} />
           <Route path="/academicsgkt" element={<Academics />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/course/:courseCode" element={<CourseDetail />} /> 
           <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
       </Container>

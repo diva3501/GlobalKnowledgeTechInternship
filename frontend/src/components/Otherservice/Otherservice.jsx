@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Otherservice.css";
-
 const services = [
   {
     id: 1,
@@ -40,23 +39,16 @@ const services = [
     title: "Digital Transformation",
     image: "/service6.png",
     content: `The changing landscape of disruptive technologies is redefining how businesses runs today. In order to help you keep up with this change, our highly efficient team converts your business ideas into technologically advanced solutions- enabling you to build cutting-edge business through our offering on emerging technologies i.e. Blockchain, DevOps, Analytics & ML and Business Intelligence.
-
     BLOCKCHAIN
-
     Blockchain Services for digital ecosystem to create a secure and transparent solution to solve emerging challenges.
-
     We offer End to End services on Blockchain to build a real-world business solution.
-
     Custom Blockchain Development
     Maintenance and Upgrade
     ICO Launch Services
     Hyperledger Consulting
     Supply Chain Blockchain
-
     Our Blockchain services
-
     We are one of the best blockchain technology company in the market delivering broad range of Blockchain Solutions that cater to various business requirements.
-
     Blockchain Development
     Private Blockchain Development
     Blockchain IoT Development
@@ -65,65 +57,45 @@ const services = [
     Smart Contract Development
     Cryptocurrency Wallet Development
     Blockchain Testing
-
     DevOps
-
     We adopt a global engineering culture that brings our different technology talent to work closely from all geographical location in each and every phase of software development with highest quality solution to create the most consistent and predictable processes.
-
     Our experts develop the best DevOps Strategy after understanding the exact requirement of our clients and customize the solution to match your project needs.
-
     Implementation Process and Approach
-
     A comprehensive approach with an eye on detail is been strategized by our team which eliminates barriers between development and operations creating a collaborative environment. Our DevOps strategy is best suited for various industrial sectors including banking and financial services, retail, IT and telecommunication, energy and utilities, manufacturing and others.
-
     Our DevOps Service
-
     Code review and IT automation
     Build Management, Integration and Automation
     Release Management and Orchestration
     Continuous Deployment
     Test automation and Infrastructure automation
     Application and Infrastructure monitoring and management
-
     Business Intelligence
-
     Our Business Intelligence Services help your organization to maintain a competitive advantage in the market by transforming raw data into insightful information enabling stakeholders to make better decision.
-
     Our BI Service
-
     We offer business intelligence solutions to enable you with complete insight for all your data-driven business needs.
-
     Business Intelligence Analytics and Data Warehousing Solutions
     Business Intelligence Testing
     BI Performance Management
     Data Visualization and Analytics Solution
-
     Analytics & Machine Learning
-
     From planning to execution our analytics and machine learning solutions helps you to define and drive your transformation journey by creating the business value and helping you make the better decisions.
-
     We help you unlock value from the data generated through your business to derive meaningful insight that brings a shift to the business success. Our expertise is on building analytics and machine learning capabilities with cutting-edge technologies.
-
     Our Offerings
-
     Consulting Services
     Analytics and Machine Learning
     Machine Learning Development
     Advanced Algorithm Development
     Machine Learning Maintenance and Support
-
     Build cutting edge business solutions by deploying the right kind of technology to build the data ecosystem.`,
   },
 ];
-
 const Otherservice = () => {
   const [expandedService, setExpandedService] = useState(null);
-
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Number of cards to show at a time
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -142,15 +114,12 @@ const Otherservice = () => {
       },
     ],
   };
-
   const handleCardClick = (service) => {
     setExpandedService(service);
   };
-
   const handleCloseClick = () => {
     setExpandedService(null);
   };
-
   return (
     <div className="otherservice">
       <div className="os-container">
@@ -175,7 +144,6 @@ const Otherservice = () => {
           ))}
         </Slider>
       </div>
-
       {expandedService && (
         <div className="expanded-service" onClick={handleCloseClick}>
           <div
@@ -198,5 +166,4 @@ const Otherservice = () => {
     </div>
   );
 };
-
 export default Otherservice;

@@ -83,10 +83,10 @@
 
 .expanded-service {
   position: fixed;
-  top: 50px; /* Adjust to start below your navbar */
+  top: 50px; 
   left: 0;
   width: 100%;
-  height: calc(100% - 50px); /* Adjust to account for navbar height */
+  height: calc(100% - 50px); 
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
