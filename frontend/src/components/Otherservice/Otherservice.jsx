@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Otherservice.css";
 
 const services = [
@@ -114,16 +117,31 @@ const services = [
 ];
 
 const Otherservice = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [expandedService, setExpandedService] = useState(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Number of cards to show at a time
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   const handleCardClick = (service) => {
     setExpandedService(service);
@@ -137,17 +155,14 @@ const Otherservice = () => {
     <div className="otherservice">
       <div className="os-container">
         <h1 className="heading">Other Services</h1>
-        <div className="service-cards">
-          {services.slice(currentIndex, currentIndex + 3).map((service) => (
-            <div
-              key={service.id}
-              className="service-card"
-              onClick={() => handleCardClick(service)}
-            >
+        <Slider {...settings}>
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
               <img
                 src={service.image}
                 alt={service.title}
                 className="service-image"
+                onClick={() => handleCardClick(service)}
               />
               <div className="service-content">
                 <h3>{service.title}</h3>
@@ -158,7 +173,7 @@ const Otherservice = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
       {expandedService && (
