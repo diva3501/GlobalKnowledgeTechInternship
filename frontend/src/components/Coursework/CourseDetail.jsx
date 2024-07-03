@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import courseworkData from '../../data/courseworkData';
+import { FiArrowLeft } from 'react-icons/fi'; 
 import './coursedetail.css';
 
 const CourseDetail = () => {
@@ -9,73 +10,93 @@ const CourseDetail = () => {
 
   const course = Object.values(courseworkData)
     .flat()
-    .find((c) => c.courseCode === courseCode);
+    .find((c) => c.CourseCode === courseCode);
 
   if (!course) {
     return <div className="course-detail">Course not found</div>;
   }
 
+  const handleBack = () => {
+    navigate(-1); 
+  };
+
   return (
     <div className="course-detail">
-      <button className="back-button" onClick={() => navigate(-1)}>Back</button>
-      <img src={course.image} alt={course.courseTitle} className="course-detail-image" />
-      <h3 className="course-detail-title">{course.courseTitle}</h3>
-      
-      <div className="course-detail-info">
-        <div className="info-row">
+      <div className="course-detail-header">
+        <img src={course.Image} alt={course.CourseTitle} className="course-detail-image" />
+        
+      </div>
+
+      <div className="course-detail-content">
+        <button className="back-button" onClick={handleBack}><FiArrowLeft /> Back</button>
+        <h3 className="course-detail-title">{course.CourseTitle}</h3>
+
+        <div className="course-detail-info">
           <div className="info-item">
-            <p><strong>Course Code:</strong> {course.courseCode}</p>
+            <p><strong>Course Code:</strong> {course.CourseCode}</p>
           </div>
           <div className="info-item">
-            <p><strong>Duration:</strong> {course.duration}</p>
+            <p><strong>Duration:</strong> {course.Duration}</p>
           </div>
           <div className="info-item">
-            <p><strong>Price:</strong> {course.price}</p>
+            <p><strong>Price:</strong> {course.Price}</p>
           </div>
         </div>
-        
-        <p className="description"><strong>Description:</strong> {course.description}</p>
-      </div>
-      
-      <div className="course-detail-section">
-        <h4>Objectives:</h4>
-        <ul>
-          {course.objectives && course.objectives.map((objective, index) => (
-            <li key={index}>{objective}</li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="course-detail-section">
-        <h4>Audience:</h4>
-        <p>{course.audience}</p>
-      </div>
-      
-      <div className="course-detail-section">
-        <h4>Prerequisites:</h4>
-        <ul>
-          {course.prerequisites && course.prerequisites.map((prerequisite, index) => (
-            <li key={index}>{prerequisite}</li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="course-detail-section">
-        <p><strong>Certification Number:</strong> {course.certificationNumber}</p>
-      </div>
-      
-      <div className="course-detail-section">
-        <h4>Recommended Courses:</h4>
-        <ul>
-          {course.recommendedCourses && course.recommendedCourses.map((recommendedCourse, index) => (
-            <li key={index}>{recommendedCourse}</li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="course-detail-section">
-        <h4>Content:</h4>
-        <p>{course.content}</p>
+
+        <p className="description"><strong>Description:</strong> {course.Description}</p>
+
+        {course.Objectives && course.Objectives.length > 0 && (
+          <div className="course-detail-section">
+            <h4>Objectives:</h4>
+            <ul>
+              {course.Objectives.map((objective, index) => (
+                <li key={index}>{objective}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {course.Audience && course.Audience.length > 0 && (
+          <div className="course-detail-section">
+            <h4>Audience:</h4>
+            <p>{course.Audience}</p>
+          </div>
+        )}
+
+        {course.Prerequisites && course.Prerequisites.length > 0 && (
+          <div className="course-detail-section">
+            <h4>Prerequisites:</h4>
+            <ul>
+              {course.Prerequisites.map((prerequisite, index) => (
+                <li key={index}>{prerequisite}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {course.CertificationNumber && (
+          <div className="course-detail-section">
+            <p><strong>Certification Number:</strong> {course.CertificationNumber}</p>
+          </div>
+        )}
+
+        {course.RecommendedCourses && course.RecommendedCourses.length > 0 && (
+          <div className="course-detail-section">
+            <h4>Recommended Courses:</h4>
+            <ul>
+              {course.RecommendedCourses.map((recommendedCourse, index) => (
+                <li key={index}>{recommendedCourse}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {course.Content && course.Content.length > 0 && (
+          <div className="course-detail-section">
+            <h4>Content:</h4>
+            <p>{course.Content}</p>
+          </div>
+        )}
       </div>
     </div>
   );

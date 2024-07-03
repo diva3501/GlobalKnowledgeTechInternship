@@ -31,6 +31,7 @@ const Coursework = () => {
   };
 
   const handleCourseClick = (courseCode) => {
+    window.scrollTo(0, 0); 
     navigate(`/course/${courseCode}`);
   };
 
@@ -50,9 +51,9 @@ const Coursework = () => {
       <div className={`coursework-content ${animationDirection}`}>
         <div className="coursework-cards">
           {displayedCourses.map((course, index) => (
-            <div key={index} className="course-card" onClick={() => handleCourseClick(course.courseCode)}>
-              <img src={course.image} alt={course.courseTitle} className="course-image" />
-              <h3 className="course-title">{course.courseTitle}</h3>
+            <div key={index} className="course-card" onClick={() => handleCourseClick(course.CourseCode)}>
+              <img src={course.Image} alt={course.CourseTitle} className="course-image" />
+              <h3 className="course-title">{course.CourseTitle}</h3>
             </div>
           ))}
         </div>
