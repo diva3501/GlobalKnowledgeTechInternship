@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import './components/Navbar/Navbar.module.css';
 import Footer from './components/Footer/Footer';
 import Academics from './pages/Academics/Academics';
+import Blog from './components/Navbar/Blog/Blog';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutgkt" element={<AboutPage />} />
         <Route path="/academicsgkt" element={<Academics/>} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer/>
     </>

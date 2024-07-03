@@ -91,7 +91,9 @@ const catalogItems = {
 
 const Navbar = () => {
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark sticky-top ${styles.navbarCustom}`}>
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark bg-dark sticky-top ${styles.navbarCustom}`}
+    >
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src="/logo.png" alt="Logo" className={styles.logoImg} />
@@ -122,7 +124,10 @@ const Navbar = () => {
               >
                 Browse Catalog
               </a>
-              <ul className="dropdown-menu" aria-labelledby="browseCatalogDropdown">
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="browseCatalogDropdown"
+              >
                 {Object.keys(catalogItems).map((key) => (
                   <li key={key} className="dropdown-submenu">
                     <a className="dropdown-item dropdown-toggle" href="#">
@@ -146,11 +151,13 @@ const Navbar = () => {
                       <li>
                         <h6 className="dropdown-header">Certifications</h6>
                         {catalogItems[key].certifications.length > 0 ? (
-                          catalogItems[key].certifications.map((certification, index) => (
-                            <a key={index} className="dropdown-item" href="#">
-                              {certification}
-                            </a>
-                          ))
+                          catalogItems[key].certifications.map(
+                            (certification, index) => (
+                              <a key={index} className="dropdown-item" href="#">
+                                {certification}
+                              </a>
+                            )
+                          )
                         ) : (
                           <a className="dropdown-item" href="#">
                             No Certifications Available
@@ -181,9 +188,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/blog">
                 BLOG
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
