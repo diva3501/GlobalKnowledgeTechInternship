@@ -1,137 +1,93 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(100deg, #242323, rgb(0, 0, 0));
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  animation: fadeInBackground 0.5s ease;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-.course-detail-container {
+.course-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
-  width: 90%;
-  padding: 30px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.5s ease;
+  padding: 20px;
+}
+
+.course-detail-image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.course-detail-title {
+  color: #FFA500;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.course-detail-info {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  flex: 1;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.info-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-item p {
+  margin: 0;
+  color: white;
+}
+
+.description {
+  margin-top: 20px;
 }
 
 .back-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  align-self: flex-start;
+  background-color: rgb(200, 37, 37);
+  color: #fff;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
   transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(231, 17, 17);
 }
 
-.course-detail {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.course-detail-info {
-  flex: 1;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
-  margin-right: 10px;
-}
-
-.course-detail-info:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.course-detail-info p {
-  margin: 5px 0;
-}
-
-.course-detail-info strong {
-  font-weight: bold;
-}
-
-.course-detail-info p.price {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.course-detail-image {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  animation: zoomIn 0.5s ease;
-}
-
-.course-detail-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  animation: slideInLeft 0.5s ease;
-}
-
-@keyframes fadeInBackground {
-  from {
-    opacity: 0;
+@media screen and (max-width: 768px) {
+  .course-detail-image {
+    width: 100%;
+    max-width: 100%;
   }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  .back-button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }

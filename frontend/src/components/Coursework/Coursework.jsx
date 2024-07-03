@@ -53,9 +53,6 @@ const Coursework = () => {
             <div key={index} className="course-card" onClick={() => handleCourseClick(course.courseCode)}>
               <img src={course.image} alt={course.courseTitle} className="course-image" />
               <h3 className="course-title">{course.courseTitle}</h3>
-              <p className="course-description">
-                {course.description.length > 100 ? `${course.description.substring(0, 100)}...` : course.description}
-              </p>
             </div>
           ))}
         </div>
