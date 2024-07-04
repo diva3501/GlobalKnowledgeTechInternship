@@ -31,18 +31,9 @@ const Title = styled.h3`
   }
 `;
 
-const FeaturedSection = styled.div`
+const Section = styled.div`
   width: 100%;
   margin-bottom: 40px;
-`;
-
-const RecentBlogsSection = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-`;
-
-const CategoriesSection = styled.div`
-  width: 100%;
 `;
 
 const CategoryButton = styled(Button)`
@@ -50,6 +41,35 @@ const CategoryButton = styled(Button)`
   margin-bottom: 10px;
   background-color: ${(props) => (props.selected ? "#007bff" : "#6c757d")};
   border-color: #6c757d;
+`;
+
+const AboutSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+`;
+
+const AboutText = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.6;
+  flex: 1;
+`;
+
+const AboutImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+  border-radius: 10px;
+`;
+
+const TagButton = styled(Button)`
+  margin: 5px;
+  background-color: #6c757d;
+  border: none;
+  &:hover {
+    background-color: #00aaff;
+  }
 `;
 
 const categories = [
@@ -73,7 +93,26 @@ const Blog = () => {
 
   return (
     <>
-      <FeaturedSection>
+      <Section>
+        <Container className="py-5">
+          <AboutSection>
+            <AboutText>
+              Welcome to the Global Knowledge Technology blog, an EduLearn
+              platform dedicated to upskilling professionals in the fields of
+              analytics, machine learning, AI, Python, data visualization, and
+              web development. Our mission is to provide valuable insights,
+              tutorials, and updates to help you stay ahead in these rapidly
+              evolving fields. Join us on a journey of continuous learning and
+              skill enhancement.
+            </AboutText>
+            <AboutImage
+              src="https://via.placeholder.com/400x300?text=EduLearn+Platform"
+              alt="EduLearn Platform"
+            />
+          </AboutSection>
+        </Container>
+      </Section>
+      <Section>
         <Container className="py-5">
           <Carousel>
             {featuredBlogs.map((blog) => (
@@ -104,9 +143,9 @@ const Blog = () => {
             ))}
           </Carousel>
         </Container>
-      </FeaturedSection>
+      </Section>
 
-      <RecentBlogsSection>
+      <Section>
         <Container className="py-5">
           <Title>Recent Blogs</Title>
           <Row>
@@ -121,7 +160,19 @@ const Blog = () => {
                   <Card.Body>
                     <Card.Title>{blog.title}</Card.Title>
                     <Card.Text>{blog.summary}</Card.Text>
-                    <Button as={Link} to={`/blog/${blog.id}`} variant="primary">
+                    <div>
+                      {blog.tags.map((tag, index) => (
+                        <TagButton key={index} variant="secondary" size="sm">
+                          {tag}
+                        </TagButton>
+                      ))}
+                    </div>
+                    <Button
+                      as={Link}
+                      to={`/blog/${blog.id}`}
+                      variant="primary"
+                      className="mt-3"
+                    >
                       Read More
                     </Button>
                   </Card.Body>
@@ -130,9 +181,9 @@ const Blog = () => {
             ))}
           </Row>
         </Container>
-      </RecentBlogsSection>
+      </Section>
 
-      <CategoriesSection>
+      <Section>
         <Container className="py-3">
           <Title>Categories</Title>
           <Row>
@@ -149,7 +200,7 @@ const Blog = () => {
             ))}
           </Row>
         </Container>
-      </CategoriesSection>
+      </Section>
 
       <BlogList selectedCategory={selectedCategory} />
       <NewsletterSubscription />

@@ -1,5 +1,3 @@
-// BlogDetail.jsx
-
 import React from "react";
 import { useParams } from "react-router-dom";
 import blogContent from "./blogcontent";
@@ -35,7 +33,7 @@ const BlogDetail = () => {
   }
 
   return (
-  
+    
       <Container fluid>
         <BlogCard>
           <Card.Body>
@@ -44,7 +42,6 @@ const BlogDetail = () => {
           </Card.Body>
         </BlogCard>
       </Container>
-    
   );
 };
 
