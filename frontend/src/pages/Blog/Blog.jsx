@@ -74,6 +74,7 @@ const TagButton = styled(Button)`
 `;
 
 const categories = [
+  "All",
   "Analytics",
   "Machine Learning",
   "AI",
@@ -102,7 +103,8 @@ const Blog = () => {
         <Container className="py-5">
           <AboutSection>
             <AboutText>
-              Welcome to the <span className="">Global Knowledge Technology</span> blog, an
+              Welcome to the{" "}
+              <span className="">Global Knowledge Technology</span> blog, an
               EduLearn platform dedicated to upskilling professionals in the
               fields of analytics, machine learning, AI, Python, data
               visualization, and web development. Our mission is to provide
@@ -148,7 +150,6 @@ const Blog = () => {
                         variant="top"
                         src={blog.imageUrl}
                         alt={blog.title}
-                        
                       />
                       <Card.Body>
                         <Card.Title style={{ fontSize: "1.5rem" }}>
@@ -246,11 +247,8 @@ const Blog = () => {
       </Section>
 
       <BlogList selectedCategory={selectedCategory} />
-      
-      
     </>
   );
 };
 
 export default Blog;
-

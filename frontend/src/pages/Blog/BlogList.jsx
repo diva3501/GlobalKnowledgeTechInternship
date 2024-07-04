@@ -20,16 +20,17 @@ const TagButton = styled(Button)`
 
 const BlogList = ({ selectedCategory }) => {
   // Filter blogs based on selectedCategory
-  const filteredBlogs = selectedCategory
-    ? blogContent.filter((blog) =>
-        blog.title.toLowerCase().includes(selectedCategory.toLowerCase())
-      )
-    : blogContent;
+  let filteredBlogs = blogContent;
+  if (selectedCategory && selectedCategory !== "All") {
+    filteredBlogs = blogContent.filter((blog) =>
+      blog.title.toLowerCase().includes(selectedCategory.toLowerCase())
+    );
+  }
 
   return (
     <BlogListContainer>
       <Container>
-        <Row style={{width: "200vh"}}>
+        <Row style={{ width: "200vh" }}>
           {filteredBlogs.map((blog, index) => (
             <Col key={index} md={4} className="mb-4">
               <motion.div
@@ -75,4 +76,3 @@ const BlogList = ({ selectedCategory }) => {
 };
 
 export default BlogList;
-
