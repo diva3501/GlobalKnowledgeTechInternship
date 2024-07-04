@@ -30,19 +30,20 @@ const BlogList = ({ selectedCategory }) => {
     <BlogListContainer>
       <Container>
         <Row>
-          {filteredBlogs.map((blog) => (
-            <Col key={blog.id} md={4} className="mb-4">
+          {filteredBlogs.map((blog, index) => (
+            <Col key={index} md={4} className="mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="h-100 shadow-sm"
               >
-                <Card className="h-100">
+                <Card className="h-100" style={{ height: "100%" }}>
                   <Card.Img
                     variant="top"
                     src={blog.imageUrl}
                     alt={blog.title}
+                    style={{ height: "200px", objectFit: "cover" }}
                   />
                   <Card.Body>
                     <Card.Title>{blog.title}</Card.Title>
@@ -74,3 +75,4 @@ const BlogList = ({ selectedCategory }) => {
 };
 
 export default BlogList;
+

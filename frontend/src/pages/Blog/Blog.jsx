@@ -141,21 +141,27 @@ const Blog = () => {
           <Carousel>
             {featuredBlogs.map((blog) => (
               <Carousel.Item key={blog.id}>
-                <Row className="justify-content-center">
+                <Row className="justify-content-center align-items-center text-center">
                   <Col md={8}>
-                    <Card>
+                    <Card style={{ height: "100%" }}>
                       <Card.Img
                         variant="top"
                         src={blog.imageUrl}
                         alt={blog.title}
+                        
                       />
                       <Card.Body>
-                        <Card.Title>{blog.title}</Card.Title>
-                        <Card.Text>{blog.summary}</Card.Text>
+                        <Card.Title style={{ fontSize: "1.5rem" }}>
+                          {blog.title}
+                        </Card.Title>
+                        <Card.Text style={{ fontSize: "1rem" }}>
+                          {blog.summary}
+                        </Card.Text>
                         <Button
                           as={Link}
                           to={`/blog/${blog.id}`}
                           variant="primary"
+                          className="m-3"
                         >
                           Read More
                         </Button>
@@ -179,15 +185,20 @@ const Blog = () => {
           <Row>
             {recentBlogs.map((blog) => (
               <Col key={blog.id} md={4} className="mb-4">
-                <Card>
+                <Card style={{ height: "100%" }}>
                   <Card.Img
                     variant="top"
                     src={blog.imageUrl}
                     alt={blog.title}
+                    style={{ objectFit: "cover", height: "40%" }}
                   />
                   <Card.Body>
-                    <Card.Title>{blog.title}</Card.Title>
-                    <Card.Text>{blog.summary}</Card.Text>
+                    <Card.Title style={{ fontSize: "1.5rem" }}>
+                      {blog.title}
+                    </Card.Title>
+                    <Card.Text style={{ fontSize: "1rem" }}>
+                      {blog.summary}
+                    </Card.Text>
                     <motion.div>
                       {blog.tags.map((tag, index) => (
                         <TagButton key={index} variant="secondary" size="sm">
@@ -235,16 +246,11 @@ const Blog = () => {
       </Section>
 
       <BlogList selectedCategory={selectedCategory} />
-      <Section
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        className="py-5"
-      >
-        <NewsletterSubscription />
-      </Section>
+      
+      
     </>
   );
 };
 
 export default Blog;
+
