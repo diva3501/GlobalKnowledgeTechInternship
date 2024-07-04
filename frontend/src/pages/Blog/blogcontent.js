@@ -48,6 +48,9 @@ const blogContent = [
     imageUrl: "https://via.placeholder.com/300x200?text=Web+Development",
     tags: ["Web Development", "Tech", "Programming"],
   },
+
 ];
+
+
 
 export default blogContent;

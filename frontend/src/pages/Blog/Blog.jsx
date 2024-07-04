@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import blogContent from "./blogcontent";
 import NewsletterSubscription from "./Newsletter";
+import { motion } from "framer-motion";
 
 const Title = styled.h3`
   position: relative;
@@ -31,7 +32,7 @@ const Title = styled.h3`
   }
 `;
 
-const Section = styled.div`
+const Section = styled(motion.div)`
   width: 100%;
   margin-bottom: 40px;
 `;
@@ -93,27 +94,50 @@ const Blog = () => {
 
   return (
     <>
-      <Section>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-5">
           <AboutSection>
             <AboutText>
-              Welcome to the Global Knowledge Technology blog, an EduLearn
-              platform dedicated to upskilling professionals in the fields of
-              analytics, machine learning, AI, Python, data visualization, and
-              web development. Our mission is to provide valuable insights,
-              tutorials, and updates to help you stay ahead in these rapidly
-              evolving fields. Join us on a journey of continuous learning and
-              skill enhancement.
+              Welcome to the <span className="">Global Knowledge Technology</span> blog, an
+              EduLearn platform dedicated to upskilling professionals in the
+              fields of analytics, machine learning, AI, Python, data
+              visualization, and web development. Our mission is to provide
+              valuable insights, tutorials, and updates to help you stay ahead
+              in these rapidly evolving fields. Join us on a journey of
+              continuous learning and skill enhancement.
+              <div className="text-center">
+                <Button
+                  as={Link}
+                  to="/aboutgkt"
+                  className="mt-5"
+                  variant="primary"
+                >
+                  Who are we?
+                </Button>
+              </div>
             </AboutText>
             <AboutImage
-              src="https://via.placeholder.com/400x300?text=EduLearn+Platform"
+              src="https://img.freepik.com/free-vector/students-watching-recorded-lecture-with-professor-talking-from-tablet-podcast-courses-audio-video-recording-class-recording-access-concept-vector-isolated-illustration_335657-1983.jpg?t=st=1720066559~exp=1720070159~hmac=3145dc20e1d150a9a470fde4c0a450ff936ed552a995a8b376c693498e28ceb7&w=996"
+              className="img-fluid"
+              style={{ borderRadius: "10px" }}
+              width="500"
+              height="500"
               alt="EduLearn Platform"
             />
           </AboutSection>
         </Container>
       </Section>
-      <Section>
-        <Container className="py-5">
+
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Container className="py-5 mt-2">
           <Carousel>
             {featuredBlogs.map((blog) => (
               <Carousel.Item key={blog.id}>
@@ -145,7 +169,11 @@ const Blog = () => {
         </Container>
       </Section>
 
-      <Section>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-5">
           <Title>Recent Blogs</Title>
           <Row>
@@ -160,13 +188,13 @@ const Blog = () => {
                   <Card.Body>
                     <Card.Title>{blog.title}</Card.Title>
                     <Card.Text>{blog.summary}</Card.Text>
-                    <div>
+                    <motion.div>
                       {blog.tags.map((tag, index) => (
                         <TagButton key={index} variant="secondary" size="sm">
                           {tag}
                         </TagButton>
                       ))}
-                    </div>
+                    </motion.div>
                     <Button
                       as={Link}
                       to={`/blog/${blog.id}`}
@@ -183,7 +211,11 @@ const Blog = () => {
         </Container>
       </Section>
 
-      <Section>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-3">
           <Title>Categories</Title>
           <Row>
@@ -203,7 +235,14 @@ const Blog = () => {
       </Section>
 
       <BlogList selectedCategory={selectedCategory} />
-      <NewsletterSubscription />
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="py-5"
+      >
+        <NewsletterSubscription />
+      </Section>
     </>
   );
 };
