@@ -21,7 +21,7 @@ const blogContent = [
       },
     ],
     imageUrl:
-      "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169850.jpg?w=996&t=st=1720074106~exp=1720074706~hmac=e10004e6dce1e70cdbe53f1addde92aea9a96c36203d6ff1b6cf06710cb31a42",
+      "https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/v1618387651/hevo-learn/advanced_analytics.jpeg",
     tags: ["Data", "Visualization", "Analytics"],
   },
   {
