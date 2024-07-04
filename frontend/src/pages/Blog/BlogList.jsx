@@ -29,7 +29,7 @@ const BlogList = ({ selectedCategory }) => {
   return (
     <BlogListContainer>
       <Container>
-        <Row>
+        <Row style={{width: "200vh"}}>
           {filteredBlogs.map((blog, index) => (
             <Col key={index} md={4} className="mb-4">
               <motion.div
