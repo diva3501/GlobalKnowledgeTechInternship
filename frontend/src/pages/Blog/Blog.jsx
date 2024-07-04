@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import blogContent from "./blogcontent";
 import NewsletterSubscription from "./Newsletter";
+import { motion } from "framer-motion";
 
 const Title = styled.h3`
   position: relative;
@@ -31,18 +32,9 @@ const Title = styled.h3`
   }
 `;
 
-const FeaturedSection = styled.div`
+const Section = styled(motion.div)`
   width: 100%;
   margin-bottom: 40px;
-`;
-
-const RecentBlogsSection = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-`;
-
-const CategoriesSection = styled.div`
-  width: 100%;
 `;
 
 const CategoryButton = styled(Button)`
@@ -50,6 +42,35 @@ const CategoryButton = styled(Button)`
   margin-bottom: 10px;
   background-color: ${(props) => (props.selected ? "#007bff" : "#6c757d")};
   border-color: #6c757d;
+`;
+
+const AboutSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+`;
+
+const AboutText = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.6;
+  flex: 1;
+`;
+
+const AboutImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+  border-radius: 10px;
+`;
+
+const TagButton = styled(Button)`
+  margin: 5px;
+  background-color: #6c757d;
+  border: none;
+  &:hover {
+    background-color: #00aaff;
+  }
 `;
 
 const categories = [
@@ -73,26 +94,74 @@ const Blog = () => {
 
   return (
     <>
-      <FeaturedSection>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-5">
+          <AboutSection>
+            <AboutText>
+              Welcome to the <span className="">Global Knowledge Technology</span> blog, an
+              EduLearn platform dedicated to upskilling professionals in the
+              fields of analytics, machine learning, AI, Python, data
+              visualization, and web development. Our mission is to provide
+              valuable insights, tutorials, and updates to help you stay ahead
+              in these rapidly evolving fields. Join us on a journey of
+              continuous learning and skill enhancement.
+              <div className="text-center">
+                <Button
+                  as={Link}
+                  to="/aboutgkt"
+                  className="mt-5"
+                  variant="primary"
+                >
+                  Who are we?
+                </Button>
+              </div>
+            </AboutText>
+            <AboutImage
+              src="https://img.freepik.com/free-vector/students-watching-recorded-lecture-with-professor-talking-from-tablet-podcast-courses-audio-video-recording-class-recording-access-concept-vector-isolated-illustration_335657-1983.jpg?t=st=1720066559~exp=1720070159~hmac=3145dc20e1d150a9a470fde4c0a450ff936ed552a995a8b376c693498e28ceb7&w=996"
+              className="img-fluid"
+              style={{ borderRadius: "10px" }}
+              width="500"
+              height="500"
+              alt="EduLearn Platform"
+            />
+          </AboutSection>
+        </Container>
+      </Section>
+
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Container className="py-5 mt-2">
           <Carousel>
             {featuredBlogs.map((blog) => (
               <Carousel.Item key={blog.id}>
-                <Row className="justify-content-center">
+                <Row className="justify-content-center align-items-center text-center">
                   <Col md={8}>
-                    <Card>
+                    <Card style={{ height: "100%" }}>
                       <Card.Img
                         variant="top"
                         src={blog.imageUrl}
                         alt={blog.title}
+                        
                       />
                       <Card.Body>
-                        <Card.Title>{blog.title}</Card.Title>
-                        <Card.Text>{blog.summary}</Card.Text>
+                        <Card.Title style={{ fontSize: "1.5rem" }}>
+                          {blog.title}
+                        </Card.Title>
+                        <Card.Text style={{ fontSize: "1rem" }}>
+                          {blog.summary}
+                        </Card.Text>
                         <Button
                           as={Link}
                           to={`/blog/${blog.id}`}
                           variant="primary"
+                          className="m-3"
                         >
                           Read More
                         </Button>
@@ -104,24 +173,45 @@ const Blog = () => {
             ))}
           </Carousel>
         </Container>
-      </FeaturedSection>
+      </Section>
 
-      <RecentBlogsSection>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-5">
           <Title>Recent Blogs</Title>
           <Row>
             {recentBlogs.map((blog) => (
               <Col key={blog.id} md={4} className="mb-4">
-                <Card>
+                <Card style={{ height: "100%" }}>
                   <Card.Img
                     variant="top"
                     src={blog.imageUrl}
                     alt={blog.title}
+                    style={{ objectFit: "cover", height: "40%" }}
                   />
                   <Card.Body>
-                    <Card.Title>{blog.title}</Card.Title>
-                    <Card.Text>{blog.summary}</Card.Text>
-                    <Button as={Link} to={`/blog/${blog.id}`} variant="primary">
+                    <Card.Title style={{ fontSize: "1.5rem" }}>
+                      {blog.title}
+                    </Card.Title>
+                    <Card.Text style={{ fontSize: "1rem" }}>
+                      {blog.summary}
+                    </Card.Text>
+                    <motion.div>
+                      {blog.tags.map((tag, index) => (
+                        <TagButton key={index} variant="secondary" size="sm">
+                          {tag}
+                        </TagButton>
+                      ))}
+                    </motion.div>
+                    <Button
+                      as={Link}
+                      to={`/blog/${blog.id}`}
+                      variant="primary"
+                      className="mt-3"
+                    >
                       Read More
                     </Button>
                   </Card.Body>
@@ -130,9 +220,13 @@ const Blog = () => {
             ))}
           </Row>
         </Container>
-      </RecentBlogsSection>
+      </Section>
 
-      <CategoriesSection>
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Container className="py-3">
           <Title>Categories</Title>
           <Row>
@@ -149,12 +243,14 @@ const Blog = () => {
             ))}
           </Row>
         </Container>
-      </CategoriesSection>
+      </Section>
 
       <BlogList selectedCategory={selectedCategory} />
-      <NewsletterSubscription />
+      
+      
     </>
   );
 };
 
 export default Blog;
+
