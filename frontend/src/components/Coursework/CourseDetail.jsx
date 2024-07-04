@@ -23,12 +23,17 @@ const CourseDetail = () => {
   return (
     <div className="course-detail">
       <div className="course-detail-header">
-        <img src={course.Image} alt={course.CourseTitle} className="course-detail-image" />
-        
+        <button className="back-button" onClick={handleBack}>
+          <FiArrowLeft /> Back
+        </button>
+        <div className="breadcrumb">
+          <span className="breadcrumb-item" onClick={() => navigate('/')}>Home</span> {'>>'} 
+          <span className="breadcrumb-item" onClick={() => navigate('/all-courses')}>All</span> {'>>'}
+          <span className="breadcrumb-item">{course.CourseTitle}</span>
+        </div>
       </div>
 
       <div className="course-detail-content">
-        <button className="back-button" onClick={handleBack}><FiArrowLeft /> Back</button>
         <h3 className="course-detail-title">{course.CourseTitle}</h3>
 
         <div className="course-detail-info">

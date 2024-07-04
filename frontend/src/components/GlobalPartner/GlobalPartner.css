@@ -22,11 +22,12 @@
 }
 
 .gp-card {
-  background-color: #ffffff;
+  background-color: #e7dcdc;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  height: 100px; 
+  height: 110px; 
+  width: 250px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
