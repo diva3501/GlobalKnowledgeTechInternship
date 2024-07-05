@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import courseworkData from '../../data/courseworkData';
-import { FiArrowLeft } from 'react-icons/fi'; 
+import { FiArrowLeft } from 'react-icons/fi';
 import './coursedetail.css';
 
 const CourseDetail = () => {
@@ -17,42 +17,50 @@ const CourseDetail = () => {
   }
 
   const handleBack = () => {
-    navigate(-1); 
+    navigate(-1);
   };
 
   return (
     <div className="course-detail">
-      <div className="course-detail-header">
-        <button className="back-button" onClick={handleBack}>
-          <FiArrowLeft /> Back
-        </button>
-        <div className="breadcrumb">
-          <span className="breadcrumb-item" onClick={() => navigate('/')}>Home</span> {'>>'} 
-          <span className="breadcrumb-item" onClick={() => navigate('/all-courses')}>All</span> {'>>'}
-          <span className="breadcrumb-item">{course.CourseTitle}</span>
-        </div>
-      </div>
+    <div className="course-detail-header">
+      <button className="back-button" onClick={handleBack}>
+        <FiArrowLeft /> 
+      </button>
+    </div>
+    <div className="breadcrumb">
+      <span className="breadcrumb-item" onClick={() => navigate('/')}>Home</span> 
+      <span className="breadcrumb-item" onClick={() => navigate('/all-courses')}>All</span> 
+      <span className="breadcrumb-item">{course.CourseTitle}</span>
+    </div>
 
       <div className="course-detail-content">
         <h3 className="course-detail-title">{course.CourseTitle}</h3>
 
         <div className="course-detail-info">
           <div className="info-item">
-            <p><strong>Course Code:</strong> {course.CourseCode}</p>
+            <p>
+              <strong>Course Code:</strong> {course.CourseCode}
+            </p>
           </div>
           <div className="info-item">
-            <p><strong>Duration:</strong> {course.Duration}</p>
+            <p>
+              <strong>Duration:</strong> {course.Duration}
+            </p>
           </div>
           <div className="info-item">
-            <p><strong>Price:</strong> {course.Price}</p>
+            <p>
+              <strong>Price:</strong> {course.Price}
+            </p>
           </div>
         </div>
 
-        <p className="description"><strong>Description:</strong> {course.Description}</p>
+        <p className="description">
+          <strong>Description:</strong> {course.Description}
+        </p>
 
         {course.Objectives && course.Objectives.length > 0 && (
           <div className="course-detail-section">
-            <h4>Objectives:</h4>
+            <h4>Objectives</h4>
             <ul>
               {course.Objectives.map((objective, index) => (
                 <li key={index}>{objective}</li>
@@ -63,14 +71,14 @@ const CourseDetail = () => {
 
         {course.Audience && course.Audience.length > 0 && (
           <div className="course-detail-section">
-            <h4>Audience:</h4>
+            <h4>Audience</h4>
             <p>{course.Audience}</p>
           </div>
         )}
 
         {course.Prerequisites && course.Prerequisites.length > 0 && (
           <div className="course-detail-section">
-            <h4>Prerequisites:</h4>
+            <h4>Prerequisites</h4>
             <ul>
               {course.Prerequisites.map((prerequisite, index) => (
                 <li key={index}>{prerequisite}</li>
@@ -81,13 +89,15 @@ const CourseDetail = () => {
 
         {course.CertificationNumber && (
           <div className="course-detail-section">
-            <p><strong>Certification Number:</strong> {course.CertificationNumber}</p>
+            <p>
+              <strong>Certification Number:</strong> {course.CertificationNumber}
+            </p>
           </div>
         )}
 
         {course.RecommendedCourses && course.RecommendedCourses.length > 0 && (
           <div className="course-detail-section">
-            <h4>Recommended Courses:</h4>
+            <h4>Recommended Courses</h4>
             <ul>
               {course.RecommendedCourses.map((recommendedCourse, index) => (
                 <li key={index}>{recommendedCourse}</li>
@@ -98,7 +108,7 @@ const CourseDetail = () => {
 
         {course.Content && course.Content.length > 0 && (
           <div className="course-detail-section">
-            <h4>Content:</h4>
+            <h4>Content</h4>
             <p>{course.Content}</p>
           </div>
         )}
