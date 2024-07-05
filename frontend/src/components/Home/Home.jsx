@@ -75,8 +75,8 @@ class Home extends React.Component {
           className="slide"
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="overlay d-flex justify-content-center align-items-center text-center">
-            <div className="content bg-dark text-white p-5 rounded shadow-lg">
+          <div className="d-flex justify-content-center align-items-center text-center">
+            <div className="content text-white p-5 rounded shadow-lg">
               <h3 className="title">Global Knowledge Technologies</h3>
               <h4 className="subtitle mt-3">{subtitle}</h4>
               <p className="mt-2">{description}</p>
