@@ -69,6 +69,7 @@ const CustomerSay = () => {
             <p className={`${styles.feedbackCardContent} ${expandedIndex === index ? styles.fullContent : styles.truncatedContent}`}>
               {feedback.content}
             </p>
+            <br></br>
             
             {expandedIndex === index && (
               <div>
@@ -78,6 +79,7 @@ const CustomerSay = () => {
             )}
             {expandedIndex !== index && (
               <div>
+                <p className="readmore">Read More</p>
                 <div className={styles.feedbackCardDivider}></div>
               <img
                 src={`/${feedback.image}`}
