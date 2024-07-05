@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import blogContent from "./blogcontent";
 import {
@@ -15,6 +15,11 @@ import "./BlogDetail.css"; // Import the CSS file for additional styling
 const BlogDetail = () => {
   const { id } = useParams();
   const blog = blogContent.find((blog) => blog.id === parseInt(id));
+  const mainContentRef = useRef(null);
+
+  useEffect(() => {
+    mainContentRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [id]); // Run this effect whenever the id changes
 
   if (!blog) {
     return <p>Blog not found</p>;
@@ -22,11 +27,17 @@ const BlogDetail = () => {
 
   return (
     <Container fluid>
+      <div ref={mainContentRef}></div>
       <Row>
         <Col md={3} className="side-menu">
           <ListGroup variant="flush" className="menu-list">
             {blogContent.map((blog) => (
-              <ListGroupItem key={blog.id} className="menu-item">
+              <ListGroupItem
+                key={blog.id}
+                className={`menu-item ${
+                  blog.id === parseInt(id) ? "selected" : ""
+                }`}
+              >
                 <a href={`/blog/${blog.id}`} className="menu-link">
                   {blog.title}
                 </a>
