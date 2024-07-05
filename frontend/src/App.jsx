@@ -11,9 +11,9 @@ import "./components/Navbar/Navbar.module.css";
 import Footer from "./components/Footer/Footer";
 import Academics from "./pages/Academics/Academics";
 import Blog from "./pages/Blog/Blog";
+import Offers from "./pages/Offers/Offers";
 import BlogDetail from "./pages/Blog/BlogDetail";
 import GlobalStyle from "./GlobalStyle";
-import CourseDetail from "./components/Coursework/CourseDetail";
 
 function App() {
   return (
@@ -29,8 +29,8 @@ function App() {
           <Route path="/aboutgkt" element={<AboutPage />} />
           <Route path="/academicsgkt" element={<Academics />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/course/:courseCode" element={<CourseDetail />} /> 
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/navbar" element={<Offers/>}/>
         </Routes>
       </Container>
       <Footer />
