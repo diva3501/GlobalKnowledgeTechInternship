@@ -1,4 +1,5 @@
 .navbarCustom {
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, 0);
   padding: 8x 20px;
   backdrop-filter: blur(10px);
@@ -11,6 +12,18 @@
   transition: transform 0.2s ease-in-out;
 }
 
+=======
+  background-color: transparent;
+  padding: 15px 20px;
+}
+
+.logoImg {
+  height: 80px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+>>>>>>> Stashed changes
 .logoImg:hover {
   transform: scale(1.1);
 }
@@ -31,7 +44,11 @@
 }
 
 .dropdown-menu {
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, 0.8);
+=======
+  background-color: rgba(31, 31, 31, 0.8);
+>>>>>>> Stashed changes
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -54,7 +71,11 @@
   top: 0;
   left: 100%;
   margin-top: -1px;
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, 0.8);
+=======
+  background-color: rgba(31, 31, 31, 0.8);
+>>>>>>> Stashed changes
 }
 
 .dropdown-submenu > .dropdown-menu .dropdown-header {

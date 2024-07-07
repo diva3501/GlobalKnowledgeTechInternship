@@ -306,7 +306,7 @@ const courseworkData = {
         CertificationNumber: "",
         RecommendedCourses: [],
         Content: [],
-        Image: "/all2.png"
+        Image: "/all2.jpg"
       },
       {
         CourseTitle: "Tableau Desktop I - Fundamentals",
@@ -339,7 +339,7 @@ const courseworkData = {
         CertificationNumber: "",
         RecommendedCourses: [],
         Content: [],
-        Image: "/all3.png"
+        Image: "/all3.jpg"
       },
       {
         CourseTitle: "Tableau Desktop II - Intermediate",
@@ -379,7 +379,7 @@ const courseworkData = {
         CertificationNumber: "",
         RecommendedCourses: [],
         Content: [],
-        Image: "/all4.png"
+        Image: "/all4.jpg"
       },
       {
         CourseTitle: "Tableau Desktop III - Advanced",
@@ -415,7 +415,7 @@ const courseworkData = {
         CertificationNumber: "",
         RecommendedCourses: [],
         Content: [],
-        Image: "/all5.png"
+        Image: "/all5.jpg"
       },
       {
         CourseTitle: "Anypoint Platform Development: Fundamentals (Mule 4)",
@@ -453,7 +453,7 @@ const courseworkData = {
         CertificationNumber: "",
         RecommendedCourses: [],
         Content: [],
-        Image: "/all6.png"
+        Image: "/all6.jpg"
       }
     ],
     

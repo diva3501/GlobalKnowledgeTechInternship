@@ -36,7 +36,7 @@ const TechnologyPrograms = () => {
             newState[index] = true;
             return newState;
           });
-          observer.unobserve(entry.target);
+          observers[index].unobserve(entry.target); // Fixed observer disconnect
         }
       }, observerOptions);
     });
