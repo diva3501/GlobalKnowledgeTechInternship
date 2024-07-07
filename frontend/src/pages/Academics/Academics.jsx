@@ -1,6 +1,12 @@
 import React from "react";
 import { Card, Button, Row, Col, Container } from "react-bootstrap";
-import { FaGraduationCap, FaPencilRuler, FaBuilding } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaPencilRuler,
+  FaBuilding,
+  FaBrain,
+  FaLaptopCode,
+} from "react-icons/fa";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import "./Academics.css";
@@ -339,7 +345,7 @@ const WhyAcademicsWorks = () => {
               <CustomCard className="shadow">
                 <Card.Body className="text-center h-100 d-flex flex-column">
                   <Icon>
-                    <FaGraduationCap />
+                    <FaBrain />
                   </Icon>
                   <Card.Title>Artificial Intelligence</Card.Title>
                   <Card.Text>
@@ -373,7 +379,7 @@ const WhyAcademicsWorks = () => {
               <CustomCard className="shadow">
                 <Card.Body className="text-center h-100 d-flex flex-column">
                   <Icon>
-                    <FaPencilRuler />
+                    <FaLaptopCode />
                   </Icon>
                   <Card.Title>Full Stack Development</Card.Title>
                   <Card.Text>
