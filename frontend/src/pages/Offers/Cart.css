@@ -1,0 +1,123 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px; /* Added margin to create space around the container */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .search-bar input {
+    padding: 10px; /* Increased padding for better input spacing */
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+    width: 250px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+  
+  .filters label {
+    margin-right: 20px; /* Increased margin between filter labels */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 12px; /* Increased padding for cells */
+    text-align: left;
+    border-bottom: 1px solid #555;
+  }
+  
+  th {
+    background-color: #444;
+    font-weight: bold;
+  }
+  
+  .filter-inputs select {
+    padding: 8px; /* Adjusted padding for select */
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .enroll-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px; /* Increased padding for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .pagination button {
+    background-color: #555;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+  .page-number {
+    margin: 0 5px;
+  }
+  
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px; /* Added margin to separate footer from content */
+  }
+  .strikethrough {
+    text-decoration: line-through;
+    margin-right: 10px;
+    color: #999;
+  }
+    
