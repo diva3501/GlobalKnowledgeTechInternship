@@ -1,0 +1,33 @@
+
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #007bff;
+}
+
+.timeline li h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline li p {
+  margin-bottom: 0;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
