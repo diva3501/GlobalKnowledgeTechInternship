@@ -14,6 +14,7 @@ import GlobalStyle from "./GlobalStyle";
 import CourseDetail from  "./components/Coursework/CourseDetail";
 import ServiceList from "./components/Otherservice/ServiceList";
 import Webinars from "./pages/Webinar/Webinars";
+
 function App() {
   return (
     <>
