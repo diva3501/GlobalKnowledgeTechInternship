@@ -97,7 +97,7 @@ const SuccessStories = () => {
       quote:
         "The hands-on experience and certifications helped me secure my dream job.",
       position: "Data Scientist at DataWorks",
-      imgSrc: "https://via.placeholder.com/150",  
+      imgSrc: "https://via.placeholder.com/150",
     },
     // Add more stories as needed
   ];
@@ -107,7 +107,6 @@ const SuccessStories = () => {
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-   
     >
       <Container className="py-5">
         <Title className="text-center mb-5">Success Stories</Title>
@@ -260,7 +259,7 @@ const WhyAcademicsWorks = () => {
         </Container>
       </Section>
       <Section
-        className="student-development-program py-5"
+        className="faculty-development-program py-5"
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -327,6 +326,69 @@ const WhyAcademicsWorks = () => {
         </Container>
       </Section>
       <SuccessStories />
+      {/* Additional Courses Section */}
+      <Section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Container className="py-5">
+          <Title className="text-center mb-5">Featured Courses</Title>
+          <Row>
+            <Col md={6} lg={4} className="mb-4">
+              <CustomCard className="shadow">
+                <Card.Body className="text-center h-100 d-flex flex-column">
+                  <Icon>
+                    <FaGraduationCap />
+                  </Icon>
+                  <Card.Title>Artificial Intelligence</Card.Title>
+                  <Card.Text>
+                    Master AI techniques and applications with hands-on projects
+                    and expert guidance.
+                  </Card.Text>
+                  <div className="mt-auto">
+                    <StyledButton>Explore Course</StyledButton>
+                  </div>
+                </Card.Body>
+              </CustomCard>
+            </Col>
+            <Col md={6} lg={4} className="mb-4">
+              <CustomCard className="shadow">
+                <Card.Body className="text-center h-100 d-flex flex-column">
+                  <Icon>
+                    <FaPencilRuler />
+                  </Icon>
+                  <Card.Title>UI/UX Design</Card.Title>
+                  <Card.Text>
+                    Learn UI/UX design principles and create impactful user
+                    experiences with practical projects.
+                  </Card.Text>
+                  <div className="mt-auto">
+                    <StyledButton>Explore Course</StyledButton>
+                  </div>
+                </Card.Body>
+              </CustomCard>
+            </Col>
+            <Col md={6} lg={4} className="mb-4">
+              <CustomCard className="shadow">
+                <Card.Body className="text-center h-100 d-flex flex-column">
+                  <Icon>
+                    <FaPencilRuler />
+                  </Icon>
+                  <Card.Title>Full Stack Development</Card.Title>
+                  <Card.Text>
+                    Learn the fundamentals of web development with practical
+                    projects.
+                  </Card.Text>
+                  <div className="mt-auto">
+                    <StyledButton>Explore Course</StyledButton>
+                  </div>
+                </Card.Body>
+              </CustomCard>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
     </>
   );
 };
