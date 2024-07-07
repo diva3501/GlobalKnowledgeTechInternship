@@ -1,14 +1,23 @@
 .navbarCustom {
-  background-color: #1f1f1f;
-  padding: 15px 20px;
-}
-
-.navbar-brand {
-  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 8x 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .logoImg {
-  max-height: 40px;
+  height: 80px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logoImg:hover {
+  transform: scale(1.1);
+}
+
+.customLink {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav .nav-link {
@@ -22,7 +31,7 @@
 }
 
 .dropdown-menu {
-  background-color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0.8);
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -45,7 +54,7 @@
   top: 0;
   left: 100%;
   margin-top: -1px;
-  background-color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dropdown-submenu > .dropdown-menu .dropdown-header {
