@@ -1,0 +1,58 @@
+/* Global styles */
+body {
+  background: linear-gradient(to right, #000000, #434343);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for layout */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap if they exceed container width */
+  justify-content: center;
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Fixed width for medium cards */
+  height: 400px; /* Fixed height for medium cards */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 20px; /* Spacing between cards */
+}
+
+.card-image {
+  width: 150px; /* Increased image size */
+  height: 150px; /* Increased image size */
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-info {
+  margin-top: 10px;
+}

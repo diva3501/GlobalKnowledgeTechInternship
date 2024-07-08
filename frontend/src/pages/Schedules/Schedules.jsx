@@ -6,7 +6,7 @@ function Schedules() {
   const [courses, setCourses] = useState([]);
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [categories, setCategories] = useState([
-    { name: 'All Courses', checked: true },
+    { name: 'All Training Schedules', checked: true },
     { name: 'Artificial Intelligence', checked: false },
     { name: 'Process Certification', checked: false },
     { name: 'Microsoft', checked: false },
