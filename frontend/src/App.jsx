@@ -8,10 +8,10 @@ import "./components/Navbar/Navbar.module.css";
 import Footer from "./components/Footer/Footer";
 import Academics from "./pages/Academics/Academics";
 import Blog from "./pages/Blog/Blog";
-import Contact from "./pages/Contact/Contact"
+import Contact from "./pages/Contact/Contact";
+import Offers from "./pages/Offers/Offers";
 import BlogDetail from "./pages/Blog/BlogDetail";
 import Schedules from "./pages/Schedules/Schedules";
-import Offers from "./pages/Offers/Offers"
 import GlobalStyle from "./GlobalStyle";
 import Webinars from "./pages/Webinar/Webinars";
 import CourseDetail from "./components/Coursework/CourseDetail";
@@ -34,8 +34,8 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail />} /> 
           <Route path="/Contact" element={<Contact/>}/>
           <Route path="/webinar" element={<Webinars/>} />
+          <Route path="/offers" element={<Offers/>} />
           <Route path="/course/:courseCode" element={<CourseDetail />} />
-          <Route path="/Offers" element={<Offers/>} />
           <Route path="/Schedules" element={<Schedules/>} />
         </Routes>
       </Container>
