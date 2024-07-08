@@ -1,6 +1,3 @@
-
-// App.jsx
-
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
@@ -11,13 +8,11 @@ import "./components/Navbar/Navbar.module.css";
 import Footer from "./components/Footer/Footer";
 import Academics from "./pages/Academics/Academics";
 import Blog from "./pages/Blog/Blog";
-import Offers from "./pages/Offers/Offers";
-import Schedules from "./pages/Schedules/Schedules";
 import Contact from "./pages/Contact/Contact"
 import BlogDetail from "./pages/Blog/BlogDetail";
 import GlobalStyle from "./GlobalStyle";
 import Webinars from "./pages/Webinar/Webinars";
-
+import CourseDetail from "./components/Coursework/CourseDetail";
 
 
 function App() {
@@ -34,11 +29,10 @@ function App() {
           <Route path="/aboutgkt" element={<AboutPage />} />
           <Route path="/academicsgkt" element={<Academics />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/offers" element={<Offers/>}/>
-          <Route path="/Schedules" element={<Schedules/>}/>
+          <Route path="/blog/:id" element={<BlogDetail />} /> 
           <Route path="/Contact" element={<Contact/>}/>
           <Route path="/webinar" element={<Webinars/>} />
+          <Route path="/course/:courseCode" element={<CourseDetail />} />
         </Routes>
       </Container>
       <Footer />
