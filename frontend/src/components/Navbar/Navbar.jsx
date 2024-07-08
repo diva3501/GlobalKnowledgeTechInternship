@@ -90,7 +90,7 @@ const catalogItems = {
 const Navbar = () => {
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-dark bg-dark sticky-top ${styles.navbarCustom}`}
+      className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}
     >
       <div className="container">
         <Link className={styles.customLink} to="/">
