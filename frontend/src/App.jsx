@@ -16,6 +16,7 @@ import Schedules from "./pages/Schedules/Schedules";
 import Contact from "./pages/Contact/Contact"
 import BlogDetail from "./pages/Blog/BlogDetail";
 import GlobalStyle from "./GlobalStyle";
+import Webinars from "./pages/Webinar/Webinars";
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/offers" element={<Offers/>}/>
           <Route path="/Schedules" element={<Schedules/>}/>
           <Route path="/Contact" element={<Contact/>}/>
+          <Route path="/webinar" element={<Webinars/>} />
         </Routes>
       </Container>
       <Footer />
