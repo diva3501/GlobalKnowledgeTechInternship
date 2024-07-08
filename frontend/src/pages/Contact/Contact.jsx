@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Contact.css';
-import contactsData from './Contacts';
+import contactsData from './ContactsData';
 
 const ContactCard = ({ city, address, phone, email, trainingEmail, imageUrl }) => (
   <div className="c-card">

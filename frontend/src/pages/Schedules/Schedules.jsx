@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './Schedules.css';
-import { coursesData } from './Schedules'; // Import coursesData from data.js
+import { coursesData } from './SchedulesData'; // Import coursesData from data.js
 
 function Schedules() {
   const [searchTerm, setSearchTerm] = useState('');
