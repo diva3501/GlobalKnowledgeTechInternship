@@ -28,18 +28,28 @@
   color: #fff;
   padding: 20px;
   border-radius: 10px;
-  width: 300px; /* Fixed width for medium cards */
-  height: 400px; /* Fixed height for medium cards */
+  width: 400px; /* Fixed width for medium cards */
+  height: 500px; /* Fixed height for medium cards */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   margin-bottom: 20px; /* Spacing between cards */
+  display: flex;
+  flex-direction: column; /* Ensure content inside card stacks vertically */
+  justify-content: space-between; /* Distribute content evenly within card */
+}
+
+.c-card-content {
+  flex: 1; /* Allow content to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .c-card-image {
   width: 150px; /* Increased image size */
   height: 150px; /* Increased image size */
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin: 0 auto 15px; /* Center image horizontally and add bottom margin */
   object-fit: cover;
 }
 
