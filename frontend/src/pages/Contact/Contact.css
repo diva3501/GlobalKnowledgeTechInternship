@@ -1,11 +1,11 @@
 /* Global styles */
-body {
+/* body {
   background: linear-gradient(to right, #000000, #434343);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
-}
+} */
 
 #root {
   min-height: 100vh;
@@ -14,7 +14,7 @@ body {
 }
 
 /* Container for layout */
-.container {
+.c-container {
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap if they exceed container width */
   justify-content: center;
@@ -23,7 +23,7 @@ body {
 }
 
 /* Card styles */
-.card {
+.c-card {
   background-color: #1a1a1a;
   color: #fff;
   padding: 20px;
@@ -35,7 +35,7 @@ body {
   margin-bottom: 20px; /* Spacing between cards */
 }
 
-.card-image {
+.c-card-image {
   width: 150px; /* Increased image size */
   height: 150px; /* Increased image size */
   border-radius: 50%;
@@ -43,7 +43,7 @@ body {
   object-fit: cover;
 }
 
-.title {
+.heading-c {
   font-size: 24px;
   margin-bottom: 10px;
 }

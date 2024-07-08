@@ -3,9 +3,9 @@ import './Contact.css';
 import contactsData from './Contacts';
 
 const ContactCard = ({ city, address, phone, email, trainingEmail, imageUrl }) => (
-  <div className="card">
-    <img src={imageUrl} alt={`${city}`} className="card-image" />
-    <h2 className="title">{city}</h2>
+  <div className="c-card">
+    <img src={imageUrl} alt={`${city}`} className="c-card-image" />
+    <h2 className="heading-c">{city}</h2>
     <p className="address">
       {address.split('\n').map((line, index) => (
         <React.Fragment key={index}>{line}<br /></React.Fragment>
@@ -27,7 +27,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="c-container">
       {contacts.map((contact, index) => (
         <ContactCard
           key={index}
