@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import OffersBanner from './OffersBanner';
-import { categories, courses, expectedCounts } from './Offers';
+import { categories, courses, expectedCounts } from './OffersData';
 
 function Offers() {
   const [selectedCategory, setSelectedCategory] = useState(null);
