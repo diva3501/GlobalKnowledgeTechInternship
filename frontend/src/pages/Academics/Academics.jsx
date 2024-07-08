@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import "./Academics.css";
 
 
 const Title = styled.h3`
