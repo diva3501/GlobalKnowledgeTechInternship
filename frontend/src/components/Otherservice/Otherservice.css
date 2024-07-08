@@ -1,13 +1,14 @@
 .otherservice {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from 'center' to 'flex-start' */
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
-  padding: 20px;
+  padding: 45px 20px 20px; /* Reduced top padding to 0 */
   overflow: hidden;
 }
+
 
 .os-container {
   width: 80%;
@@ -15,17 +16,16 @@
   padding: 20px;
   background: rgba(78, 75, 75, 0.1);
   border-radius: 10px;
-  margin-top: 50px; /* Adjust according to your navbar height */
+  margin-top: 20px; /* Reduced margin-top */
 }
 
 .heading {
   color: #fff;
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0; /* Adjusted margin to reduce top space */
   font-family: 'Roboto', sans-serif;
 }
-
 .service-cards {
   display: flex;
   justify-content: space-around;
@@ -45,13 +45,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
 .service-image {
-  max-height: 50%;
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -66,14 +60,14 @@
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size:xx-large;
+  font-size: xx-large;
 }
 
 .service-content p {
   color: #d1d1d1;
   margin-bottom: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -85,10 +79,10 @@
 
 .expanded-service {
   position: fixed;
-  top: 50px; 
+  top: 50px;
   left: 0;
   width: 100%;
-  height: calc(100% - 50px); 
+  height: calc(100% - 50px);
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
@@ -107,15 +101,6 @@
   overflow-y: auto;
   position: relative;
   animation: slideIn 0.5s ease;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
 
 .close-button {

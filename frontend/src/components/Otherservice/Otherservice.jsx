@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 import "./Otherservice.css";
+
+
 const services = [
   {
     id: 1,
@@ -89,8 +92,11 @@ const services = [
     Build cutting edge business solutions by deploying the right kind of technology to build the data ecosystem.`,
   },
 ];
+
+
 const Otherservice = () => {
   const [expandedService, setExpandedService] = useState(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -114,20 +120,26 @@ const Otherservice = () => {
       },
     ],
   };
+
   const handleCardClick = (service) => {
     setExpandedService(service);
   };
+
   const handleCloseClick = () => {
     setExpandedService(null);
   };
+
   return (
     <div className="otherservice">
       <h1 className="heading">Other Services</h1>
       <div className="os-container">
-        
         <Slider {...settings}>
           {services.map((service) => (
-            <div key={service.id} className="service-card">
+            <motion.div
+              key={service.id}
+              className="service-card"
+              whileHover={{ scale: 1.05, boxShadow: "0 6px 12px rgba(0, 0, 0, 0.4)" }}
+            >
               <img
                 src={service.image}
                 alt={service.title}
@@ -138,18 +150,28 @@ const Otherservice = () => {
                 <h3>{service.title}</h3>
                 <p>
                   {service.content.split("\n")[0]}...{" "}
-                  <span className="read-more">Read more</span>
+                  <span className="read-more" onClick={() => handleCardClick(service)}>Read more</span>
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </Slider>
       </div>
       {expandedService && (
-        <div className="expanded-service" onClick={handleCloseClick}>
-          <div
+        <motion.div
+          className="expanded-service"
+          onClick={handleCloseClick}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
             className="expanded-service-content"
             onClick={(e) => e.stopPropagation()}
+            initial={{ y: "-100%" }}
+            animate={{ y: "0%" }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.5 }}
           >
             <button className="close-button" onClick={handleCloseClick}>
               Close
@@ -161,10 +183,11 @@ const Otherservice = () => {
               className="expanded-service-image"
             />
             <p className="expcontent">{expandedService.content}</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );
 };
+
 export default Otherservice;
