@@ -1,14 +1,13 @@
 .otherservice {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Changed from 'center' to 'flex-start' */
+  justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
+  height: 85vh;
   background: linear-gradient(135deg, rgb(0, 0, 0), #2b2b2b);
-  padding: 45px 20px 20px; /* Reduced top padding to 0 */
+  padding: 30px 20px 20px;
   overflow: hidden;
 }
-
 
 .os-container {
   width: 80%;
@@ -16,21 +15,22 @@
   padding: 20px;
   background: rgba(78, 75, 75, 0.1);
   border-radius: 10px;
-  margin-top: 20px; /* Reduced margin-top */
+  margin-top: 20px;
 }
 
 .heading {
   color: #fff;
   font-size: 2.5rem;
   text-align: center;
-  margin: 20px 0; /* Adjusted margin to reduce top space */
+  margin: 20px 0;
   font-family: 'Roboto', sans-serif;
 }
+
 .service-cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .service-card {
@@ -40,8 +40,8 @@
   overflow: hidden;
   cursor: pointer;
   width: 100%;
-  height: 350px;
   max-width: 350px;
+  height: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
