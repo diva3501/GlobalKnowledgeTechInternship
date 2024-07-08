@@ -1,5 +1,8 @@
+// Schedules.js
+
 import React, { useState, useEffect } from 'react';
-import './Schedules.css'; // Import your CSS file
+import './Schedules.css';
+import { coursesData } from './Schedules'; // Import coursesData from data.js
 
 function Schedules() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,34 +22,18 @@ function Schedules() {
   ]);
 
   useEffect(() => {
-    // Simulate an initial API call to fetch courses
-    const initialCourses = [
-      { id: 1, title: 'AI for Beginners', deliveryMode: 'Online', date: '2024-08-01', price: '$100', duration: '4 weeks', categories: ['Artificial Intelligence'] },
-      { id: 2, title: 'Process Certification Basics', deliveryMode: 'In-person', date: '2024-09-01', price: '$200', duration: '2 days', categories: ['Process Certification'] },
-      { id: 3, title: 'Microsoft Azure Fundamentals', deliveryMode: 'Online', date: '2024-07-15', price: '$150', duration: '3 weeks', categories: ['Microsoft'] },
-      { id: 4, title: 'Anglepoint SAM Essentials', deliveryMode: 'In-person', date: '2024-10-01', price: '$300', duration: '1 day', categories: ['Anglepoint'] },
-      { id: 5, title: 'Red Hat System Administration', deliveryMode: 'Online', date: '2024-08-10', price: '$400', duration: '5 weeks', categories: ['Red Hat'] },
-      { id: 6, title: 'Tableau for Data Visualization', deliveryMode: 'Online', date: '2024-09-15', price: '$250', duration: '3 weeks', categories: ['Tableau'] },
-      { id: 7, title: 'Mulesoft Integration Basics', deliveryMode: 'In-person', date: '2024-11-05', price: '$350', duration: '2 weeks', categories: ['Mulesoft'] },
-      { id: 8, title: 'Blockchain Essentials', deliveryMode: 'Online', date: '2024-12-01', price: '$500', duration: '6 weeks', categories: ['Blockchain'] },
-      { id: 9, title: 'IBM Cloud Computing', deliveryMode: 'In-person', date: '2024-07-25', price: '$600', duration: '4 weeks', categories: ['IBM'] },
-    ];
-    setCourses(initialCourses);
-    setFilteredCourses(initialCourses);
+    // Initialize courses with data from coursesData
+    setCourses(coursesData);
+    setFilteredCourses(coursesData);
   }, []);
 
-  const handleSearch = () => {
+  useEffect(() => {
+    // Function to filter courses based on searchTerm
     const filtered = courses.filter((course) =>
       course.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCourses(filtered);
-
-    // Reset categories to "All Courses"
-    setCategories(categories.map((category, index) => ({
-      ...category,
-      checked: index === 0,
-    })));
-  };
+  }, [searchTerm, courses]);
 
   const handleCategoryChange = (index) => {
     const updatedCategories = categories.map((category, idx) => ({
@@ -71,7 +58,8 @@ function Schedules() {
       <header className="catalog-header">
         <h1>Schedules</h1>
         <h3>Looking for flexible learning options?</h3>
-        <h2> We are here to help you. Following are our upcoming training schedules.</h2>
+        <h2>We are here to help you. </h2>
+          <h3>Following are our upcoming training schedules.</h3>
         <h4>Navigate across the available Training Courses in Bangalore and learn at your own convenience.</h4>
       </header>
       <main>
@@ -82,9 +70,6 @@ function Schedules() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button onClick={handleSearch} className="search-button">
-            Search
-          </button>
         </div>
         <div className="filter-options">
           {categories.map((category, index) => (
