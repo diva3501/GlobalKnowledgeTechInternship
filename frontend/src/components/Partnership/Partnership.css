@@ -22,8 +22,8 @@
 .partnership-card {
   overflow: hidden;
   width: 250px;
-  height: 350px;
-  perspective: 1500px; /* Add perspective for 3D effect */
+  height: 270px;
+  perspective: 1500px;
 }
 
 .partnership-card-inner {
@@ -37,20 +37,21 @@
 }
 
 .partnership-card:hover .partnership-card-inner {
-  transform: scale(1.05) rotateY(10deg); /* Scale and rotate on hover */
+  transform: scale(1.05) rotateY(10deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .partnership-card-img-top {
+  margin-top: 50px;
   width: 100%;
   height: 80%;
-  object-fit: contain; /* Ensure image covers entire area */
+  object-fit: contain;
   border-radius: 10px 10px 0 0;
-  transition: transform 0.3s; /* Smooth image transform */
+  transition: transform 0.3s;
 }
 
 .partnership-card:hover .partnership-card-img-top {
-  transform: scale(1.2); /* Scale up image on hover */
+  transform: scale(1.05);
 }
 
 .partnership-card-body {
@@ -63,10 +64,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(20, 20, 20, 0.959); /* Match card background */
+  background-color: rgba(20, 20, 20, 0.959);
   padding: 10px;
-  transform-origin: bottom; /* Animation origin */
-  transition: transform 0.5s, opacity 0.5s; /* Animation properties */
+  transform-origin: bottom;
+  transition: transform 0.5s, opacity 0.5s;
   opacity: 0;
   transform: translateY(100%);
 }
@@ -85,7 +86,7 @@
 }
 
 .partnership-card:hover .partnership-card-title {
-  transform: scale(1.1); /* Scale title on hover */
+  transform: scale(1.1);
 }
 
 .partnership-view-all-container {

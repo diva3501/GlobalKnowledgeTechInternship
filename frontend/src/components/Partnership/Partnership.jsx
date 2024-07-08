@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Partnership.css";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import Card from "react-bootstrap/Card";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const partners = [
   { name: "Microsoft", image: "/partner1.png" },
@@ -17,15 +18,27 @@ const partners = [
 
 const Partnership = () => {
   const [showAll, setShowAll] = useState(false);
-
   const displayedPartners = showAll ? partners : partners.slice(0, 4);
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
     <motion.div
       className="partnership-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+      }}
       transition={{ duration: 0.5 }}
     >
       <h2 className="partnership-heading">Our Partnerships</h2>
@@ -44,15 +57,18 @@ const Partnership = () => {
             transition={{ duration: 0.7, delay: index * 0.2 }}
           >
             <Card className="partnership-card-inner">
-              <Card.Img
-                variant="top"
-                src={partner.image}
-                alt={partner.name}
-                className="partnership-card-img-top"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, rotate: 360 }}
+              <motion.div
+                initial={{ rotateY: 0 }}
+                whileHover={{ rotateY: 360 }}
                 transition={{ duration: 1 }}
-              />
+              >
+                <Card.Img
+                  variant="top"
+                  src={partner.image}
+                  alt={partner.name}
+                  className="partnership-card-img-top"
+                />
+              </motion.div>
               <Card.Body className="partnership-card-body">
                 <Card.Title className="partnership-card-title text-center mt-3 mb-3">
                   {partner.name}
