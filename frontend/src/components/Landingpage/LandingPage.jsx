@@ -8,6 +8,7 @@ import GlobalPartner from '../GlobalPartner/GlobalPartner';
 import OurHappyCustomer from '../OurHappyCustomer/OurHappyCustomer';
 import Coursework from '../Coursework/Coursework';
 import CustomerSay from '../CustomerSay/CustomerSay';
+import Otherservice from '../Otherservice/Otherservice';
 
 
 const LandingPage = () => {
@@ -17,9 +18,9 @@ const LandingPage = () => {
       <Home />
       <Partnership />
       <TechnologyPrograms />
-      <Aboutus />
-      
+      <Aboutus /> 
       <GlobalPartner />
+      <Otherservice/>
       <OurHappyCustomer />
       <Coursework />
       <CustomerSay />
