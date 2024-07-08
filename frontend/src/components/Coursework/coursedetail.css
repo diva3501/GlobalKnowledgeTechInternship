@@ -89,7 +89,7 @@ body {
 }
 
 .breadcrumb-item:not(:last-child)::after {
-  content: ' >> ';
+  content: '>>';
   color: #d1d1d1;
 }
 

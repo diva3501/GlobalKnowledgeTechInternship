@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-import './Navbar.jsx'
 
 const catalogItems = {
   "Artificial Intelligence": {
@@ -88,14 +87,13 @@ const catalogItems = {
   },
 };
 
-
 const Navbar = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-dark bg-dark sticky-top ${styles.navbarCustom}`}
     >
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className={styles.customLink} to="/">
           <img src="/logo.png" alt="Logo" className={styles.logoImg} />
         </Link>
 
@@ -193,7 +191,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/webinar">
                 WEBINARS
               </a>
             </li>

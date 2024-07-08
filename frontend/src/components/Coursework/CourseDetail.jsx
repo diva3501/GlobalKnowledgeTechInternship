@@ -29,7 +29,6 @@ const CourseDetail = () => {
     </div>
     <div className="breadcrumb">
       <span className="breadcrumb-item" onClick={() => navigate('/')}>Home</span> 
-      <span className="breadcrumb-item" onClick={() => navigate('/all-courses')}>All</span> 
       <span className="breadcrumb-item">{course.CourseTitle}</span>
     </div>
 
