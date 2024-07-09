@@ -54,7 +54,7 @@ function Schedules() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app container py-3">
       <header className="catalog-header">
         <h1>Schedules</h1>
         <h3>Looking for flexible learning options?</h3>
@@ -133,3 +133,4 @@ function Schedules() {
 }
 
 export default Schedules;
+
