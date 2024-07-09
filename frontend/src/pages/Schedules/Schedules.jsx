@@ -66,6 +66,7 @@ function Schedules() {
           <input
             type="text"
             placeholder="Search courses..."
+            className="mt-2"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
