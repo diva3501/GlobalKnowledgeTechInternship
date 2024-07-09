@@ -37,6 +37,7 @@ function App() {
           <Route path="/offers" element={<Offers/>} />
           <Route path="/course/:courseCode" element={<CourseDetail />} />
           <Route path="/Schedules" element={<Schedules/>} />
+          
         </Routes>
       </Container>
       <Footer />

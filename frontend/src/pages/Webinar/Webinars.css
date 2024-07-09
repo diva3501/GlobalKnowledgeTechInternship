@@ -1,4 +1,4 @@
-.webinars {
+.webinars-container {
   padding: 20px;
   color: #fff;
   background-color: #1a1a1a;
@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-.webinar-description {
+.webinars-description {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -16,34 +16,35 @@
   gap: 20px;
 }
 
-.webinar-text {
+.webinars-text {
   flex: 1;
   padding-right: 20px;
 }
 
-.webinar-text h2 {
+.webinars-text h2 {
   margin-top: 0;
   color: #ffa500;
 }
 
-.webinar-text p {
+.webinars-text p {
   line-height: 1.6;
 }
 
-.webinar-image {
+.webinars-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.webinar-image img {
+.webinars-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.webinar-categories {
+
+.webinars-categories {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -51,7 +52,7 @@
   justify-content: center;
 }
 
-.webinar-category-button {
+.webinars-category-button {
   flex: 1 1 calc(20% - 10px);
   background-color: #444;
   color: #00bfff;
@@ -64,42 +65,151 @@
   min-width: 150px;
 }
 
-.webinar-category-button:hover {
+.webinars-category-button:hover {
   background-color: #555;
 }
 
-.webinar-content {
+
+.webinars-content {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;
 }
 
-.webinar-content h3 {
+.webinars-content h3 {
   margin-top: 0;
   color: #ffa500;
 }
 
-.webinar-content ul {
+.webinars-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.webinar-card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.webinar-card:hover {
+  background-color: #444;
+}
+
+.webinar-card h4 {
+  color: #ffa500;
+  margin-top: 0;
+}
+
+.webinar-card ul {
   list-style-type: disc;
   margin: 0;
   padding-left: 20px;
 }
 
-.webinar-content ul li {
+.webinar-card ul li {
   margin-bottom: 5px;
 }
 
+
+.enroll-button {
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.enroll-button:hover {
+  background-color: #009ace;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.enroll-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.enroll-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.submit-button {
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #009ace;
+}
+
 @media screen and (max-width: 768px) {
-  .webinar-description {
+  .webinars-description {
     flex-direction: column;
   }
 
-  .webinar-categories {
+  .webinars-categories {
     flex-direction: column;
   }
 
-  .webinar-category-button {
+  .webinars-category-button {
     flex: 1 1 100%;
   }
 }

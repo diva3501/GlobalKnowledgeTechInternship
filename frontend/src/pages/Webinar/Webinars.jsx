@@ -5,56 +5,78 @@ import './Webinars.css';
 
 const Webinars = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [showEnrollModal, setShowEnrollModal] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const handleEnrollClick = (course) => {
+    setSelectedCourse(course);
+    setShowEnrollModal(true);
+  };
+
+  const closeModal = () => {
+    setShowEnrollModal(false);
+  };
 
   const renderWebinarContent = () => {
     if (!selectedCategory) {
       return null;
     }
 
-    const webinar = webinarData[selectedCategory];
+    const webinars = webinarData[selectedCategory];
 
     return (
-      <motion.div 
-        className="webinar-content"
+      <motion.div
+        className="webinars-content"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <h3>{selectedCategory}</h3>
-        <p><strong>Duration:</strong> {webinar.Duration}</p>
-        <p><strong>Course:</strong> {webinar.Course}</p>
-        <p><strong>Topics Covered:</strong></p>
-        <ul>
-          {webinar.TopicsCovered.map((topic, index) => (
-            <li key={index}>{topic}</li>
+        <div className="webinars-list">
+          {webinars.map((webinar, index) => (
+            <motion.div
+              key={index}
+              className="webinar-card"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => handleEnrollClick(webinar)}
+            >
+              <h4>{webinar.CourseTitle}</h4>
+              <p><strong>Topics Covered:</strong></p>
+              <ul>
+                {webinar.TopicsCovered.map((topic, index) => (
+                  <li key={index}>{topic}</li>
+                ))}
+              </ul>
+              <p><strong>Benefits:</strong></p>
+              <ul>
+                {webinar.Benefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+              <button className="enroll-button">Enroll</button>
+            </motion.div>
           ))}
-        </ul>
-        <p><strong>Benefits:</strong></p>
-        <ul>
-          {webinar.Benefits.map((benefit, index) => (
-            <li key={index}>{benefit}</li>
-          ))}
-        </ul>
+        </div>
       </motion.div>
     );
   };
 
   return (
-    <div className="webinars">
-      <motion.div 
-        className="webinar-description"
+    <div className="webinars-container">
+      <motion.div
+        className="webinars-description"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="webinar-text">
+        <div className="webinars-text">
           <h2>Upcoming Webinar</h2>
           <p>Join us for our upcoming webinar where we will cover the latest trends and insights in the industry. Our expert speakers will guide you through the most important topics and answer your questions.</p>
         </div>
-        <div className="webinar-image">
-          <motion.img 
-            src="/webinar.jpg" 
-            alt="Webinar" 
+        <div className="webinars-image">
+          <motion.img
+            src="/webinar.jpg"
+            alt="Webinar"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -62,11 +84,11 @@ const Webinars = () => {
         </div>
       </motion.div>
 
-      <div className="webinar-categories">
+      <div className="webinars-categories">
         {Object.keys(webinarData).map((category, index) => (
-          <motion.button 
-            key={index} 
-            className="webinar-category-button" 
+          <motion.button
+            key={index}
+            className="webinars-category-button"
             onClick={() => setSelectedCategory(category)}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,6 +100,35 @@ const Webinars = () => {
       </div>
 
       {renderWebinarContent()}
+
+      {showEnrollModal && (
+        <div className="modal">
+          <motion.div
+            className="modal-content"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            <span className="close-button" onClick={closeModal}>
+              &times;
+            </span>
+            <h3>Enroll in {selectedCourse.Course}</h3>
+            <form className="enroll-form">
+              <label htmlFor="name">Name:</label>
+              <input type="text" id="name" />
+
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" />
+
+              <label htmlFor="mobile">Mobile Number:</label>
+              <input type="text" id="mobile" />
+
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };
