@@ -1,24 +1,24 @@
-// Schedules.js
-
-import React, { useState, useEffect } from 'react';
-import './Schedules.css';
-import { coursesData } from './SchedulesData'; // Import coursesData from data.js
+import React, { useState, useEffect } from "react";
+import "./Schedules.css";
+import { coursesData } from "./SchedulesData"; // Import coursesData from data.js
+import { motion } from "framer-motion";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Schedules() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [courses, setCourses] = useState([]);
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [categories, setCategories] = useState([
-    { name: 'All Training Schedules', checked: true },
-    { name: 'Artificial Intelligence', checked: false },
-    { name: 'Process Certification', checked: false },
-    { name: 'Microsoft', checked: false },
-    { name: 'Anglepoint', checked: false },
-    { name: 'Red Hat', checked: false },
-    { name: 'Tableau', checked: false },
-    { name: 'Mulesoft', checked: false },
-    { name: 'Blockchain', checked: false },
-    { name: 'IBM', checked: false },
+    { name: "All Training Schedules", checked: true },
+    { name: "Artificial Intelligence", checked: false },
+    { name: "Process Certification", checked: false },
+    { name: "Microsoft", checked: false },
+    { name: "Anglepoint", checked: false },
+    { name: "Red Hat", checked: false },
+    { name: "Tableau", checked: false },
+    { name: "Mulesoft", checked: false },
+    { name: "Blockchain", checked: false },
+    { name: "IBM", checked: false },
   ]);
 
   useEffect(() => {
@@ -54,15 +54,27 @@ function Schedules() {
   };
 
   return (
-    <div className="app container py-3">
-      <header className="catalog-header">
-       
-        <h2>We are here to help you. </h2>
-          <h3>Following are our upcoming training schedules.</h3>
-        <h4>Navigate across the available Training Courses in Bangalore and learn at your own convenience.</h4>
-      </header>
+    <div className="container py-3">
+      <motion.header
+        className="catalog-header mb-4"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2>We are here to help you.</h2>
+        <h3>Following are our upcoming training schedules.</h3>
+        <h4>
+          Navigate across the available Training Courses in Bangalore and learn
+          at your own convenience.
+        </h4>
+      </motion.header>
       <main>
-        <div className="search-bar">
+        <motion.div
+          className="search-bar mb-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <input
             type="text"
             placeholder="Search courses..."
@@ -70,19 +82,29 @@ function Schedules() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-        </div>
-        <div className="filter-options">
+        </motion.div>
+        <div className="filter-options mb-4">
           {categories.map((category, index) => (
-            <button
+            <motion.button
               key={index}
-              className={`filter-button ${category.checked ? 'selected' : ''}`}
+              className={`btn btn-outline-primary me-2 mb-2 ${
+                category.checked ? "active" : ""
+              }`}
               onClick={() => handleCategoryChange(index)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {category.name}
-            </button>
+            </motion.button>
           ))}
         </div>
-        <table className="course-table">
+        <motion.table
+          className="table table-dark table-hover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <thead>
             <tr>
               <th>Title</th>
@@ -101,29 +123,34 @@ function Schedules() {
               </tr>
             ) : (
               filteredCourses.map((course) => (
-                <tr key={course.id}>
+                <motion.tr
+                  key={course.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                >
                   <td>{course.title}</td>
                   <td>{course.deliveryMode}</td>
                   <td>{course.date}</td>
                   <td>{course.price}</td>
                   <td>{course.duration}</td>
-                  <td>{course.categories.join(', ')}</td>
+                  <td>{course.categories.join(", ")}</td>
                   <td>
-                    <button className="enroll-button">Enroll</button>
+                    <button className="btn btn-primary">Enroll</button>
                   </td>
-                </tr>
+                </motion.tr>
               ))
             )}
           </tbody>
-        </table>
+        </motion.table>
         {filteredCourses.length > 0 && (
-          <div className="pagination">
-            <button className="pagination-button">Previous</button>
-            <button className="pagination-button">Next</button>
+          <div className="d-flex justify-content-between my-3">
+            <button className="btn btn-outline-secondary">Previous</button>
+            <button className="btn btn-outline-secondary">Next</button>
           </div>
         )}
         <footer>
-          <p>
+          <p className="text-center">
             * Prices quoted above are inclusive of taxes.
           </p>
         </footer>
@@ -133,4 +160,3 @@ function Schedules() {
 }
 
 export default Schedules;
-
