@@ -1,18 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Awards.css";
+import styled from "styled-components";
 
 const Awards = () => {
+  const Title = styled.h2`
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 4px;
+      width: 50px;
+      background-color: #00aaff;
+      border-radius: 2px;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1.75rem;
+    }
+  `;
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      style={{ background: "linear-gradient(100deg, #242323, rgb(0, 0, 0))" }}
+     
       className="py-5"
     >
       <div className="container">
-        <h2 className="text-center text-white mb-4" >Awards</h2>
+        <h2 className="text-center text-white mb-5" >Awards</h2>
         <div className="main-timeline-2">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
