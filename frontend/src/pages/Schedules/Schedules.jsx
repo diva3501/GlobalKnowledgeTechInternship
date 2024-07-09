@@ -56,8 +56,7 @@ function Schedules() {
   return (
     <div className="app container py-3">
       <header className="catalog-header">
-        <h1>Schedules</h1>
-        <h3>Looking for flexible learning options?</h3>
+       
         <h2>We are here to help you. </h2>
           <h3>Following are our upcoming training schedules.</h3>
         <h4>Navigate across the available Training Courses in Bangalore and learn at your own convenience.</h4>
