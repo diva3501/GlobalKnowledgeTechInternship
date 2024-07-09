@@ -57,18 +57,12 @@ const Partnership = () => {
             transition={{ duration: 0.7, delay: index * 0.2 }}
           >
             <Card className="partnership-card-inner">
-              <motion.div
-                initial={{ rotateY: 0 }}
-                whileHover={{ rotateY: 360 }}
-                transition={{ duration: 1 }}
-              >
-                <Card.Img
-                  variant="top"
-                  src={partner.image}
-                  alt={partner.name}
-                  className="partnership-card-img-top"
-                />
-              </motion.div>
+              <Card.Img
+                variant="top"
+                src={partner.image}
+                alt={partner.name}
+                className="partnership-card-img-top"
+              />
               <Card.Body className="partnership-card-body">
                 <Card.Title className="partnership-card-title text-center mt-3 mb-3">
                   {partner.name}

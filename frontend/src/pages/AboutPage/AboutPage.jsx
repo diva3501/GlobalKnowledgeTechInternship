@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
+import Awards from "./Awards";
 
 const InlineTypewriter = styled.span`
   display: inline-block;
@@ -98,7 +99,7 @@ const AboutPage = () => {
           </ContentWrapper>
         </motion.div>
     
-
+        <Awards />
       
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}

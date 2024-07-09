@@ -11,7 +11,7 @@ import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact"
 import BlogDetail from "./pages/Blog/BlogDetail";
 import Schedules from "./pages/Schedules/Schedules";
-import Offers from "./pages/Offers/Offers"
+
 import GlobalStyle from "./GlobalStyle";
 import Webinars from "./pages/Webinar/Webinars";
 import CourseDetail from "./components/Coursework/CourseDetail";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/Contact" element={<Contact/>}/>
           <Route path="/webinar" element={<Webinars/>} />
           <Route path="/course/:courseCode" element={<CourseDetail />} />
-          <Route path="/Offers" element={<Offers/>} />
+         
           <Route path="/Schedules" element={<Schedules/>} />
         </Routes>
       </Container>
