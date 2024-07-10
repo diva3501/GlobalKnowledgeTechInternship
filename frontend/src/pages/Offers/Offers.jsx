@@ -56,9 +56,9 @@ function Offers() {
               <div key={course.id} className="course-card" style={{ width: '30%', marginRight: '3%', marginBottom: 20 }}>
                 <div
                   style={{
-                    border: '1px solid #ddd',
+                    
                     padding: 10,
-                    borderRadius: 10,
+                    borderRadius: 50,
                     height: '100%', // Ensures the card takes full height of its container
                     display: 'flex',
                     flexDirection: 'column',
@@ -71,7 +71,7 @@ function Offers() {
                     <p>{course.description}</p> {/* Display course description */}
                   </div>
                   <div style={{ textAlign: 'center' }}>
-                    <button className="enroll-button" style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Enroll</button>
+                    <button className="enroll-button btn rounded-pill btn-primary w-100" style={{ color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Enroll</button>
                   </div>
                 </div>
               </div>
