@@ -1,9 +1,7 @@
-/* The actual timeline (the vertical ruler) */
 .main-timeline-2 {
     position: relative;
   }
   
-  /* The vertical ruler */
   .main-timeline-2::after {
     content: "";
     position: absolute;
@@ -12,18 +10,18 @@
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -1.5px; /* Adjust for half the width */
+    margin-left: -1.5px;
   }
   
-  /* Container around content */
+ 
   .timeline-2 {
     position: relative;
     background-color: inherit;
     width: 50%;
-    margin-bottom: 40px; /* Adjust spacing between timeline items */
+    margin-bottom: 40px;
   }
   
-  /* The circles on the timeline */
+ 
   .timeline-2::after {
     content: "";
     position: absolute;
@@ -36,19 +34,19 @@
     z-index: 1;
   }
   
-  /* Place the container to the left */
+ 
   .left-2 {
     padding: 0px 40px 20px 0px;
     left: 0;
   }
   
-  /* Place the container to the right */
+ 
   .right-2 {
     padding: 0px 0px 20px 40px;
     left: 50%;
   }
   
-  /* Arrows pointing right for left containers */
+ 
   .left-2::before {
     content: " ";
     position: absolute;
@@ -60,7 +58,7 @@
     border-color: transparent transparent transparent white;
   }
   
-  /* Arrows pointing left for right containers */
+ 
   .right-2::before {
     content: " ";
     position: absolute;
@@ -72,26 +70,26 @@
     border-color: transparent white transparent transparent;
   }
   
-  /* Adjust circle position for right containers */
+ 
   .right-2::after {
     left: -14px;
   }
   
-  /* Media queries - Responsive timeline on screens less than 600px wide */
+ 
   @media screen and (max-width: 600px) {
-    /* Adjust the position of the vertical ruler for smaller screens */
+   
     .main-timeline-2::after {
       left: 31px;
     }
   
-    /* Make timeline items full width on smaller screens */
+   
     .timeline-2 {
       width: 100%;
       padding-left: 70px;
       padding-right: 25px;
     }
   
-    /* Adjust arrows and circles for smaller screens */
+   
     .timeline-2::before {
       left: 60px;
       border: medium solid white;
