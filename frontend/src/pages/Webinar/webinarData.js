@@ -2,89 +2,89 @@ const webinarData = {
   "Artificial Intelligence": [
     {
       CourseTitle: "AI Basics",
-      TopicsCovered: ["Introduction to AI", "Machine Learning", "Deep Learning"],
-      Benefits: ["Hands-on projects", "Expert trainers", "Certificate on completion"],
+      Description: "Introduction to AI and Machine Learning",
     },
     {
       CourseTitle: "Advanced AI",
-      TopicsCovered: ["Advanced Machine Learning", "Neural Networks", "AI Ethics"],
-      Benefits: ["In-depth knowledge", "Real-world applications", "Advanced certification"],
+      Description: "Advanced Machine Learning and Neural Networks",
     },
     {
       CourseTitle: "AI in Industry",
-      TopicsCovered: ["AI in Healthcare", "AI in Finance", "AI in Robotics"],
-      Benefits: ["Industry insights", "Practical projects", "Certification"],
+      Description: "AI Applications in Healthcare, Finance, and Robotics",
     },
   ],
   "Process Certification": [
     {
       CourseTitle: "Process Management",
-      TopicsCovered: ["Process Mapping", "Process Improvement", "Quality Assurance"],
-      Benefits: ["Practical training", "Industry-standard methods", "Certification"],
+      Description: "Process Mapping and Quality Assurance",
     },
   ],
   "Microsoft": [
     {
       CourseTitle: "Microsoft Office Suite",
-      TopicsCovered: ["Word", "Excel", "PowerPoint"],
-      Benefits: ["Enhanced productivity", "Expert guidance", "Certification"],
+      Description: "Word, Excel, and PowerPoint Essentials",
     },
   ],
   "Anglepoint": [
     {
       CourseTitle: "Software Asset Management",
-      TopicsCovered: ["SAM Basics", "License Management", "Compliance"],
-      Benefits: ["Industry insights", "Hands-on labs", "Certification"],
+      Description: "SAM Basics and License Management",
     },
     {
       CourseTitle: "Advanced SAM",
-      TopicsCovered: ["Advanced License Management", "Asset Lifecycle", "Audit Preparation"],
-      Benefits: ["Expert training", "Real-world scenarios", "Advanced certification"],
+      Description: "Advanced License Management and Audit Preparation",
     },
   ],
   "Red Hat": [
     {
       CourseTitle: "Red Hat Linux",
-      TopicsCovered: ["Linux Basics", "System Administration", "Shell Scripting"],
-      Benefits: ["Comprehensive training", "Certification", "Career growth"],
+      Description: "Linux Basics and System Administration",
     },
     {
       CourseTitle: "Red Hat OpenShift",
-      TopicsCovered: ["Kubernetes", "OpenShift Administration", "Container Orchestration"],
-      Benefits: ["Hands-on labs", "Expert guidance", "Certification"],
+      Description: "Kubernetes and OpenShift Administration",
     },
     {
       CourseTitle: "Red Hat Ansible",
-      TopicsCovered: ["Ansible Basics", "Automation with Ansible", "Advanced Ansible Techniques"],
-      Benefits: ["Automation skills", "Certification", "Project-based learning"],
+      Description: "Ansible Basics and Automation Techniques",
     },
   ],
   "Tableau": [
     {
       CourseTitle: "Tableau for Data Visualization",
-      TopicsCovered: ["Dashboard Creation", "Data Connections", "Storytelling"],
-      Benefits: ["Data skills enhancement", "Certification", "Project work"],
+      Description: "Dashboard Creation and Data Connections",
     },
   ],
   "Mulesoft": [
     {
       CourseTitle: "Mulesoft Integration",
-      TopicsCovered: ["API Design", "Data Integration", "CloudHub"],
-      Benefits: ["Real-world projects", "Certification", "Industry relevance"],
+      Description: "API Design and Data Integration",
     },
   ],
   "Blockchain": [
     {
       CourseTitle: "Blockchain Fundamentals",
-      TopicsCovered: ["Blockchain Basics", "Smart Contracts", "DApps"],
-      Benefits: ["In-depth knowledge", "Certification", "Career opportunities"],
+      Description: "Blockchain Basics and Smart Contracts",
     },
   ],
   "IBM": [
     {
       CourseTitle: "IBM Cloud",
-      TopicsCovered: ["Cloud Basics", "IBM Services", "Project Implementation"],
-      Benefits: ["Hands-on labs", "Certification", "Job-ready skills"],
+      Description: "Cloud Basics and IBM Services",
+    },
+  ],
+  "Upcoming Webinar": [
+    {
+      CourseTitle: "AI in Healthcare",
+      Description: "Join our upcoming webinar on AI applications in Healthcare.",
+      Date: "July 15, 2024",
+      Time: "10:00 AM (GMT)",
+    },
+    {
+      CourseTitle: "Data Science Trends",
+      Description: "Explore the latest trends in Data Science with our experts.",
+      Date: "August 5, 2024",
+      Time: "11:30 AM (GMT)",
     },
   ],
 };
