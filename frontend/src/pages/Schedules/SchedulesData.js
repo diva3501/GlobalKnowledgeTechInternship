@@ -1,5 +1,3 @@
-// data.js
-
 export const coursesData = [
     { id: 1, title: 'AI for Beginners', deliveryMode: 'Online', date: '2024-08-01', price: '$100', duration: '4 weeks', categories: ['Artificial Intelligence'] },
     { id: 2, title: 'Process Certification Basics', deliveryMode: 'In-person', date: '2024-09-01', price: '$200', duration: '2 days', categories: ['Process Certification'] },

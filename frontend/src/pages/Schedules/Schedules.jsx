@@ -21,6 +21,13 @@ function Schedules() {
     { name: "IBM", checked: false },
   ]);
 
+  const [showEnrollModal, setShowEnrollModal] = useState(false);
+  const [enrollFormData, setEnrollFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+  });
+
   useEffect(() => {
     // Initialize courses with data from coursesData
     setCourses(coursesData);
@@ -51,6 +58,30 @@ function Schedules() {
       );
       setFilteredCourses(filteredCourses);
     }
+  };
+
+  const handleEnrollClick = () => {
+    setShowEnrollModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowEnrollModal(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEnrollFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleEnrollSubmit = () => {
+    // Handle enrollment submission logic here
+    console.log("Enrollment form data:", enrollFormData);
+    // Example: Submit data to backend, show success message, etc.
+    // For now, just close the modal
+    setShowEnrollModal(false);
   };
 
   return (
@@ -136,7 +167,12 @@ function Schedules() {
                   <td>{course.duration}</td>
                   <td>{course.categories.join(", ")}</td>
                   <td>
-                    <button className="btn btn-primary">Enroll</button>
+                    <button
+                      className="btn btn-primary"
+                      onClick={handleEnrollClick}
+                    >
+                      Enroll
+                    </button>
                   </td>
                 </motion.tr>
               ))
@@ -154,6 +190,69 @@ function Schedules() {
             * Prices quoted above are inclusive of taxes.
           </p>
         </footer>
+      </main>
+      {showEnrollModal && (
+        <div className="modal-overlay" onClick={handleModalClose}>
+          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+            
+            <h2>Enroll for the Course</h2>
+            <div className="form-container">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={enrollFormData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={enrollFormData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  value={enrollFormData.mobile}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="button-container">
+              <button className="btn-enroll" onClick={handleEnrollSubmit}>
+                Enroll
+              </button>
+              <button className="btn-cancel" onClick={handleModalClose}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <main>
+        <motion.button
+          className="btn btn-primary"
+          onClick={handleEnrollClick}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Open Enrollment Modal
+        </motion.button>
       </main>
     </div>
   );
