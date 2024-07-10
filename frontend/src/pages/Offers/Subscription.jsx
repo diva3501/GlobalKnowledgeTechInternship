@@ -18,12 +18,15 @@ const CourseHeader = styled.div`
 const CourseImage = styled.img`
   width: 100%;
   max-height: 500px;
-  
+  border-radius: 15px;
+
   filter: brightness(0.7);
 `;
 
 const CourseNameOverlay = styled.div`
   position: absolute;
+  color: #fff;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -181,11 +184,11 @@ function Subscription() {
           <ContactForm>
             <FormGroup className="form-group">
               <FormLabel htmlFor="firstname">First Name</FormLabel>
-              <input type="text" className="form-control" id="firstname" />
+              <input type="message" className="form-control" id="firstname" />
             </FormGroup>
             <FormGroup className="form-group">
               <FormLabel htmlFor="lastname">Last Name</FormLabel>
-              <input type="text" className="form-control" id="lastname" />
+              <input type="message" className="form-control" id="lastname" />
             </FormGroup>
             <FormGroup className="form-group">
               <FormLabel htmlFor="email">Email</FormLabel>
@@ -210,3 +213,6 @@ function Subscription() {
 }
 
 export default Subscription;
+
+
+/* https://ordinarycoders.com/blog/article/bootstrap-pricing-table-example */
